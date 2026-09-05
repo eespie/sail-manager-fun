@@ -1,0 +1,7 @@
+[gd_resource type="Theme" format=3 uid="uid://d2rai3sjqo8nm"]
+
+[ext_resource type="FontFile" uid="uid://cfhioojf1humw" path="res://assets/fonts/pablo-impallari_dosis/Dosis-SemiBold.ttf" id="1_gwmee"]
+
+[resource]
+default_font = ExtResource("1_gwmee")
+default_font_size = 30

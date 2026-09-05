@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://d3i24frqtvmu5"]
+
+[ext_resource type="Script" uid="uid://nt7su0g1w2nj" path="res://src/core/common/system/curves.gd" id="1_jbnyc"]
+
+[sub_resource type="Resource" id="Resource_jbnyc"]
+metadata/__load_path__ = "res://resources/curves/pulse_curve.tres"
+
+[sub_resource type="Curve" id="Curve_de6uc"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.49878928, 0.97590363), 0.0, 0.0, 0, 0, Vector2(0.9927361, 1), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Curve" id="Curve_l2ntc"]
+_limits = [0.0, 20.0, 0.0, 30.0]
+_data = [Vector2(0, 19.638554), 0.0, 0.0, 0, 0, Vector2(7.293233, 17.749998), -0.706259, -0.706259, 0, 0, Vector2(22.51816, 3.125), -1.0292425, -1.0292425, 0, 0, Vector2(29.927362, 0.12048149), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="Curve" id="Curve_frgkc"]
+_data = [Vector2(0, 1), 0.0, -1.9861113, 0, 0, Vector2(0.24725273, 0.5069444), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[node name="Curves" type="Node" unique_id=1083773608]
+script = ExtResource("1_jbnyc")
+pulse_curve = SubResource("Resource_jbnyc")
+takeoff_curve = SubResource("Curve_de6uc")
+takeoff_wait_time_curve = SubResource("Curve_l2ntc")
+touchdown_curve = SubResource("Curve_frgkc")

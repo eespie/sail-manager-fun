@@ -11,13 +11,31 @@ config_version=5
 [application]
 
 config/name="Sail Manager Fun"
+run/main_scene="uid://n04lddn4sfoy"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+EventBus="*uid://b4iaoa15111v"
+File="*uid://bs1bx2ldng75c"
+Sound="*uid://c1byy5cfpier"
+Global="*uid://drrjbm7yend5v"
+GameInfo="*uid://cti4ef4vyrg0l"
+Scene="*uid://jrpv0r44nb3c"
+
 [display]
 
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[gui]
+
+fonts/dynamic_fonts/use_oversampling=false
+theme/custom="uid://d2rai3sjqo8nm"
+theme/custom_font="uid://cfhioojf1humw"
 
 [physics]
 
