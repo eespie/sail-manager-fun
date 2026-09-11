@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://b275r5u4p0iex"]
 
-[ext_resource type="PackedScene" uid="uid://cfyvxe3h3otig" path="res://src/ui/dashboard/background.tscn" id="1_ikyho"]
-[ext_resource type="PackedScene" uid="uid://bqafa66no0ivb" path="res://src/ui/dashboard/hud.tscn" id="2_ikyho"]
+[ext_resource type="PackedScene" uid="uid://0gaisw7n8bte" path="res://stages/menus/ui/background/background.tscn" id="1_4yjcs"]
+[ext_resource type="PackedScene" uid="uid://bqafa66no0ivb" path="res://stages/menus/ui/hud/hud.tscn" id="2_wuvxh"]
 
-[node name="dashboard" type="Control" unique_id=1821514011]
+[node name="Dashboard" type="Control" unique_id=1821514011]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -11,9 +11,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Background" parent="." unique_id=875759460 instance=ExtResource("1_ikyho")]
-layout_mode = 0
-anchors_preset = 0
+[node name="Background" parent="." unique_id=1805338972 instance=ExtResource("1_4yjcs")]
+layout_mode = 1
 
 [node name="Label" type="Label" parent="." unique_id=548475609]
 layout_mode = 1
@@ -32,4 +31,4 @@ text = "Dashboard"
 
 [node name="HUDLayer" type="CanvasLayer" parent="." unique_id=1927994493]
 
-[node name="HUDDasboard" parent="HUDLayer" unique_id=112578795 instance=ExtResource("2_ikyho")]
+[node name="HUDDasboard" parent="HUDLayer" unique_id=112578795 instance=ExtResource("2_wuvxh")]

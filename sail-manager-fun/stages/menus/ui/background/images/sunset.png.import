@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btwcuv2to3mdb"
-path="res://.godot/imported/coins-b.png-bcc5735e6bd9a83c65b4614b7d44694c.ctex"
+uid="uid://cfent7ypmn8pg"
+path="res://.godot/imported/sunset.png-5e7de2c0840d7ea71ef34aa41f255ba6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/coins-b.png"
-dest_files=["res://.godot/imported/coins-b.png-bcc5735e6bd9a83c65b4614b7d44694c.ctex"]
+source_file="res://stages/menus/ui/background/images/sunset.png"
+dest_files=["res://.godot/imported/sunset.png-5e7de2c0840d7ea71ef34aa41f255ba6.ctex"]
 
 [params]
 

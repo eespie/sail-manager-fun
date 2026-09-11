@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://bqafa66no0ivb"]
+
+[ext_resource type="Script" uid="uid://fh54mmu2rink" path="res://stages/menus/ui/hud/hud.gd" id="1_f8lm7"]
+[ext_resource type="Texture2D" uid="uid://btwcuv2to3mdb" path="res://stages/menus/ui/hud/images/coins-b.png" id="1_vafhn"]
+
+[node name="HUDDasboard" type="Control" unique_id=112578795]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f8lm7")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=789152788]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="Title" type="Label" parent="MarginContainer" unique_id=1941630485]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Title"
+uppercase = true
+
+[node name="Money" type="HBoxContainer" parent="MarginContainer" unique_id=600605077]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_constants/separation = 10
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/Money" unique_id=1635921582]
+layout_mode = 2
+texture = ExtResource("1_vafhn")
+
+[node name="Amount" type="Label" parent="MarginContainer/Money" unique_id=1674416671]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "100.000.000"
+
+[node name="Continue" type="Button" parent="MarginContainer" unique_id=898496868]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+text = "continue"
+
+[connection signal="pressed" from="MarginContainer/Continue" to="." method="_on_continue_pressed"]

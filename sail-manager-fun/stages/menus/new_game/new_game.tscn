@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://ddt17xj1854p8"]
+
+[ext_resource type="PackedScene" uid="uid://0gaisw7n8bte" path="res://stages/menus/ui/background/background.tscn" id="1_3exyt"]
+[ext_resource type="Script" uid="uid://cktwtudnwflug" path="res://stages/menus/new_game/new_game.gd" id="1_3ybb2"]
+[ext_resource type="PackedScene" uid="uid://bqafa66no0ivb" path="res://stages/menus/ui/hud/hud.tscn" id="3_l45mq"]
+
+[node name="NewGame" type="Control" unique_id=1906277180]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3ybb2")
+
+[node name="Background" parent="." unique_id=1805338972 instance=ExtResource("1_3exyt")]
+layout_mode = 1
+
+[node name="Panel" type="Panel" parent="." unique_id=16546004]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -250.0
+offset_right = 250.0
+offset_bottom = 350.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=1563942161]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = 50.0
+offset_right = 150.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="New Game" type="Button" parent="Panel/VBoxContainer" unique_id=1004197524]
+layout_mode = 2
+size_flags_vertical = 3
+theme_type_variation = &"FlatButton"
+toggle_mode = true
+text = "New Game"
+
+[node name="Select Game" type="Label" parent="Panel/VBoxContainer" unique_id=2146879370]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "Select Game
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Saved Games" type="VBoxContainer" parent="Panel/VBoxContainer" unique_id=141018794]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+
+[node name="Create" type="Button" parent="Panel/VBoxContainer" unique_id=1711313813]
+layout_mode = 2
+text = "Create"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1728560295]
+
+[node name="HUDDasboard" parent="CanvasLayer" unique_id=112578795 instance=ExtResource("3_l45mq")]
+pageTitle = "Game Selection"
+showMoney = false
+showContinueButton = false
+
+[connection signal="pressed" from="Panel/VBoxContainer/Create" to="." method="_on_create_pressed"]

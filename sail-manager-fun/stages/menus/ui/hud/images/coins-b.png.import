@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bosh6y3mr6lp8"
-path="res://.godot/imported/sunset.png-4b95756216cb153c8eedc9f4296ab725.ctex"
+uid="uid://btwcuv2to3mdb"
+path="res://.godot/imported/coins-b.png-42bb8de200c87cd729fae34c627625e8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/sunset.png"
-dest_files=["res://.godot/imported/sunset.png-4b95756216cb153c8eedc9f4296ab725.ctex"]
+source_file="res://stages/menus/ui/hud/images/coins-b.png"
+dest_files=["res://.godot/imported/coins-b.png-42bb8de200c87cd729fae34c627625e8.ctex"]
 
 [params]
 
