@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="TeamRes" format=3 uid="uid://cpudgh5nrn2l7"]
+
+[ext_resource type="Texture2D" uid="uid://bwit2a4vib8me" path="res://stages/entities/teams/images/Teams ESP.png" id="1_jtx4x"]
+[ext_resource type="Script" uid="uid://dfxneiqxstvvj" path="res://stages/entities/teams/team_resource.gd" id="2_pfk37"]
+
+[resource]
+script = ExtResource("2_pfk37")
+team_name = "ESP"
+startAmountMoney = 18000000
+chooserImage = ExtResource("1_jtx4x")
+metadata/_custom_type_script = "uid://dfxneiqxstvvj"

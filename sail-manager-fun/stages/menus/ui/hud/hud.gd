@@ -3,7 +3,7 @@ extends Control
 @export var pageTitle : String = 'title'
 @export var showMoney : bool = true
 @export var showContinueButton : bool = true
-@export var continueCallBack : Callable
+@export var nextScene : String
 
 @onready var labelTitle: Label = %Title
 @onready var btnContinue: Button = %Continue
@@ -16,15 +16,14 @@ func _ready() -> void:
 		money.show()
 	else:
 		money.hide()
-	if showContinueButton:
+	show_continue_button(showContinueButton)
+
+func show_continue_button(_show : bool):
+	if _show:
 		btnContinue.show()
 	else:
 		btnContinue.hide()
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
+		
+# continue to next screen
 func _on_continue_pressed() -> void:
-	if continueCallBack:
-		continueCallBack.call()
+	EventBus.sigChangeScene.emit(nextScene)

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="TeamRes" format=3 uid="uid://be8hl8i5ko066"]
+
+[ext_resource type="Texture2D" uid="uid://d3gja12re65ul" path="res://stages/entities/teams/images/Teams BRA.png" id="1_1qlqi"]
+[ext_resource type="Script" uid="uid://dfxneiqxstvvj" path="res://stages/entities/teams/team_resource.gd" id="2_1qlqi"]
+
+[resource]
+script = ExtResource("2_1qlqi")
+team_name = "BRA"
+startAmountMoney = 10000000
+chooserImage = ExtResource("1_1qlqi")
+metadata/_custom_type_script = "uid://dfxneiqxstvvj"

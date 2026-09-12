@@ -10,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 script = ExtResource("1_f8lm7")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=789152788]
@@ -40,19 +41,20 @@ size_flags_vertical = 0
 theme_override_constants/separation = 10
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer/Money" unique_id=1635921582]
+visible = false
 layout_mode = 2
 texture = ExtResource("1_vafhn")
 
 [node name="Amount" type="Label" parent="MarginContainer/Money" unique_id=1674416671]
 layout_mode = 2
-theme_override_font_sizes/font_size = 50
-text = "100.000.000"
+text = "$ 100.000.000"
 
 [node name="Continue" type="Button" parent="MarginContainer" unique_id=898496868]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
+mouse_filter = 1
 text = "continue"
 
 [connection signal="pressed" from="MarginContainer/Continue" to="." method="_on_continue_pressed"]

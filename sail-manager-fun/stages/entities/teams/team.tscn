@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://b3nxt06yyw46f"]
+
+[ext_resource type="Script" uid="uid://cngy4amr0s0qd" path="res://stages/entities/teams/team.gd" id="1_dkhyi"]
+[ext_resource type="Resource" uid="uid://ov25jgde2phh" path="res://stages/entities/teams/team_aus.tres" id="2_gk577"]
+[ext_resource type="Texture2D" uid="uid://b0c2sqtu7jhkf" path="res://stages/entities/teams/images/Teams AUS.png" id="3_bd8na"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bd8na"]
+bg_color = Color(0.6233569, 0.7661482, 0.8825151, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Team" type="Control" unique_id=1318962289]
+custom_minimum_size = Vector2(190, 290)
+layout_mode = 3
+anchors_preset = 0
+offset_transform_enabled = true
+mouse_default_cursor_shape = 2
+script = ExtResource("1_dkhyi")
+teamInfo = ExtResource("2_gk577")
+
+[node name="Panel" type="Panel" parent="." unique_id=1867274681]
+custom_minimum_size = Vector2(190, 0)
+layout_mode = 0
+offset_right = 190.0
+offset_bottom = 290.0
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_bd8na")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=1596158533]
+custom_minimum_size = Vector2(0, 260)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -81.5
+offset_top = -130.0
+offset_right = 81.5
+offset_bottom = 130.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TeamName" type="Label" parent="Panel/VBoxContainer" unique_id=1575508974]
+unique_name_in_owner = true
+layout_mode = 2
+text = "AUS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Boat" type="TextureRect" parent="Panel/VBoxContainer" unique_id=1334701387]
+unique_name_in_owner = true
+custom_maximum_size = Vector2(-1, 250)
+layout_mode = 2
+texture = ExtResource("3_bd8na")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="Amount" type="Label" parent="Panel/VBoxContainer" unique_id=1686312813]
+unique_name_in_owner = true
+layout_mode = 2
+text = "$ 20.000.000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

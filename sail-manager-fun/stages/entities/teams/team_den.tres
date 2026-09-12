@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="TeamRes" format=3 uid="uid://c7ki5jumlfe72"]
+
+[ext_resource type="Texture2D" uid="uid://dwfl4ois7fe6y" path="res://stages/entities/teams/images/Teams DEN.png" id="1_5gyla"]
+[ext_resource type="Script" uid="uid://dfxneiqxstvvj" path="res://stages/entities/teams/team_resource.gd" id="2_kq7ie"]
+
+[resource]
+script = ExtResource("2_kq7ie")
+team_name = "DEN"
+startAmountMoney = 15000000
+chooserImage = ExtResource("1_5gyla")
+metadata/_custom_type_script = "uid://dfxneiqxstvvj"

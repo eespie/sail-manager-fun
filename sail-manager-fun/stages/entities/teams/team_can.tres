@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="TeamRes" format=3 uid="uid://c2skjlhh5aon4"]
+
+[ext_resource type="Texture2D" uid="uid://bljlpft30y210" path="res://stages/entities/teams/images/Teams CAN.png" id="1_05bfy"]
+[ext_resource type="Script" uid="uid://dfxneiqxstvvj" path="res://stages/entities/teams/team_resource.gd" id="2_05bfy"]
+
+[resource]
+script = ExtResource("2_05bfy")
+team_name = "CAN"
+startAmountMoney = 12000000
+chooserImage = ExtResource("1_05bfy")
+metadata/_custom_type_script = "uid://dfxneiqxstvvj"
