@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="TeamRes" format=3 uid="uid://qj6vogbuydj"]
+
+[ext_resource type="Texture2D" uid="uid://bkv8yq5qmclu2" path="res://stages/entities/teams/images/Teams NED.png" id="1_1lovo"]
+[ext_resource type="Script" uid="uid://dfxneiqxstvvj" path="res://stages/entities/teams/team_resource.gd" id="2_g6hyw"]
+
+[resource]
+script = ExtResource("2_g6hyw")
+team_name = "NED"
+startAmountMoney = 10000000
+chooserImage = ExtResource("1_1lovo")
+metadata/_custom_type_script = "uid://dfxneiqxstvvj"

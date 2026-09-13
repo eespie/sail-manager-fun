@@ -11,7 +11,7 @@ func _bind_events() -> void:
 	EventBus.sigChangeScene.connect(_on_change_scene, CONNECT_DEFERRED)
 
 func _on_change_scene(path: String) -> void:
-	var s = ResourceLoader.load(path)
+	var s = load(path)
 	if s == null:
 		return
 	current_scene.queue_free()

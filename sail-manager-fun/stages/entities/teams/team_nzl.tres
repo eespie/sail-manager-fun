@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="TeamRes" format=3 uid="uid://72yjp2xjo726"]
+
+[ext_resource type="Texture2D" uid="uid://b54j6vft4blf0" path="res://stages/entities/teams/images/Teams NZL.png" id="1_tvr5q"]
+[ext_resource type="Script" uid="uid://dfxneiqxstvvj" path="res://stages/entities/teams/team_resource.gd" id="2_irhlg"]
+
+[resource]
+script = ExtResource("2_irhlg")
+team_name = "NZL"
+startAmountMoney = 18000000
+chooserImage = ExtResource("1_tvr5q")
+metadata/_custom_type_script = "uid://dfxneiqxstvvj"

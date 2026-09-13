@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="TeamRes" format=3 uid="uid://bvwedg5dfihxh"]
+
+[ext_resource type="Texture2D" uid="uid://dt7dl5crvlqaj" path="res://stages/entities/teams/images/Teams SWE.png" id="1_n6urb"]
+[ext_resource type="Script" uid="uid://dfxneiqxstvvj" path="res://stages/entities/teams/team_resource.gd" id="2_liop2"]
+
+[resource]
+script = ExtResource("2_liop2")
+team_name = "SWE"
+startAmountMoney = 15000000
+chooserImage = ExtResource("1_n6urb")
+metadata/_custom_type_script = "uid://dfxneiqxstvvj"

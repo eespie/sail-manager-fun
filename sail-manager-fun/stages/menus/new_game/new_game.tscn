@@ -4,6 +4,18 @@
 [ext_resource type="Script" uid="uid://cktwtudnwflug" path="res://stages/menus/new_game/new_game.gd" id="1_3ybb2"]
 [ext_resource type="PackedScene" uid="uid://bqafa66no0ivb" path="res://stages/menus/ui/hud/hud.tscn" id="3_l45mq"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l45mq"]
+bg_color = Color(0.11372549, 0.18039216, 0.26666668, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
 [node name="NewGame" type="Control" unique_id=1906277180]
 layout_mode = 3
 anchors_preset = 15
@@ -12,9 +24,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3ybb2")
+newGameScene = "res://stages/menus/choose_team/choose_team.tscn"
 
 [node name="Background" parent="." unique_id=1805338972 instance=ExtResource("1_3exyt")]
 layout_mode = 1
+
+[node name="HUDDasboard" parent="." unique_id=112578795 instance=ExtResource("3_l45mq")]
+layout_mode = 1
+pageTitle = "Game Selection"
+showMoney = false
+showContinueButton = false
 
 [node name="Panel" type="Panel" parent="." unique_id=16546004]
 custom_minimum_size = Vector2(500, 500)
@@ -38,9 +57,9 @@ anchors_preset = 13
 anchor_left = 0.5
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -150.0
+offset_left = -209.0
 offset_top = 50.0
-offset_right = 150.0
+offset_right = 209.0
 offset_bottom = -50.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -51,6 +70,7 @@ alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 theme_type_variation = &"FlatButton"
+theme_override_styles/hover = SubResource("StyleBoxFlat_l45mq")
 toggle_mode = true
 text = "New Game"
 
@@ -64,19 +84,22 @@ text = "Select Game
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Saved Games" type="VBoxContainer" parent="Panel/VBoxContainer" unique_id=141018794]
+[node name="Saved Games" type="ItemList" parent="Panel/VBoxContainer" unique_id=1194921402]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 300)
 layout_mode = 2
+allow_search = false
+item_count = 8
+item_0/text = "Saved 13/09/2026 11:05"
+item_1/text = "Saved 13/09/2026 10:05"
+item_2/text = "Saved 12/09/2026 10:05"
+item_3/text = "Saved 11/09/2026 10:05"
+item_4/text = "Saved 10/09/2026 10:05"
+item_5/text = "Saved 09/09/2026 10:05"
+item_6/text = "Saved 08/09/2026 10:05"
+item_7/text = "Saved 07/09/2026 10:05"
 
-[node name="Create" type="Button" parent="Panel/VBoxContainer" unique_id=1711313813]
-layout_mode = 2
-text = "Create"
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1728560295]
-
-[node name="HUDDasboard" parent="CanvasLayer" unique_id=112578795 instance=ExtResource("3_l45mq")]
-pageTitle = "Game Selection"
-showMoney = false
-showContinueButton = false
-
-[connection signal="pressed" from="Panel/VBoxContainer/Create" to="." method="_on_create_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/New Game" to="." method="_on_new_game_pressed"]
+[connection signal="item_activated" from="Panel/VBoxContainer/Saved Games" to="." method="_on_saved_games_item_activated"]
+[connection signal="item_clicked" from="Panel/VBoxContainer/Saved Games" to="." method="_on_saved_games_item_clicked"]
+[connection signal="item_selected" from="Panel/VBoxContainer/Saved Games" to="." method="_on_saved_games_item_selected"]

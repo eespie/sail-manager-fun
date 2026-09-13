@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="TeamRes" format=3 uid="uid://dls7qw1hfmu1k"]
+
+[ext_resource type="Texture2D" uid="uid://bgswrgwnjf885" path="res://stages/entities/teams/images/Teams SUI.png" id="1_jjb5q"]
+[ext_resource type="Script" uid="uid://dfxneiqxstvvj" path="res://stages/entities/teams/team_resource.gd" id="2_ooflx"]
+
+[resource]
+script = ExtResource("2_ooflx")
+team_name = "SUI"
+startAmountMoney = 10000000
+chooserImage = ExtResource("1_jjb5q")
+metadata/_custom_type_script = "uid://dfxneiqxstvvj"

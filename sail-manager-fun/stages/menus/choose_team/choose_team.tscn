@@ -9,6 +9,12 @@
 [ext_resource type="Resource" uid="uid://c7ki5jumlfe72" path="res://stages/entities/teams/team_den.tres" id="6_5wcys"]
 [ext_resource type="Resource" uid="uid://cpudgh5nrn2l7" path="res://stages/entities/teams/team_esp.tres" id="7_7h8kt"]
 [ext_resource type="Resource" uid="uid://cs2g0cp2tsose" path="res://stages/entities/teams/team_fra.tres" id="8_miksc"]
+[ext_resource type="Resource" uid="uid://b6s4ug5io1l8m" path="res://stages/entities/teams/team_gbr.tres" id="10_3d53q"]
+[ext_resource type="Resource" uid="uid://drhnd7etx6n72" path="res://stages/entities/teams/team_ger.tres" id="11_cmqox"]
+[ext_resource type="Resource" uid="uid://qj6vogbuydj" path="res://stages/entities/teams/team_ned.tres" id="12_mu70h"]
+[ext_resource type="Resource" uid="uid://72yjp2xjo726" path="res://stages/entities/teams/team_nzl.tres" id="13_l1eql"]
+[ext_resource type="Resource" uid="uid://dls7qw1hfmu1k" path="res://stages/entities/teams/team_sui.tres" id="14_q41q2"]
+[ext_resource type="Resource" uid="uid://bvwedg5dfihxh" path="res://stages/entities/teams/team_swe.tres" id="15_gchxi"]
 
 [node name="ChooseTeam" type="Control" unique_id=603365159]
 layout_mode = 3
@@ -36,10 +42,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -615.0
-offset_top = -310.0
-offset_right = 615.0
-offset_bottom = 310.0
+offset_left = -625.0
+offset_top = -325.0
+offset_right = 625.0
+offset_bottom = 325.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -86,18 +92,24 @@ teamInfo = ExtResource("8_miksc")
 
 [node name="Team7" parent="Panel/GridContainer" unique_id=1526431520 instance=ExtResource("3_yr3iw")]
 layout_mode = 2
+teamInfo = ExtResource("10_3d53q")
 
 [node name="Team8" parent="Panel/GridContainer" unique_id=186400454 instance=ExtResource("3_yr3iw")]
 layout_mode = 2
+teamInfo = ExtResource("11_cmqox")
 
 [node name="Team9" parent="Panel/GridContainer" unique_id=2092289808 instance=ExtResource("3_yr3iw")]
 layout_mode = 2
+teamInfo = ExtResource("12_mu70h")
 
 [node name="Team10" parent="Panel/GridContainer" unique_id=2091117456 instance=ExtResource("3_yr3iw")]
 layout_mode = 2
+teamInfo = ExtResource("13_l1eql")
 
 [node name="Team11" parent="Panel/GridContainer" unique_id=1318520103 instance=ExtResource("3_yr3iw")]
 layout_mode = 2
+teamInfo = ExtResource("14_q41q2")
 
 [node name="Team12" parent="Panel/GridContainer" unique_id=595988430 instance=ExtResource("3_yr3iw")]
 layout_mode = 2
+teamInfo = ExtResource("15_gchxi")
