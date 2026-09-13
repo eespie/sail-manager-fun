@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://c27iitp8qmlqg"]
+
+[ext_resource type="Script" uid="uid://cxed4ja87smna" path="res://stages/menus/manage_crew/manage_crew.gd" id="1_24omc"]
+[ext_resource type="PackedScene" uid="uid://0gaisw7n8bte" path="res://stages/menus/ui/background/background.tscn" id="2_teqpq"]
+[ext_resource type="PackedScene" uid="uid://bqafa66no0ivb" path="res://stages/menus/ui/hud/hud.tscn" id="3_5pgyg"]
+
+[node name="ManageCrew" type="Control" unique_id=708908834]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_24omc")
+
+[node name="Background" parent="." unique_id=1805338972 instance=ExtResource("2_teqpq")]
+layout_mode = 1
+
+[node name="HUDDasboard" parent="." unique_id=112578795 instance=ExtResource("3_5pgyg")]
+layout_mode = 1
+pageTitle = null
+showMoney = null
+showContinueButton = null
+nextScene = null

@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://bqafa66no0ivb"]
 
 [ext_resource type="Script" uid="uid://fh54mmu2rink" path="res://stages/menus/ui/hud/hud.gd" id="1_f8lm7"]
-[ext_resource type="Texture2D" uid="uid://btwcuv2to3mdb" path="res://stages/menus/ui/hud/images/coins-b.png" id="1_vafhn"]
 
 [node name="HUDDasboard" type="Control" unique_id=112578795]
 layout_mode = 3
@@ -33,20 +32,11 @@ size_flags_vertical = 0
 text = "Title"
 uppercase = true
 
-[node name="Money" type="HBoxContainer" parent="MarginContainer" unique_id=600605077]
+[node name="Amount" type="Label" parent="MarginContainer" unique_id=1674416671]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 0
-theme_override_constants/separation = 10
-
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/Money" unique_id=1635921582]
-visible = false
-layout_mode = 2
-texture = ExtResource("1_vafhn")
-
-[node name="Amount" type="Label" parent="MarginContainer/Money" unique_id=1674416671]
-layout_mode = 2
 text = "$ 100.000.000"
 
 [node name="Continue" type="Button" parent="MarginContainer" unique_id=898496868]

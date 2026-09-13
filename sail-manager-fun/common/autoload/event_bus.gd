@@ -13,16 +13,9 @@ extends Node
 @warning_ignore("unused_signal") signal sigMouseButtonClicked(pos :Vector2)
 @warning_ignore("unused_signal") signal sigMouseButtonReleased(pos :Vector2)
 
-# Console
-@warning_ignore("unused_signal") signal sigConsoleAddCommand(id: int, color: Color, description: String, command: String, post_desc: String, sig: Signal)
-@warning_ignore("unused_signal") signal sigConsoleRemoveCommand(id :int)
-@warning_ignore("unused_signal") signal sigConsoleEnableCommand(enabled: bool, id :int)
+# Select team for new game
+@warning_ignore("unused_signal") signal sigTeamSelected(team_info :TeamRes)
 
-
-# Command
-@warning_ignore("unused_signal") signal sigCommandNone(id: int)
-@warning_ignore("unused_signal") signal sigCommandTaxi(id: int)
-@warning_ignore("unused_signal") signal sigCommandTakeoff(id: int)
-@warning_ignore("unused_signal") signal sigCommandFlightPlan(id: int)
-@warning_ignore("unused_signal") signal sigCommandCrossRunway(id: int)
-@warning_ignore("unused_signal") signal sigCommandPrepareLanding(id: int)
+# Player
+@warning_ignore("unused_signal") signal sigCurrentMoneyChanged(amount :int)
+@warning_ignore("unused_signal") signal sigAddMoney(amount :int)
