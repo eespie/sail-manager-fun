@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://b0035vf3m26mc"]
+
+[ext_resource type="Script" uid="uid://c881vrn3r0ufe" path="res://stages/menus/sponsors/sponsors.gd" id="1_hlxxp"]
+[ext_resource type="PackedScene" uid="uid://0gaisw7n8bte" path="res://stages/menus/ui/background/background.tscn" id="1_lpqi6"]
+[ext_resource type="PackedScene" uid="uid://bqafa66no0ivb" path="res://stages/menus/ui/hud/hud.tscn" id="2_hlxxp"]
+
+[node name="Sponsors" type="Control" unique_id=1248585618]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hlxxp")
+
+[node name="Background" parent="." unique_id=1805338972 instance=ExtResource("1_lpqi6")]
+layout_mode = 1
+
+[node name="HUDDasboard" parent="." unique_id=112578795 instance=ExtResource("2_hlxxp")]
+layout_mode = 1
+pageTitle = "Choose Sponsor"
+showContinueButton = false

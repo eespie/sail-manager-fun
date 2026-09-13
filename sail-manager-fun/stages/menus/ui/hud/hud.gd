@@ -51,4 +51,3 @@ func _on_money_changed(_amount :int) -> void:
 			str_part = "%d" % part
 		str_amount = str_part + str_amount
 	amount.text = str("$ ", str_amount)
-	
