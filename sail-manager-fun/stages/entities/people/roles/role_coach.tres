@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CrewRole" format=3 uid="uid://cv0jiypk3bxjx"]
+
+[ext_resource type="Script" uid="uid://ctbulmftwdum0" path="res://stages/entities/people/roles/roles.gd" id="1_rpnrw"]
+
+[resource]
+script = ExtResource("1_rpnrw")
+role_name = 6
+annual_salary_max = 10000000
+annual_salary_min = 1000000
+metadata/_custom_type_script = "uid://ctbulmftwdum0"

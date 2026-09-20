@@ -7,6 +7,6 @@
 script = ExtResource("2_1qlqi")
 team_name = "BRA"
 team_full_name = "Brazil"
-start_amount_money = 12000000
+start_amount_money = 10000000
 chooser_image = ExtResource("1_1qlqi")
 metadata/_custom_type_script = "uid://dfxneiqxstvvj"

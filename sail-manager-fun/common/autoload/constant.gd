@@ -1,7 +1,7 @@
 extends Node
 
 
-enum CREW_TYPE {
+enum CREW_ROLE {
 	DRIVER,
 	STRATEGIST,
 	WING_TRIMMER,

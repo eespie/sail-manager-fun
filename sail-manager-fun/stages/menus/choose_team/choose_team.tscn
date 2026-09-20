@@ -71,74 +71,74 @@ theme_override_constants/h_separation = 20
 theme_override_constants/v_separation = 20
 columns = 6
 
-[node name="Team" parent="Panel/GridContainer" unique_id=1318962289 instance=ExtResource("3_yr3iw")]
+[node name="Team AUS" parent="Panel/GridContainer" unique_id=1318962289 instance=ExtResource("3_yr3iw")]
 layout_mode = 2
 size_flags_horizontal = 12
 size_flags_vertical = 0
 mouse_filter = 1
 
-[node name="Team2" parent="Panel/GridContainer" unique_id=1398324582 instance=ExtResource("3_yr3iw")]
-layout_mode = 2
-size_flags_horizontal = 12
-size_flags_vertical = 0
-teamInfo = ExtResource("4_puofl")
-
-[node name="Team3" parent="Panel/GridContainer" unique_id=525238615 instance=ExtResource("3_yr3iw")]
-layout_mode = 2
-size_flags_horizontal = 12
-size_flags_vertical = 0
-teamInfo = ExtResource("5_puofl")
-
-[node name="Team4" parent="Panel/GridContainer" unique_id=1135053481 instance=ExtResource("3_yr3iw")]
-layout_mode = 2
-size_flags_horizontal = 12
-size_flags_vertical = 0
-teamInfo = ExtResource("6_5wcys")
-
-[node name="Team5" parent="Panel/GridContainer" unique_id=883268710 instance=ExtResource("3_yr3iw")]
-layout_mode = 2
-size_flags_horizontal = 12
-size_flags_vertical = 0
-teamInfo = ExtResource("7_7h8kt")
-
-[node name="Team6" parent="Panel/GridContainer" unique_id=316133608 instance=ExtResource("3_yr3iw")]
-layout_mode = 2
-size_flags_horizontal = 12
-size_flags_vertical = 0
-teamInfo = ExtResource("8_miksc")
-
-[node name="Team7" parent="Panel/GridContainer" unique_id=1526431520 instance=ExtResource("3_yr3iw")]
+[node name="Team GBR" parent="Panel/GridContainer" unique_id=1398324582 instance=ExtResource("3_yr3iw")]
 layout_mode = 2
 size_flags_horizontal = 12
 size_flags_vertical = 0
 teamInfo = ExtResource("10_3d53q")
 
-[node name="Team8" parent="Panel/GridContainer" unique_id=186400454 instance=ExtResource("3_yr3iw")]
-layout_mode = 2
-size_flags_horizontal = 12
-size_flags_vertical = 0
-teamInfo = ExtResource("11_cmqox")
-
-[node name="Team9" parent="Panel/GridContainer" unique_id=2092289808 instance=ExtResource("3_yr3iw")]
-layout_mode = 2
-size_flags_horizontal = 12
-size_flags_vertical = 0
-teamInfo = ExtResource("12_mu70h")
-
-[node name="Team10" parent="Panel/GridContainer" unique_id=2091117456 instance=ExtResource("3_yr3iw")]
+[node name="Team NZL" parent="Panel/GridContainer" unique_id=525238615 instance=ExtResource("3_yr3iw")]
 layout_mode = 2
 size_flags_horizontal = 12
 size_flags_vertical = 0
 teamInfo = ExtResource("13_l1eql")
 
-[node name="Team11" parent="Panel/GridContainer" unique_id=1318520103 instance=ExtResource("3_yr3iw")]
+[node name="Team FRA" parent="Panel/GridContainer" unique_id=1135053481 instance=ExtResource("3_yr3iw")]
+layout_mode = 2
+size_flags_horizontal = 12
+size_flags_vertical = 0
+teamInfo = ExtResource("8_miksc")
+
+[node name="Team ESP" parent="Panel/GridContainer" unique_id=883268710 instance=ExtResource("3_yr3iw")]
+layout_mode = 2
+size_flags_horizontal = 12
+size_flags_vertical = 0
+teamInfo = ExtResource("7_7h8kt")
+
+[node name="Team DEN" parent="Panel/GridContainer" unique_id=316133608 instance=ExtResource("3_yr3iw")]
+layout_mode = 2
+size_flags_horizontal = 12
+size_flags_vertical = 0
+teamInfo = ExtResource("6_5wcys")
+
+[node name="Team CAN" parent="Panel/GridContainer" unique_id=1526431520 instance=ExtResource("3_yr3iw")]
+layout_mode = 2
+size_flags_horizontal = 12
+size_flags_vertical = 0
+teamInfo = ExtResource("5_puofl")
+
+[node name="Team SUI" parent="Panel/GridContainer" unique_id=186400454 instance=ExtResource("3_yr3iw")]
 layout_mode = 2
 size_flags_horizontal = 12
 size_flags_vertical = 0
 teamInfo = ExtResource("14_q41q2")
 
-[node name="Team12" parent="Panel/GridContainer" unique_id=595988430 instance=ExtResource("3_yr3iw")]
+[node name="Team GER" parent="Panel/GridContainer" unique_id=2092289808 instance=ExtResource("3_yr3iw")]
+layout_mode = 2
+size_flags_horizontal = 12
+size_flags_vertical = 0
+teamInfo = ExtResource("11_cmqox")
+
+[node name="Team NED" parent="Panel/GridContainer" unique_id=2091117456 instance=ExtResource("3_yr3iw")]
+layout_mode = 2
+size_flags_horizontal = 12
+size_flags_vertical = 0
+teamInfo = ExtResource("12_mu70h")
+
+[node name="Team SWE" parent="Panel/GridContainer" unique_id=1318520103 instance=ExtResource("3_yr3iw")]
 layout_mode = 2
 size_flags_horizontal = 12
 size_flags_vertical = 0
 teamInfo = ExtResource("15_gchxi")
+
+[node name="Team BRA" parent="Panel/GridContainer" unique_id=595988430 instance=ExtResource("3_yr3iw")]
+layout_mode = 2
+size_flags_horizontal = 12
+size_flags_vertical = 0
+teamInfo = ExtResource("4_puofl")

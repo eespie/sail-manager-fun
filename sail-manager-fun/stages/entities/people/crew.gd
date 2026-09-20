@@ -6,7 +6,7 @@ extends Control
 @onready var crew_salary: Label = %"Crew Salary"
 @onready var crew_type_label: Label = %CrewTypeLabel
 
-@export var crew_type : Constant.CREW_TYPE;
+@export var crew_role_data : CrewRole
 @export var crew_id : int
 
 var tween: Tween
@@ -15,7 +15,7 @@ var mouseEntered: bool = false
 
 
 func _ready() -> void:
-	crew_type_label.text = Constant.CREW_TYPE.keys()[crew_type].capitalize()
+	crew_type_label.text = Constant.CREW_ROLE.keys()[crew_role_data.role_name].capitalize()
 	offset_transform_enabled = true
 
 
