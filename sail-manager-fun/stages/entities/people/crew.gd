@@ -6,21 +6,28 @@ extends Control
 @onready var crew_salary: Label = %"Crew Salary"
 @onready var crew_type_label: Label = %CrewTypeLabel
 
-@export var crew_role_data : CrewRole
+@export var crew_role : CrewRole
 @export var crew_id : int
 
+var person
 var tween: Tween
 var mousePressed: bool = false
 var mouseEntered: bool = false
 
 
 func _ready() -> void:
-	crew_type_label.text = Constant.CREW_ROLE.keys()[crew_role_data.role_name].capitalize()
+	crew_type_label.text = Constant.CREW_ROLE.keys()[crew_role.role_name].capitalize()
 	offset_transform_enabled = true
+	_bind_events()
 
 
-func set_people():
+func _bind_events() -> void:
+	EventBus.sigCrewSelected.connect(_on_crew_selected)
+
+
+func _on_crew_selected(_crew_id :int, _person) -> void:
 	crew.self_modulate = Color.CORNFLOWER_BLUE
+	
 
 
 func _on_mouse_entered() -> void:
@@ -49,5 +56,5 @@ func _on_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and mouseEntered:
 			if mousePressed and not event.pressed:
-				EventBus.sigCrewSelected.emit(crew_id)
+				EventBus.sigCrewSelectionNeeded.emit(crew_id, crew_role)
 			mousePressed = event.pressed

@@ -17,7 +17,8 @@ extends Node
 @warning_ignore("unused_signal") signal sigTeamSelected(team_info :TeamRes)
 
 # Select new_crew
-@warning_ignore("unused_signal") signal sigCrewSelected(id :int)
+@warning_ignore("unused_signal") signal sigCrewSelected(crew_id :int, person)
+@warning_ignore("unused_signal") signal sigCrewSelectionNeeded(crew_id :int, crew_role : CrewRole)
 
 
 # Player

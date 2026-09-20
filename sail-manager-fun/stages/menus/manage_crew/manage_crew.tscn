@@ -66,40 +66,40 @@ columns = 4
 
 [node name="Driver" parent="Panel/GridContainer" unique_id=1773087098 instance=ExtResource("4_teqpq")]
 layout_mode = 2
-crew_role_data = ExtResource("5_5pgyg")
+crew_role = ExtResource("5_5pgyg")
 crew_id = 1
 
 [node name="Strategist" parent="Panel/GridContainer" unique_id=1876958625 instance=ExtResource("4_teqpq")]
 layout_mode = 2
-crew_role_data = ExtResource("6_kj1g7")
+crew_role = ExtResource("6_kj1g7")
 crew_id = 2
 
 [node name="Flight Controller" parent="Panel/GridContainer" unique_id=1832269989 instance=ExtResource("4_teqpq")]
 layout_mode = 2
-crew_role_data = ExtResource("7_vuch8")
+crew_role = ExtResource("7_vuch8")
 crew_id = 3
 
 [node name="Wing trimmer" parent="Panel/GridContainer" unique_id=66777980 instance=ExtResource("4_teqpq")]
 layout_mode = 2
-crew_role_data = ExtResource("8_sqmto")
+crew_role = ExtResource("8_sqmto")
 crew_id = 4
 
 [node name="Grinder 1" parent="Panel/GridContainer" unique_id=2142295496 instance=ExtResource("4_teqpq")]
 layout_mode = 2
-crew_role_data = ExtResource("9_f6ywv")
+crew_role = ExtResource("9_f6ywv")
 crew_id = 5
 
 [node name="Grinder 2" parent="Panel/GridContainer" unique_id=1828121779 instance=ExtResource("4_teqpq")]
 layout_mode = 2
-crew_role_data = ExtResource("9_f6ywv")
+crew_role = ExtResource("9_f6ywv")
 crew_id = 6
 
 [node name="Coach" parent="Panel/GridContainer" unique_id=174068630 instance=ExtResource("4_teqpq")]
 layout_mode = 2
-crew_role_data = ExtResource("10_cvpmg")
+crew_role = ExtResource("10_cvpmg")
 crew_id = 7
 
 [node name="Coach assistant" parent="Panel/GridContainer" unique_id=164004191 instance=ExtResource("4_teqpq")]
 layout_mode = 2
-crew_role_data = ExtResource("11_5hspu")
+crew_role = ExtResource("11_5hspu")
 crew_id = 8
