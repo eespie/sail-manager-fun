@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cxed4ja87smna" path="res://stages/menus/manage_crew/manage_crew.gd" id="1_24omc"]
 [ext_resource type="PackedScene" uid="uid://0gaisw7n8bte" path="res://stages/menus/ui/background/background.tscn" id="2_teqpq"]
 [ext_resource type="PackedScene" uid="uid://bqafa66no0ivb" path="res://stages/menus/ui/hud/hud.tscn" id="3_5pgyg"]
+[ext_resource type="PackedScene" uid="uid://16go7ugft7oo" path="res://stages/entities/people/crew.tscn" id="4_teqpq"]
 
 [node name="ManageCrew" type="Control" unique_id=708908834]
 layout_mode = 3
@@ -11,6 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 script = ExtResource("1_24omc")
 
 [node name="Background" parent="." unique_id=1805338972 instance=ExtResource("2_teqpq")]
@@ -29,22 +31,77 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -819.0
-offset_top = -382.5
-offset_right = 819.0
-offset_bottom = 382.5
+offset_top = -390.0
+offset_right = 831.0
+offset_bottom = 390.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Panel" unique_id=2016317950]
+[node name="GridContainer" type="GridContainer" parent="Panel" unique_id=679964898]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_left = -740.0
+offset_top = -310.0
+offset_right = 740.0
+offset_bottom = 310.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
+columns = 5
+
+[node name="Crew" parent="Panel/GridContainer" unique_id=1773087098 instance=ExtResource("4_teqpq")]
+layout_mode = 2
+crew_id = 1
+
+[node name="Crew2" parent="Panel/GridContainer" unique_id=1876958625 instance=ExtResource("4_teqpq")]
+layout_mode = 2
+crew_type = 1
+crew_id = 2
+
+[node name="Crew3" parent="Panel/GridContainer" unique_id=1832269989 instance=ExtResource("4_teqpq")]
+layout_mode = 2
+crew_type = 2
+crew_id = 3
+
+[node name="Crew4" parent="Panel/GridContainer" unique_id=66777980 instance=ExtResource("4_teqpq")]
+layout_mode = 2
+crew_type = 3
+crew_id = 4
+
+[node name="Crew5" parent="Panel/GridContainer" unique_id=2142295496 instance=ExtResource("4_teqpq")]
+layout_mode = 2
+crew_type = 4
+crew_id = 5
+
+[node name="Crew6" parent="Panel/GridContainer" unique_id=1828121779 instance=ExtResource("4_teqpq")]
+layout_mode = 2
+crew_type = 4
+crew_id = 6
+
+[node name="Crew7" parent="Panel/GridContainer" unique_id=174068630 instance=ExtResource("4_teqpq")]
+layout_mode = 2
+crew_type = 5
+crew_id = 7
+
+[node name="Crew8" parent="Panel/GridContainer" unique_id=164004191 instance=ExtResource("4_teqpq")]
+layout_mode = 2
+crew_type = 5
+crew_id = 8
+
+[node name="Crew9" parent="Panel/GridContainer" unique_id=1531276144 instance=ExtResource("4_teqpq")]
+layout_mode = 2
+crew_type = 6
+crew_id = 9
+
+[node name="Crew10" parent="Panel/GridContainer" unique_id=257980564 instance=ExtResource("4_teqpq")]
+layout_mode = 2
+crew_type = 7
+crew_id = 10

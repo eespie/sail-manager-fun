@@ -17,7 +17,7 @@ corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
 [node name="Team" type="Control" unique_id=1318962289]
-custom_minimum_size = Vector2(190, 290)
+custom_minimum_size = Vector2(220, 300)
 layout_mode = 3
 anchors_preset = 0
 offset_transform_enabled = true
@@ -26,10 +26,10 @@ script = ExtResource("1_dkhyi")
 teamInfo = ExtResource("2_gk577")
 
 [node name="Panel" type="Panel" parent="." unique_id=1867274681]
-custom_minimum_size = Vector2(190, 0)
+custom_minimum_size = Vector2(200, 300)
 layout_mode = 0
-offset_right = 190.0
-offset_bottom = 290.0
+offset_right = 220.0
+offset_bottom = 300.0
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxFlat_bd8na")
 

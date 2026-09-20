@@ -16,6 +16,10 @@ extends Node
 # Select team for new game
 @warning_ignore("unused_signal") signal sigTeamSelected(team_info :TeamRes)
 
+# Select new_crew
+@warning_ignore("unused_signal") signal sigCrewSelected(id :int)
+
+
 # Player
 @warning_ignore("unused_signal") signal sigCurrentMoneyChanged(amount :int)
 @warning_ignore("unused_signal") signal sigAddMoney(amount :int)

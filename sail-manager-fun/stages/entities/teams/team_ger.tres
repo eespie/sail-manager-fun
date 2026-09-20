@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource("2_n5j64")
 team_name = "GER"
-startAmountMoney = 10000000
-chooserImage = ExtResource("1_ovamv")
+team_full_name = "Gernany"
+start_amount_money = 12000000
+chooser_image = ExtResource("1_ovamv")
 metadata/_custom_type_script = "uid://dfxneiqxstvvj"

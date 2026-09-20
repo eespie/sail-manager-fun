@@ -1,6 +1,6 @@
 extends Node
 
-var teamInfo :TeamRes
+var team_info :TeamRes
 var money : int
 
 
@@ -12,9 +12,9 @@ func _bind_events() -> void:
 	EventBus.sigAddMoney.connect(_on_add_money)
 
 
-func set_team_info(team_info :TeamRes) -> void:
-	teamInfo = team_info
-	set_money(team_info.startAmountMoney)
+func set_team_info(_team_info :TeamRes) -> void:
+	team_info = _team_info
+	set_money(team_info.start_amount_money)
 
 
 func  set_money(amount :int) -> void:

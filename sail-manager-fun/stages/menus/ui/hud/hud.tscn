@@ -32,6 +32,15 @@ size_flags_vertical = 0
 text = "Title"
 uppercase = true
 
+[node name="Team" type="Label" parent="MarginContainer" unique_id=1325137297]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
 [node name="Amount" type="Label" parent="MarginContainer" unique_id=1674416671]
 unique_name_in_owner = true
 layout_mode = 2

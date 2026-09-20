@@ -12,9 +12,10 @@ var mousePressed: bool = false
 var mouseEntered: bool = false
 
 func _ready() -> void:
-	boat.texture = teamInfo.chooserImage
+	boat.texture = teamInfo.chooser_image
 	team_name.text = teamInfo.team_name
-	amount.text = str("$ ", teamInfo.startAmountMoney)
+	amount.text = str("$ ", teamInfo.start_amount_money)
+	offset_transform_enabled = true
 
 
 func _on_mouse_entered() -> void:

@@ -8,11 +8,14 @@ extends Control
 @onready var labelTitle: Label = %Title
 @onready var btnContinue: Button = %Continue
 @onready var amount: Label = %Amount
+@onready var team: Label = %Team
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	_bind_events()
 	labelTitle.text = pageTitle
+	if Player.team_info:
+		team.text = str("Team ", Player.team_info.team_full_name)
 	_on_money_changed(Player.money)
 	if showMoney:
 		amount.show()
@@ -43,7 +46,7 @@ func _on_money_changed(_amount :int) -> void:
 		str_amount = "0"
 	while _amount > 0:
 		var part = _amount % 1000
-		_amount = (_amount - part) / 1000
+		_amount = floori((_amount - part) / 1000.0)
 		var str_part
 		if _amount > 0:
 			str_part = ",%03d" % part
