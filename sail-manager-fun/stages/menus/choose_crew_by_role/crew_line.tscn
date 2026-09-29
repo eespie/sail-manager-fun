@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://ce66bs5qwknwh"]
+
+[ext_resource type="Script" uid="uid://01uawjutivjb" path="res://stages/menus/choose_crew_by_role/crew_line.gd" id="1_2e2t6"]
+[ext_resource type="Theme" uid="uid://d2rai3sjqo8nm" path="res://resources/theme/game_theme.tres" id="2_i1yta"]
+[ext_resource type="Texture2D" uid="uid://dysot830ivr00" path="res://stages/menus/choose_crew_by_role/images/level-1.png" id="2_onwlh"]
+[ext_resource type="Texture2D" uid="uid://bglvkwhpk4q3" path="res://stages/menus/choose_crew_by_role/images/level-2.png" id="3_d5klm"]
+[ext_resource type="Texture2D" uid="uid://gq8okseiuekr" path="res://stages/menus/choose_crew_by_role/images/level-4.png" id="4_i1yta"]
+[ext_resource type="FontFile" uid="uid://d0gfb4vpb2l2g" path="res://assets/fonts/B612/B612Mono-Regular.ttf" id="5_d5klm"]
+
+[node name="Crew Line" type="HBoxContainer" unique_id=703028850]
+custom_minimum_size = Vector2(1592, 0)
+custom_maximum_size = Vector2(1592, -1)
+script = ExtResource("1_2e2t6")
+
+[node name="NameLabel" type="Label" parent="." unique_id=836696607]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(368, 0)
+custom_maximum_size = Vector2(368, -1)
+layout_mode = 2
+theme = ExtResource("2_i1yta")
+theme_type_variation = &"TableValue"
+text = "Name"
+
+[node name="NationLabel" type="Label" parent="." unique_id=1783697555]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(180, 0)
+custom_maximum_size = Vector2(180, -1)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_i1yta")
+theme_type_variation = &"TableValue"
+text = "Nation"
+
+[node name="CareerLabel" type="Label" parent="." unique_id=1628561639]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(180, 0)
+custom_maximum_size = Vector2(180, -1)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_i1yta")
+theme_type_variation = &"TableValue"
+text = "Career"
+
+[node name="ExpLabel" type="TextureRect" parent="." unique_id=1238225356]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 0)
+custom_maximum_size = Vector2(200, -1)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_onwlh")
+
+[node name="SkillsLabel" type="TextureRect" parent="." unique_id=8575872]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 0)
+custom_maximum_size = Vector2(200, -1)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("3_d5klm")
+
+[node name="EnduranceLabel" type="TextureRect" parent="." unique_id=364316866]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 0)
+custom_maximum_size = Vector2(200, -1)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("4_i1yta")
+
+[node name="SalaryLabel" type="Label" parent="." unique_id=997949678]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(240, 0)
+custom_maximum_size = Vector2(240, -1)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_d5klm")
+theme_override_font_sizes/font_size = 24
+text = "Annual Salary"
+horizontal_alignment = 2

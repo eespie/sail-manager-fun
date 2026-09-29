@@ -23,8 +23,10 @@ Sound="*uid://c1byy5cfpier"
 Global="*uid://drrjbm7yend5v"
 GameInfo="*uid://cti4ef4vyrg0l"
 Scene="*uid://jrpv0r44nb3c"
-Player="*uid://dv4k5huslb032"
 Constant="*uid://wbsmi0gohopt"
+Teams="*uid://dnlg2cid1cjn3"
+Player="*uid://dv4k5huslb032"
+CrewManagement="*uid://f8hnoyxwlkt4"
 
 [display]
 
@@ -37,7 +39,7 @@ window/stretch/aspect="expand"
 
 fonts/dynamic_fonts/use_oversampling=false
 theme/custom="uid://d2rai3sjqo8nm"
-theme/custom_font="uid://cfhioojf1humw"
+theme/custom_font="uid://ddoujvi5ctqms"
 
 [physics]
 

@@ -89,15 +89,12 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 300)
 layout_mode = 2
 allow_search = false
-item_count = 8
+item_count = 5
 item_0/text = "Saved 13/09/2026 11:05"
 item_1/text = "Saved 13/09/2026 10:05"
 item_2/text = "Saved 12/09/2026 10:05"
 item_3/text = "Saved 11/09/2026 10:05"
 item_4/text = "Saved 10/09/2026 10:05"
-item_5/text = "Saved 09/09/2026 10:05"
-item_6/text = "Saved 08/09/2026 10:05"
-item_7/text = "Saved 07/09/2026 10:05"
 
 [connection signal="pressed" from="Panel/VBoxContainer/New Game" to="." method="_on_new_game_pressed"]
 [connection signal="item_activated" from="Panel/VBoxContainer/Saved Games" to="." method="_on_saved_games_item_activated"]

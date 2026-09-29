@@ -1,6 +1,6 @@
 [gd_resource type="Theme" format=3 uid="uid://d2rai3sjqo8nm"]
 
-[ext_resource type="FontFile" uid="uid://cfhioojf1humw" path="res://assets/fonts/pablo-impallari_dosis/Dosis-SemiBold.ttf" id="1_gwmee"]
+[ext_resource type="FontFile" uid="uid://dmx5sp580rkvp" path="res://assets/fonts/B612/B612-Regular.ttf" id="1_gwmee"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gwmee"]
 bg_color = Color(0.34780002, 0.57004666, 0.74, 1)
@@ -134,19 +134,50 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cguq3"]
+bg_color = Color(0.6233569, 0.7661482, 0.8825151, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cukaj"]
+bg_color = Color(0.55, 0.55, 0.55, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
 [resource]
-default_font = ExtResource("1_gwmee")
-default_font_size = 30
+default_font_size = 28
 Button/styles/hover = SubResource("StyleBoxFlat_gwmee")
 Button/styles/normal = SubResource("StyleBoxFlat_6nmne")
 Button/styles/pressed = SubResource("StyleBoxFlat_h2jer")
+FlatButton/font_sizes/font_size = 28
 FlatButton/styles/hover = SubResource("StyleBoxFlat_6kjy7")
 FlatButton/styles/normal = SubResource("StyleBoxFlat_7y1cn")
 FlatButton/styles/pressed = SubResource("StyleBoxFlat_nr4fk")
 Label/colors/font_color = Color(0, 0, 0, 1)
 Label/colors/font_outline_color = Color(1, 1, 1, 1)
-Label/font_sizes/font_size = 30
+Label/font_sizes/font_size = 28
 MenuButton/styles/hover = SubResource("StyleBoxFlat_drdjc")
 MenuButton/styles/normal = SubResource("StyleBoxFlat_i87uh")
 MenuButton/styles/pressed = SubResource("StyleBoxFlat_oamwd")
 Panel/styles/panel = SubResource("StyleBoxFlat_ccjeu")
+SelectionSelected/base_type = &"Panel"
+SelectionSelected/styles/panel = SubResource("StyleBoxFlat_cguq3")
+SelectionUnselected/base_type = &"Panel"
+SelectionUnselected/styles/panel = SubResource("StyleBoxFlat_cukaj")
+TableValue/base_type = &"Label"
+TableValue/font_sizes/font_size = 26
+TableValue/fonts/font = ExtResource("1_gwmee")

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="TeamRes" format=3 uid="uid://ov25jgde2phh"]
+
+[ext_resource type="Texture2D" uid="uid://b0c2sqtu7jhkf" path="res://resources/team/images/Teams AUS.png" id="1_ses38"]
+[ext_resource type="Script" uid="uid://dfxneiqxstvvj" path="res://resources/team/team_resource.gd" id="2_ses38"]
+
+[resource]
+script = ExtResource("2_ses38")
+team_name = "AUS"
+team_full_name = "Australia"
+start_amount_money = 34000000
+chooser_image = ExtResource("1_ses38")
+metadata/_custom_type_script = "uid://dfxneiqxstvvj"

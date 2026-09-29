@@ -14,7 +14,7 @@ extends Node
 @warning_ignore("unused_signal") signal sigMouseButtonReleased(pos :Vector2)
 
 # Select team for new game
-@warning_ignore("unused_signal") signal sigTeamSelected(team_info :TeamRes)
+@warning_ignore("unused_signal") signal sigTeamSelected(_team_entity :TeamEntity)
 
 # Select new_crew
 @warning_ignore("unused_signal") signal sigCrewSelected(crew_id :int, person)
@@ -22,5 +22,5 @@ extends Node
 
 
 # Player
-@warning_ignore("unused_signal") signal sigCurrentMoneyChanged(amount :int)
-@warning_ignore("unused_signal") signal sigAddMoney(amount :int)
+@warning_ignore("unused_signal") signal sigCurrentMoneyChanged(team_id : int, amount :int)
+@warning_ignore("unused_signal") signal sigAddMoney(team_id : int, amount :int)

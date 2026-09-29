@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="TeamRes" format=3 uid="uid://drhnd7etx6n72"]
+
+[ext_resource type="Texture2D" uid="uid://bn0jpa74n4a1b" path="res://resources/team/images/Teams GER.png" id="1_ovamv"]
+[ext_resource type="Script" uid="uid://dfxneiqxstvvj" path="res://resources/team/team_resource.gd" id="2_n5j64"]
+
+[resource]
+script = ExtResource("2_n5j64")
+team_name = "GER"
+team_full_name = "Gernany"
+start_amount_money = 12000000
+chooser_image = ExtResource("1_ovamv")
+metadata/_custom_type_script = "uid://dfxneiqxstvvj"

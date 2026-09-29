@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://c6psfmyaba2lk"]
+
+[ext_resource type="Script" uid="uid://buw58hftdiyqo" path="res://stages/menus/choose_crew_by_role/choose_crew_by_role.gd" id="1_pajwp"]
+[ext_resource type="PackedScene" uid="uid://0gaisw7n8bte" path="res://stages/menus/ui/background/background.tscn" id="2_fkhv3"]
+[ext_resource type="PackedScene" uid="uid://bqafa66no0ivb" path="res://stages/menus/ui/hud/hud.tscn" id="3_24cpm"]
+[ext_resource type="PackedScene" uid="uid://b0qdfaaie3l5c" path="res://stages/menus/choose_crew_by_role/crew_line_title.tscn" id="4_24cpm"]
+
+[node name="ChooseCrewByRole" type="Control" unique_id=213223845]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pajwp")
+
+[node name="Background" parent="." unique_id=1805338972 instance=ExtResource("2_fkhv3")]
+layout_mode = 1
+
+[node name="HUDDasboard" parent="." unique_id=112578795 instance=ExtResource("3_24cpm")]
+unique_name_in_owner = true
+layout_mode = 1
+pageTitle = "Recruit Crew"
+nextScene = "res://stages/menus/choose_crew/choose_crew.tscn"
+
+[node name="Panel" type="Panel" parent="." unique_id=503609126]
+custom_minimum_size = Vector2(1650, 780)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Table" type="VBoxContainer" parent="Panel" unique_id=1262529322]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -800.0
+offset_top = 14.0
+offset_right = 800.0
+offset_bottom = 757.0
+grow_horizontal = 2
+theme_override_constants/separation = 8
+
+[node name="Titlle" parent="Panel/Table" unique_id=1003989838 instance=ExtResource("4_24cpm")]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel/Table" unique_id=1780976809]
+custom_minimum_size = Vector2(1600, 700)
+custom_maximum_size = Vector2(1600, -1)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/Table/ScrollContainer" unique_id=2121684068]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3

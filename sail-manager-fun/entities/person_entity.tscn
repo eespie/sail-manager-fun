@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cvxg873p3ouy1"]
+
+[ext_resource type="Script" uid="uid://bcop53burw0u" path="res://entities/person_entity.gd" id="1_jwliv"]
+
+[node name="PersonEntity" type="Node" unique_id=419849714]
+script = ExtResource("1_jwliv")

@@ -1,17 +1,13 @@
-class_name SaveFile
 extends Node
 
-@export var save_file = "user://file.save"
+#var save_file = "user://file.save"
 
-func _ready():
-	pass
-
-func save_game(savedict) -> void:
+func save_data(savedict : Dictionary, save_file : String) -> void:
 	var savegame = FileAccess.open(save_file, FileAccess.WRITE)
 	savegame.store_line(JSON.stringify(savedict))
 	savegame.close()
 
-func load_game() -> Dictionary:
+func load_data(save_file : String) -> Variant:
 	if not FileAccess.file_exists(save_file):
 		return {}
 	var savedict = {}

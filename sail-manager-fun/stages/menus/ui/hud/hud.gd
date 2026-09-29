@@ -14,9 +14,9 @@ extends Control
 func _ready() -> void:
 	_bind_events()
 	labelTitle.text = pageTitle
-	if Player.team_info:
-		team.text = str("Team ", Player.team_info.team_full_name)
-	_on_money_changed(Player.money)
+	if Player.team:
+		team.text = str("Team ", Player.team.team_res.team_full_name)
+		_on_money_changed(Player.team.uuid, Player.team.current_money)
 	if showMoney:
 		amount.show()
 	else:
@@ -26,7 +26,7 @@ func _ready() -> void:
 
 func _bind_events() -> void:
 	EventBus.sigCurrentMoneyChanged.connect(_on_money_changed)
-	
+
 
 func show_continue_button(_show : bool) -> void:
 	if _show:
@@ -40,17 +40,12 @@ func _on_continue_pressed() -> void:
 	EventBus.sigChangeScene.emit(nextScene)
 
 
-func _on_money_changed(_amount :int) -> void:
-	var str_amount = ""
-	if _amount == 0:
-		str_amount = "0"
-	while _amount > 0:
-		var part = _amount % 1000
-		_amount = floori((_amount - part) / 1000.0)
-		var str_part
-		if _amount > 0:
-			str_part = ",%03d" % part
-		else:
-			str_part = "%d" % part
-		str_amount = str_part + str_amount
-	amount.text = str("$ ", str_amount)
+func _on_money_changed(_uuid : int, _amount :int) -> void:
+	if not Player.team or Player.team.uuid != _uuid:
+		return
+	amount.text = Utils.format_money(_amount)
+
+
+func set_title(_title : String) -> void:
+	pageTitle = _title
+	labelTitle.text = pageTitle

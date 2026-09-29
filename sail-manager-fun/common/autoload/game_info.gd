@@ -3,7 +3,8 @@ extends Node
 var game_info = {}
 
 func _ready():
-	game_info = File.load_game()
+#	game_info = File.load_game()
+	pass
 	
 func get_value(game: String, value_name: String, default):
 	var info = game_info.get(game)
