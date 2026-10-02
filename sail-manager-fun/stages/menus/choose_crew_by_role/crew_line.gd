@@ -1,4 +1,4 @@
-extends HBoxContainer
+extends ColorRect
 
 @onready var name_label: Label = %NameLabel
 @onready var nation_label: Label = %NationLabel
@@ -8,6 +8,13 @@ extends HBoxContainer
 @onready var endurance_label: TextureRect = %EnduranceLabel
 @onready var salary_label: Label = %SalaryLabel
 
+var person : Dictionary
+var crew_id : int
+var tween: Tween
+var mousePressed: bool = false
+var mouseEntered: bool = false
+var is_selected: bool = false
+
 const LEVELS : Array = [
 	preload("uid://dysot830ivr00"),
 	preload("uid://bglvkwhpk4q3"),
@@ -16,7 +23,9 @@ const LEVELS : Array = [
 	preload("uid://bde3f6unpmu2b")
 ]
 
-func init(person : Dictionary) -> void:
+func init(_crew_id : int, _person : Dictionary) -> void:
+	person = _person
+	crew_id = _crew_id
 	name_label.text = person['NAME']
 	nation_label.text = person['NATIONALITY']
 	career_label.text = _format_career(person['REMAINING_YEARS'])
@@ -40,3 +49,24 @@ func _format_career(remaining_years: int) -> String:
 	if remaining_years < 10:
 		return "Mid"
 	return "End"
+
+
+func _on_mouse_entered() -> void:
+	self_modulate = Color("8f9aff")
+	mouseEntered = true
+	mousePressed = false
+
+
+func _on_mouse_exited() -> void:
+	self_modulate = Color("ffffffff")
+	mouseEntered = false
+
+
+func _on_gui_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT and mouseEntered:
+			if mousePressed and not event.pressed:
+				is_selected = true
+				#panel.theme_type_variation = "SelectionSelected"
+				#EventBus.sigTeamSelected.emit(team_entity)
+			mousePressed = event.pressed

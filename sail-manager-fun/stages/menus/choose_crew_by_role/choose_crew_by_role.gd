@@ -23,4 +23,4 @@ func init_table(_crew_id, crew_role) -> void:
 	for person in crew_by_role:
 		var line = CREW_LINE.instantiate()
 		v_box_container.add_child(line)
-		line.init(person)
+		line.init(crew_id, person)
