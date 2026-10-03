@@ -8,15 +8,24 @@
 [ext_resource type="FontFile" uid="uid://d0gfb4vpb2l2g" path="res://assets/fonts/B612/B612Mono-Regular.ttf" id="5_d5klm"]
 
 [node name="Crew Line" type="ColorRect" unique_id=2048128732]
-custom_minimum_size = Vector2(1592, 39)
+custom_minimum_size = Vector2(1600, 39)
 color = Color(0.5370113, 0.5370113, 0.5370113, 1)
 script = ExtResource("1_2e2t6")
 
 [node name="Crew Line2" type="HBoxContainer" parent="." unique_id=703028850]
 self_modulate = Color(0.56, 0.6040001, 1, 1)
-custom_minimum_size = Vector2(1592, 0)
+custom_minimum_size = Vector2(1600, 0)
 custom_maximum_size = Vector2(1592, -1)
-layout_mode = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Crew Line2" unique_id=87432678]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
 
 [node name="NameLabel" type="Label" parent="Crew Line2" unique_id=836696607]
 unique_name_in_owner = true
