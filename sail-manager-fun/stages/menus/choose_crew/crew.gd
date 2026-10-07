@@ -22,11 +22,32 @@ func _ready() -> void:
 
 
 func _bind_events() -> void:
-	EventBus.sigCrewSelected.connect(_on_crew_selected)
+	EventBus.sigCrewHired.connect(_on_crew_hired)
 
 
-func _on_crew_selected(_crew_id :int, _person) -> void:
-	crew.self_modulate = Color.CORNFLOWER_BLUE
+func init_from_person_entity(_person_entity : PersonEntity) -> void:
+	crew_name.text = _person_entity.person_name
+	crew_nationality.text = _person_entity.person_nationality
+	crew_salary.text = Utils.format_money(_person_entity.person_annual_salary)
+	crew_type_label.offset_transform_rotation = 0
+	crew_name.show()
+	crew_nationality.show()
+	crew_salary.show()
+	crew.self_modulate = Color.AQUA
+
+
+func _on_crew_hired(_crew_id :int, _person : Dictionary) -> void:
+	if crew_id != _crew_id:
+		return
+	person = _person
+	crew_name.text = person['NAME']
+	crew_nationality.text = person['NATIONALITY']
+	crew_salary.text = Utils.format_money(floori(person['ANNUAL_SALARY']))
+	crew_type_label.offset_transform_rotation = 0
+	crew_name.show()
+	crew_nationality.show()
+	crew_salary.show()
+	crew.self_modulate = Color.AQUA
 
 
 func _on_mouse_entered() -> void:

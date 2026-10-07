@@ -23,6 +23,10 @@ const LEVELS : Array = [
 	preload("uid://bde3f6unpmu2b")
 ]
 
+
+func _ready() -> void:
+	EventBus.sigCrewHired.connect(_on_crew_hired)
+
 func init(_crew_id : int, _person : Dictionary) -> void:
 	person = _person
 	crew_id = _crew_id
@@ -52,13 +56,15 @@ func _format_career(remaining_years: int) -> String:
 
 
 func _on_mouse_entered() -> void:
-	self_modulate = Color("8f9aff")
+	if not is_selected:
+		self_modulate = Color("8f9aff")
 	mouseEntered = true
 	mousePressed = false
 
 
 func _on_mouse_exited() -> void:
-	self_modulate = Color("ffffffff")
+	if not is_selected:
+		self_modulate = Color("898989")
 	mouseEntered = false
 
 
@@ -67,6 +73,12 @@ func _on_gui_input(event: InputEvent) -> void:
 		if event.button_index == MOUSE_BUTTON_LEFT and mouseEntered:
 			if mousePressed and not event.pressed:
 				is_selected = true
-				#panel.theme_type_variation = "SelectionSelected"
-				#EventBus.sigTeamSelected.emit(team_entity)
+				self_modulate = Color("ffffffff")
+				EventBus.sigCrewLineSelected.emit(person)
 			mousePressed = event.pressed
+
+
+func _on_crew_hired(_crew_id, _person) -> void:
+	if _person['NAME'] != person['NAME']:
+		is_selected = false
+		self_modulate = Color("898989")

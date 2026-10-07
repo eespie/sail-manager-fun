@@ -14,9 +14,10 @@ extends Control
 func _ready() -> void:
 	_bind_events()
 	labelTitle.text = pageTitle
-	if Player.team:
-		team.text = str("Team ", Player.team.team_res.team_full_name)
-		_on_money_changed(Player.team.uuid, Player.team.current_money)
+	if Player.team_id:
+		var team_entity : TeamEntity = Teams.teams[Player.team_id]
+		team.text = str("Team ", team_entity.team_res.team_full_name)
+		_on_money_changed(Player.team_id, team_entity.current_money)
 	if showMoney:
 		amount.show()
 	else:
@@ -37,11 +38,12 @@ func show_continue_button(_show : bool) -> void:
 
 # continue to next screen
 func _on_continue_pressed() -> void:
+	EventBus.sigPrepareContinue.emit()
 	EventBus.sigChangeScene.emit(nextScene)
 
 
-func _on_money_changed(_uuid : int, _amount :int) -> void:
-	if not Player.team or Player.team.uuid != _uuid:
+func _on_money_changed(_team_id : int, _amount :int) -> void:
+	if Player.team_id != _team_id:
 		return
 	amount.text = Utils.format_money(_amount)
 

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d2gt6e1m85je8" path="res://stages/menus/choose_crew/crew.gd" id="1_y5hnj"]
 
-[node name="Crew" type="Control" unique_id=1773087098]
+[node name="CrewSelector" type="Control" unique_id=1773087098]
 custom_minimum_size = Vector2(280, 300)
 layout_mode = 3
 anchors_preset = 0
@@ -41,10 +41,13 @@ alignment = 1
 [node name="Crew Name" type="Label" parent="Crew/MarginContainer/VBoxContainer" unique_id=1527579976]
 unique_name_in_owner = true
 visible = false
+custom_minimum_size = Vector2(260, 0)
 layout_mode = 2
 size_flags_vertical = 7
+text = "Ainhoa Etxeberria Goikoetxea"
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 2
 
 [node name="Crew Nationality" type="Label" parent="Crew/MarginContainer/VBoxContainer" unique_id=611173330]
 unique_name_in_owner = true

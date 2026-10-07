@@ -1,32 +1,29 @@
-extends Node
+extends Object
 class_name TeamEntity
 
-@export var team_res : TeamRes
-@export var crew : Array[PersonEntity]
-
-var uuid : int
+var team_res : TeamRes
+var crew : Dictionary[int, PersonEntity]
+var team_id : int
 var current_money : int
-
-
-func _ready() -> void:
-	_bind_events()
-
-
-func _bind_events() -> void:
-	EventBus.sigAddMoney.connect(_on_add_money)
-
-
-func _on_add_money(_id : int, _amount :int) -> void:
-	if _id == uuid:
-		var money = current_money + _amount
-		set_money(money)
-
-
-func set_money(_amount : int) -> void:
-	current_money = _amount
-	EventBus.sigCurrentMoneyChanged.emit(uuid, current_money)
 
 
 func set_team_resource(_team_res :TeamRes) -> void:
 	team_res = _team_res
+	team_id = team_res.team_id
 	set_money(team_res.start_amount_money)
+
+
+func crew_hired(_crew_id :int, _person : Dictionary) -> void:
+	if crew.has(_crew_id):
+		add_money(crew[_crew_id].person_annual_salary)
+	crew[_crew_id] = PersonEntity.create_from_person(_person)
+	add_money(-crew[_crew_id].person_annual_salary)
+
+
+func add_money(_amount : int) -> void:
+	set_money(current_money + _amount)
+
+
+func set_money(_amount : int) -> void:
+	current_money = _amount
+	EventBus.sigCurrentMoneyChanged.emit(team_id, current_money)

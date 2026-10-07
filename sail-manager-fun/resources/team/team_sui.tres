@@ -5,6 +5,7 @@
 
 [resource]
 script = ExtResource("2_ooflx")
+team_id = 8
 team_name = "SUI"
 team_full_name = "Switzerland"
 start_amount_money = 14000000

@@ -5,6 +5,7 @@ extends Control
 
 var crew_id : int
 var crew_role : String
+var selected_person : Dictionary
 
 const CREW_LINE = preload("uid://ce66bs5qwknwh")
 
@@ -14,13 +15,29 @@ func _ready() -> void:
 	crew_role = scene_data["crew_role"]
 	hud_dasboard.set_title(str("Recruit ", crew_role))
 	init_table(crew_id, crew_role)
+	hud_dasboard.show_continue_button(false)
+	_bind_events()
 
 
-func init_table(_crew_id, crew_role) -> void:
-	var crew_by_role = CrewManagement.crew_by_role[crew_role]
+func _bind_events() -> void:
+	EventBus.sigCrewLineSelected.connect(_on_crew_line_selected)
+	EventBus.sigPrepareContinue.connect(_on_prepare_continue)
+
+
+func init_table(_crew_id, _crew_role) -> void:
+	var crew_by_role = CrewManagement.crew_by_role[_crew_role]
 	crew_by_role.sort_custom(func(a, b): return a['SKILLS'] > b['SKILLS'])
 	Utils.clear_all_children(v_box_container)
 	for person in crew_by_role:
 		var line = CREW_LINE.instantiate()
 		v_box_container.add_child(line)
 		line.init(crew_id, person)
+
+
+func _on_crew_line_selected(_person : Dictionary) -> void:
+	selected_person = _person
+	hud_dasboard.show_continue_button(true)
+
+
+func _on_prepare_continue() -> void:
+	EventBus.sigCrewHired.emit(Player.team_id, crew_id, selected_person)

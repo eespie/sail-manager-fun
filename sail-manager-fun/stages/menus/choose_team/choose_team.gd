@@ -8,10 +8,10 @@ const TEAM_CHOOSER = preload("uid://b3nxt06yyw46f")
 func _ready() -> void:
 	_bind_events()
 	Teams.init_teams()
-	for team in Constant.TEAM_NAME.values():
+	for team in Teams.teams.keys():
 		var team_node = TEAM_CHOOSER.instantiate()
 		grid_container.add_child(team_node)
-		team_node.set_team(Teams.all_teams[team])
+		team_node.set_team(Teams.teams[team])
 
 
 func _bind_events() -> void:

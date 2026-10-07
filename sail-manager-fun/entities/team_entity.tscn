@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://cpjtis7jooctw"]
-
-[ext_resource type="Script" uid="uid://42dul5em2hpg" path="res://entities/team_entity.gd" id="1_3t6wu"]
-
-[node name="TeamEntity" type="Node" unique_id=1997613553]
-script = ExtResource("1_3t6wu")

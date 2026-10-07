@@ -8,8 +8,8 @@
 [ext_resource type="FontFile" uid="uid://d0gfb4vpb2l2g" path="res://assets/fonts/B612/B612Mono-Regular.ttf" id="5_d5klm"]
 
 [node name="Crew Line" type="ColorRect" unique_id=2048128732]
+self_modulate = Color(0.5372549, 0.5372549, 0.5372549, 1)
 custom_minimum_size = Vector2(1600, 39)
-color = Color(0.5370113, 0.5370113, 0.5370113, 1)
 script = ExtResource("1_2e2t6")
 
 [node name="Crew Line2" type="HBoxContainer" parent="." unique_id=703028850]
