@@ -25,7 +25,7 @@ const LEVELS : Array = [
 
 
 func _ready() -> void:
-	EventBus.sigCrewHired.connect(_on_crew_hired)
+	EventBus.sigCrewLineSelected.connect(_on_crew_selected)
 
 func init(_crew_id : int, _person : Dictionary) -> void:
 	person = _person
@@ -78,7 +78,7 @@ func _on_gui_input(event: InputEvent) -> void:
 			mousePressed = event.pressed
 
 
-func _on_crew_hired(_crew_id, _person) -> void:
+func _on_crew_selected(_person) -> void:
 	if _person['NAME'] != person['NAME']:
 		is_selected = false
 		self_modulate = Color("898989")

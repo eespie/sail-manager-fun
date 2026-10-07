@@ -6,8 +6,25 @@ const crew_file = "user://crew-data.json"
 var crew_by_role : Dictionary
 var role_resources : Dictionary
 
+
 func _ready() -> void:
 	load_crew()
+	_bind_events()
+
+
+func _bind_events() -> void:
+	EventBus.sigCrewHired.connect(_on_crew_hired)
+
+
+func _on_crew_hired(_team_id : int, _crew_id :int, _person : Dictionary) -> void:
+	var role = _person['ROLE'].capitalize()
+	for i in range(crew_by_role[role].size()):
+		var person = crew_by_role[role][i]
+		if person['NAME'] == _person['NAME']:
+			person['TEAM'] = _team_id
+			crew_by_role[role][i] = person
+			break
+
 
 func load_initial_crew() -> void :
 	for role in Constant.CREW_ROLE.keys():
@@ -23,8 +40,10 @@ func load_initial_crew() -> void :
 		person['SKILLS'] = randi() % 50 + 50
 		person['ENDURANCE'] = randi() % 50 + 50
 		person['ANNUAL_SALARY'] = floori((randi() % (person_res.annual_salary_max - person_res.annual_salary_min) + person_res.annual_salary_min) / 1000.0) * 1000
+		person['TEAM'] = 0
 		crew_by_role[role].append(person)
 	save_crew()
+
 
 func load_crew() -> void :
 	crew_by_role = File.load_data(crew_file)

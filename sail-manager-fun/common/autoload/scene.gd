@@ -3,7 +3,6 @@ extends Node
 var current_scene: Node
 var scene_data: Dictionary = {}
 
-
 func _ready():
 	var root = get_tree().get_root()
 	current_scene = root.get_child( root.get_child_count() -1 )
@@ -15,6 +14,7 @@ func _bind_events() -> void:
 
 
 func _on_change_scene(path: String) -> void:
+	print(str("Scene changed to: [", path, "]"))
 	var s = load(path)
 	if s == null:
 		return
@@ -23,13 +23,14 @@ func _on_change_scene(path: String) -> void:
 	current_scene = s.instantiate()
 	get_tree().get_root().add_child(current_scene)
 	get_tree().set_current_scene( current_scene )
-	reset_scene_data() 
+	reset_scene_data()
 
 
 func cleanup_group(group_name):
 	var nodes = get_tree().get_nodes_in_group(group_name)
 	for node in nodes:
 		node.queue_free()
+
 
 func set_scene_data(_scene_data : Dictionary) -> void :
 	scene_data = _scene_data

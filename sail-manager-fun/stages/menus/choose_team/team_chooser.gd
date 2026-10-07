@@ -26,7 +26,11 @@ func set_team(_team_entity : TeamEntity) -> void:
 	var team_res = team_entity.team_res
 	boat.texture = team_res.chooser_image
 	team_name.text = team_res.team_name
-	amount.text = str("$ ", team_res.start_amount_money)	
+	amount.text = Utils.format_money(team_res.start_amount_money)
+	if Player.team_id == team_entity.team_id:
+		is_selected = true
+		panel.theme_type_variation = "SelectionSelected"
+		EventBus.sigTeamSelected.emit(team_entity)
 
 
 func _on_mouse_entered() -> void:
@@ -62,7 +66,7 @@ func _on_gui_input(event: InputEvent) -> void:
 
 
 func _on_other_team_selected(_team : TeamEntity) -> void :
-	if _team.team_res.team_full_name == team_entity.team_res.team_full_name:
+	if _team.team_id == team_entity.team_id:
 		return
 	# Unselect team
 	if is_selected:

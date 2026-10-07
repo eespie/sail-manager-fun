@@ -62,4 +62,15 @@ mouse_filter = 1
 theme_override_font_sizes/font_size = 28
 text = "continue"
 
+[node name="Cancel" type="Button" parent="MarginContainer" unique_id=294008521]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+mouse_filter = 1
+theme_override_font_sizes/font_size = 28
+text = "cancel"
+
 [connection signal="pressed" from="MarginContainer/Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="MarginContainer/Cancel" to="." method="_on_cancel_pressed"]

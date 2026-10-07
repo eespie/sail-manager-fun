@@ -2,10 +2,13 @@ extends Node
 
 # System
 @warning_ignore("unused_signal") signal sigChangeScene(scene :String)
+@warning_ignore("unused_signal") signal sigBackScene()
 @warning_ignore("unused_signal") signal sigPause(is_paused : bool)
 
 # HUD
 @warning_ignore("unused_signal") signal sigPrepareContinue()
+@warning_ignore("unused_signal") signal sigPrepareCancel()
+
 
 # State machine
 @warning_ignore("unused_signal") signal sigEnterState(name : String)

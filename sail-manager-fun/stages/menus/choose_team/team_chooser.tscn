@@ -53,7 +53,7 @@ stretch_mode = 5
 [node name="Amount" type="Label" parent="Panel/VBoxContainer" unique_id=1686312813]
 unique_name_in_owner = true
 layout_mode = 2
-text = "$ 20.000.000"
+text = "$ 250.000.000"
 horizontal_alignment = 1
 vertical_alignment = 1
 

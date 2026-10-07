@@ -19,7 +19,7 @@ func _bind_events() -> void:
 
 
 func _on_team_selected(_team_entity :TeamEntity) -> void:
-	print(str("Team selected: ", _team_entity.team_res.team_name))
-	Player.set_team_entity(_team_entity)
 	hud_dasboard.show_continue_button(true)
+	hud_dasboard.team.text = str("Team ", _team_entity.team_res.team_full_name)
+	hud_dasboard._on_money_changed(Player.team_id, _team_entity.current_money)
 	

@@ -44,7 +44,6 @@ visible = false
 custom_minimum_size = Vector2(260, 0)
 layout_mode = 2
 size_flags_vertical = 7
-text = "Ainhoa Etxeberria Goikoetxea"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2

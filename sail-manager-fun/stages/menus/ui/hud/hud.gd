@@ -4,9 +4,11 @@ extends Control
 @export var showMoney : bool = true
 @export var showContinueButton : bool = true
 @export var nextScene : String
+@export var prevScene : String
 
 @onready var labelTitle: Label = %Title
 @onready var btnContinue: Button = %Continue
+@onready var btnCancel: Button = %Cancel
 @onready var amount: Label = %Amount
 @onready var team: Label = %Team
 
@@ -23,6 +25,10 @@ func _ready() -> void:
 	else:
 		amount.hide()
 	show_continue_button(showContinueButton)
+	if prevScene.length() > 0:
+		show_cancel_button(true)
+	else:
+		show_cancel_button(false)
 
 
 func _bind_events() -> void:
@@ -36,11 +42,22 @@ func show_continue_button(_show : bool) -> void:
 		btnContinue.hide()
 
 
+func show_cancel_button(_show : bool) -> void:
+	if _show:
+		btnCancel.show()
+	else:
+		btnCancel.hide()
+
+
 # continue to next screen
 func _on_continue_pressed() -> void:
 	EventBus.sigPrepareContinue.emit()
 	EventBus.sigChangeScene.emit(nextScene)
 
+
+func _on_cancel_pressed() -> void:
+	EventBus.sigPrepareCancel.emit()
+	EventBus.sigChangeScene.emit(prevScene)
 
 func _on_money_changed(_team_id : int, _amount :int) -> void:
 	if Player.team_id != _team_id:

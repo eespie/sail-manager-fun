@@ -26,9 +26,12 @@ func _bind_events() -> void:
 
 func init_table(_crew_id, _crew_role) -> void:
 	var crew_by_role = CrewManagement.crew_by_role[_crew_role]
+	var max_salary = Teams.teams[Player.team_id].current_money
 	crew_by_role.sort_custom(func(a, b): return a['SKILLS'] > b['SKILLS'])
 	Utils.clear_all_children(v_box_container)
 	for person in crew_by_role:
+		if int(person['TEAM']) != 0 or person['ANNUAL_SALARY'] > max_salary:
+			continue
 		var line = CREW_LINE.instantiate()
 		v_box_container.add_child(line)
 		line.init(crew_id, person)

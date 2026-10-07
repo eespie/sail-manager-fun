@@ -26,9 +26,11 @@ script = ExtResource("1_n6byw")
 layout_mode = 1
 
 [node name="HUDDasboard" parent="." unique_id=112578795 instance=ExtResource("3_ynvrv")]
+unique_name_in_owner = true
 layout_mode = 1
 pageTitle = "Select Crew"
 nextScene = "res://stages/menus/sponsors/sponsors.tscn"
+prevScene = "res://stages/menus/choose_team/choose_team.tscn"
 
 [node name="Panel" type="Panel" parent="." unique_id=1122229459]
 layout_mode = 1
@@ -46,6 +48,7 @@ grow_vertical = 2
 mouse_filter = 1
 
 [node name="GridContainer" type="GridContainer" parent="Panel" unique_id=679964898]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
