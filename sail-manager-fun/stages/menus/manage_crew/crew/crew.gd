@@ -8,6 +8,7 @@ extends Control
 
 @export var crew_role : CrewRole
 @export var crew_id : int
+@export var is_mandatory : bool = true
 
 var person
 var tween: Tween
@@ -76,7 +77,8 @@ func _on_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and mouseEntered:
 			if mousePressed and not event.pressed:
-				Scene.set_scene_data({"crew_id":crew_id, "crew_role":crew_role.role_name})
-				EventBus.sigChangeScene.emit("res://stages/menus/choose_crew_by_role/choose_crew_by_role.tscn")
+				Scene.add_scene_data("crew_id", crew_id)
+				Scene.add_scene_data("crew_role", crew_role.role_name)
+				EventBus.sigChangeScene.emit("uid://c6psfmyaba2lk")
 				EventBus.sigCrewSelectionNeeded.emit(crew_id, crew_role)
 			mousePressed = event.pressed

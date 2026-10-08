@@ -19,4 +19,4 @@ layout_mode = 1
 [node name="HUDDasboard" parent="." unique_id=112578795 instance=ExtResource("2_hlxxp")]
 layout_mode = 1
 pageTitle = "Choose Sponsor"
-showContinueButton = false
+nextScene = "uid://b275r5u4p0iex"

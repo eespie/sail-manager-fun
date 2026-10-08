@@ -23,7 +23,6 @@ func _on_change_scene(path: String) -> void:
 	current_scene = s.instantiate()
 	get_tree().get_root().add_child(current_scene)
 	get_tree().set_current_scene( current_scene )
-	reset_scene_data()
 
 
 func cleanup_group(group_name):
@@ -35,6 +34,9 @@ func cleanup_group(group_name):
 func set_scene_data(_scene_data : Dictionary) -> void :
 	scene_data = _scene_data
 
+
+func add_scene_data(_key : String, _value) -> void:
+	scene_data[_key] = _value
 
 func reset_scene_data() -> void :
 	scene_data = {}

@@ -15,6 +15,9 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	_bind_events()
+	var scene_data = Scene.get_scene_data()
+	if nextScene.length() == 0 and scene_data.has("next_scene"):
+		nextScene = scene_data["next_scene"]
 	labelTitle.text = pageTitle
 	if Player.team_id:
 		var team_entity : TeamEntity = Teams.teams[Player.team_id]

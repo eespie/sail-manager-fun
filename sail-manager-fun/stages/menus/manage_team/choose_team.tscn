@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dkth38khtebh8"]
 
-[ext_resource type="Script" uid="uid://b8h64mhvtgns8" path="res://stages/menus/choose_team/choose_team.gd" id="1_qulr3"]
+[ext_resource type="Script" uid="uid://b8h64mhvtgns8" path="res://stages/menus/manage_team/choose_team.gd" id="1_qulr3"]
 [ext_resource type="PackedScene" uid="uid://0gaisw7n8bte" path="res://stages/menus/ui/background/background.tscn" id="1_ugaxk"]
 [ext_resource type="PackedScene" uid="uid://bqafa66no0ivb" path="res://stages/menus/ui/hud/hud.tscn" id="2_qulr3"]
 
@@ -24,7 +24,7 @@ layout_mode = 1
 pageTitle = "choose team"
 showMoney = false
 showContinueButton = false
-nextScene = "res://stages/menus/choose_crew/choose_crew.tscn"
+nextScene = "uid://c27iitp8qmlqg"
 
 [node name="Panel" type="Panel" parent="." unique_id=1978822339]
 layout_mode = 1

@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://c27iitp8qmlqg"]
 
-[ext_resource type="Script" uid="uid://cxed4ja87smna" path="res://stages/menus/choose_crew/choose_crew.gd" id="1_n6byw"]
+[ext_resource type="Script" uid="uid://cxed4ja87smna" path="res://stages/menus/manage_crew/choose_crew.gd" id="1_n6byw"]
 [ext_resource type="PackedScene" uid="uid://0gaisw7n8bte" path="res://stages/menus/ui/background/background.tscn" id="2_37ekg"]
 [ext_resource type="PackedScene" uid="uid://bqafa66no0ivb" path="res://stages/menus/ui/hud/hud.tscn" id="3_ynvrv"]
-[ext_resource type="PackedScene" uid="uid://16go7ugft7oo" path="res://stages/menus/choose_crew/crew.tscn" id="4_8mqgu"]
+[ext_resource type="PackedScene" uid="uid://16go7ugft7oo" path="res://stages/menus/manage_crew/crew/crew.tscn" id="4_8mqgu"]
 [ext_resource type="Resource" uid="uid://e60psunyik6l" path="res://resources/roles/role_driver.tres" id="5_e1il0"]
 [ext_resource type="Resource" uid="uid://bdl0npelnyiq" path="res://resources/roles/role_strategist.tres" id="6_o7k3q"]
 [ext_resource type="Resource" uid="uid://to1l715d853q" path="res://resources/roles/role_flight_controller.tres" id="7_w4jrq"]
@@ -29,8 +29,7 @@ layout_mode = 1
 unique_name_in_owner = true
 layout_mode = 1
 pageTitle = "Select Crew"
-nextScene = "res://stages/menus/sponsors/sponsors.tscn"
-prevScene = "res://stages/menus/choose_team/choose_team.tscn"
+showContinueButton = false
 
 [node name="Panel" type="Panel" parent="." unique_id=1122229459]
 layout_mode = 1
@@ -101,8 +100,10 @@ crew_id = 6
 layout_mode = 2
 crew_role = ExtResource("10_xrmpe")
 crew_id = 7
+is_mandatory = false
 
 [node name="Crew8" parent="Panel/GridContainer" unique_id=164004191 instance=ExtResource("4_8mqgu")]
 layout_mode = 2
 crew_role = ExtResource("11_nmage")
 crew_id = 8
+is_mandatory = false

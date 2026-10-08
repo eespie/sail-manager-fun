@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://16go7ugft7oo"]
 
-[ext_resource type="Script" uid="uid://d2gt6e1m85je8" path="res://stages/menus/choose_crew/crew.gd" id="1_y5hnj"]
+[ext_resource type="Script" uid="uid://d2gt6e1m85je8" path="res://stages/menus/manage_crew/crew/crew.gd" id="1_k1100"]
 
 [node name="CrewSelector" type="Control" unique_id=1773087098]
 custom_minimum_size = Vector2(280, 300)
@@ -10,7 +10,7 @@ offset_right = 280.0
 offset_bottom = 300.0
 offset_transform_enabled = true
 mouse_default_cursor_shape = 2
-script = ExtResource("1_y5hnj")
+script = ExtResource("1_k1100")
 
 [node name="Crew" type="Panel" parent="." unique_id=2105726980]
 unique_name_in_owner = true

@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://c6psfmyaba2lk"]
 
-[ext_resource type="Script" uid="uid://buw58hftdiyqo" path="res://stages/menus/choose_crew_by_role/choose_crew_by_role.gd" id="1_pajwp"]
+[ext_resource type="Script" uid="uid://buw58hftdiyqo" path="res://stages/menus/manage_crew/crew_by_role/choose_crew_by_role.gd" id="1_pajwp"]
 [ext_resource type="PackedScene" uid="uid://0gaisw7n8bte" path="res://stages/menus/ui/background/background.tscn" id="2_fkhv3"]
 [ext_resource type="PackedScene" uid="uid://bqafa66no0ivb" path="res://stages/menus/ui/hud/hud.tscn" id="3_24cpm"]
-[ext_resource type="PackedScene" uid="uid://b0qdfaaie3l5c" path="res://stages/menus/choose_crew_by_role/crew_line_title.tscn" id="4_24cpm"]
+[ext_resource type="PackedScene" uid="uid://b0qdfaaie3l5c" path="res://stages/menus/manage_crew/crew_by_role/crew_line/crew_line_title.tscn" id="4_24cpm"]
 
 [node name="ChooseCrewByRole" type="Control" unique_id=213223845]
 layout_mode = 3
@@ -21,7 +21,7 @@ layout_mode = 1
 unique_name_in_owner = true
 layout_mode = 1
 pageTitle = "Recruit Crew"
-nextScene = "res://stages/menus/choose_crew/choose_crew.tscn"
+nextScene = "uid://c27iitp8qmlqg"
 prevScene = "uid://c27iitp8qmlqg"
 
 [node name="Panel" type="Panel" parent="." unique_id=503609126]

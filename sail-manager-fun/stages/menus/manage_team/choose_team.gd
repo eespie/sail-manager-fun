@@ -16,10 +16,15 @@ func _ready() -> void:
 
 func _bind_events() -> void:
 	EventBus.sigTeamSelected.connect(_on_team_selected)
+	EventBus.sigPrepareContinue.connect(_on_before_continue)
 
 
 func _on_team_selected(_team_entity :TeamEntity) -> void:
 	hud_dasboard.show_continue_button(true)
 	hud_dasboard.team.text = str("Team ", _team_entity.team_res.team_full_name)
 	hud_dasboard._on_money_changed(Player.team_id, _team_entity.current_money)
-	
+
+
+func _on_before_continue() -> void:
+	# the screen after crew management is sponsors
+	Scene.add_scene_data("next_scene", "uid://b0035vf3m26mc")

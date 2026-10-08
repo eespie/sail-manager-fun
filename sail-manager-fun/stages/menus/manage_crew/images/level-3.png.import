@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ot64gmg33642"
-path="res://.godot/imported/level-3.png-486c343ca34a679856ed17e1c578d347.ctex"
+path="res://.godot/imported/level-3.png-03e0ae9332550390e59c199327021cb9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://stages/menus/choose_crew_by_role/images/level-3.png"
-dest_files=["res://.godot/imported/level-3.png-486c343ca34a679856ed17e1c578d347.ctex"]
+source_file="res://stages/menus/manage_crew/images/level-3.png"
+dest_files=["res://.godot/imported/level-3.png-03e0ae9332550390e59c199327021cb9.ctex"]
 
 [params]
 
