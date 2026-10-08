@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://bkv8yq5qmclu2" path="res://resources/team/images/Teams NED.png" id="1_1lovo"]
 [ext_resource type="Script" uid="uid://dfxneiqxstvvj" path="res://resources/team/team_resource.gd" id="2_g6hyw"]
+[ext_resource type="Texture2D" uid="uid://cnkxl1ahcaavi" path="res://resources/flag/png-large/Flag_of_the_Netherlands.png" id="2_u1e7r"]
+[ext_resource type="Texture2D" uid="uid://dd1h2jbbj15q1" path="res://resources/flag/png-small/Flag_of_the_Netherlands.png" id="3_nl5qo"]
 
 [resource]
 script = ExtResource("2_g6hyw")
@@ -10,4 +12,6 @@ team_name = "NED"
 team_full_name = "Nederland"
 start_amount_money = 12000000
 chooser_image = ExtResource("1_1lovo")
+flag_small = ExtResource("3_nl5qo")
+flag_large = ExtResource("2_u1e7r")
 metadata/_custom_type_script = "uid://dfxneiqxstvvj"

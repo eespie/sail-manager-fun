@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://d3gja12re65ul" path="res://resources/team/images/Teams BRA.png" id="1_1qlqi"]
 [ext_resource type="Script" uid="uid://dfxneiqxstvvj" path="res://resources/team/team_resource.gd" id="2_1qlqi"]
+[ext_resource type="Texture2D" uid="uid://bv756bsyhcvfm" path="res://resources/flag/png-large/Flag_of_Brazil.png" id="2_kpxww"]
+[ext_resource type="Texture2D" uid="uid://caa5toudbyn4u" path="res://resources/flag/png-small/Flag_of_Brazil.png" id="3_7hbha"]
 
 [resource]
 script = ExtResource("2_1qlqi")
@@ -10,4 +12,6 @@ team_name = "BRA"
 team_full_name = "Brazil"
 start_amount_money = 10000000
 chooser_image = ExtResource("1_1qlqi")
+flag_small = ExtResource("3_7hbha")
+flag_large = ExtResource("2_kpxww")
 metadata/_custom_type_script = "uid://dfxneiqxstvvj"

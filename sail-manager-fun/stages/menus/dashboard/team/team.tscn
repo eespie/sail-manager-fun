@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://dwxsb7ei71wxh"]
+
+[ext_resource type="Script" uid="uid://c8xkqxp252gdt" path="res://stages/menus/dashboard/team/team.gd" id="1_t1igd"]
+[ext_resource type="Texture2D" uid="uid://bruqjl7p33l7u" path="res://resources/flag/png-carre/Flag_of_France.png" id="2_2wd4w"]
+
+[node name="Team" type="PanelContainer" unique_id=2054560589]
+custom_minimum_size = Vector2(400, 400)
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_type_variation = &"PanelContainerDashboard"
+script = ExtResource("1_t1igd")
+
+[node name="Background" type="Control" parent="." unique_id=176252029]
+modulate = Color(1, 1, 1, 0.24705882)
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="Background" unique_id=417493137]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Background" unique_id=2112789953]
+clip_contents = true
+layout_mode = 0
+offset_right = 392.0
+offset_bottom = 392.0
+offset_transform_rotation = -0.5235988
+texture = ExtResource("2_2wd4w")
+expand_mode = 5
+
+[node name="Team Name" type="Label" parent="." unique_id=859403754]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_vertical = 0
+text = "TEAM France"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true

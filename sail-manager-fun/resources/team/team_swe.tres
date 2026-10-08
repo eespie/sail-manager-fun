@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://dt7dl5crvlqaj" path="res://resources/team/images/Teams SWE.png" id="1_n6urb"]
 [ext_resource type="Script" uid="uid://dfxneiqxstvvj" path="res://resources/team/team_resource.gd" id="2_liop2"]
+[ext_resource type="Texture2D" uid="uid://rqa72rdpyp4v" path="res://resources/flag/png-large/Flag_of_Sweden.png" id="2_m2ej4"]
+[ext_resource type="Texture2D" uid="uid://dkq7cytc5o6nu" path="res://resources/flag/png-small/Flag_of_Sweden.png" id="3_qlqle"]
 
 [resource]
 script = ExtResource("2_liop2")
@@ -10,4 +12,6 @@ team_name = "SWE"
 team_full_name = "Sweden"
 start_amount_money = 10000000
 chooser_image = ExtResource("1_n6urb")
+flag_small = ExtResource("3_qlqle")
+flag_large = ExtResource("2_m2ej4")
 metadata/_custom_type_script = "uid://dfxneiqxstvvj"

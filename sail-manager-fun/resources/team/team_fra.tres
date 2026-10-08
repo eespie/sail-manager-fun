@@ -1,7 +1,9 @@
 [gd_resource type="Resource" script_class="TeamRes" format=3 uid="uid://cs2g0cp2tsose"]
 
 [ext_resource type="Texture2D" uid="uid://b4sbv7485ifr2" path="res://resources/team/images/Teams FRA.png" id="1_wdy20"]
+[ext_resource type="Texture2D" uid="uid://hydl5di11e5k" path="res://resources/flag/png-large/Flag_of_France.png" id="2_1akqj"]
 [ext_resource type="Script" uid="uid://dfxneiqxstvvj" path="res://resources/team/team_resource.gd" id="2_iagvq"]
+[ext_resource type="Texture2D" uid="uid://bw52gssfcnfwn" path="res://resources/flag/png-small/Flag_of_France.png" id="3_jqdbh"]
 
 [resource]
 script = ExtResource("2_iagvq")
@@ -10,4 +12,6 @@ team_name = "FRA"
 team_full_name = "France"
 start_amount_money = 23000000
 chooser_image = ExtResource("1_wdy20")
+flag_small = ExtResource("3_jqdbh")
+flag_large = ExtResource("2_1akqj")
 metadata/_custom_type_script = "uid://dfxneiqxstvvj"

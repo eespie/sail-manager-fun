@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://xlsh0h5klffs"]
+
+[node name="Next Event" type="PanelContainer" unique_id=2092147697]
+size_flags_vertical = 3
+theme_type_variation = &"PanelContainerDashboard"
+
+[node name="Label" type="Label" parent="." unique_id=1140204713]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Next Event"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true

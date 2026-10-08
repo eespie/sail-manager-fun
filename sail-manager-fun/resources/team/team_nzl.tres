@@ -1,7 +1,9 @@
 [gd_resource type="Resource" script_class="TeamRes" format=3 uid="uid://72yjp2xjo726"]
 
 [ext_resource type="Texture2D" uid="uid://b54j6vft4blf0" path="res://resources/team/images/Teams NZL.png" id="1_tvr5q"]
+[ext_resource type="Texture2D" uid="uid://b70nxhcfim204" path="res://resources/flag/png-large/Flag_of_New_Zealand.png" id="2_gr8x6"]
 [ext_resource type="Script" uid="uid://dfxneiqxstvvj" path="res://resources/team/team_resource.gd" id="2_irhlg"]
+[ext_resource type="Texture2D" uid="uid://thn0irxtcc3p" path="res://resources/flag/png-small/Flag_of_New_Zealand.png" id="3_b8lfq"]
 
 [resource]
 script = ExtResource("2_irhlg")
@@ -10,4 +12,6 @@ team_name = "NZL"
 team_full_name = "New Zealand"
 start_amount_money = 25000000
 chooser_image = ExtResource("1_tvr5q")
+flag_small = ExtResource("3_b8lfq")
+flag_large = ExtResource("2_gr8x6")
 metadata/_custom_type_script = "uid://dfxneiqxstvvj"

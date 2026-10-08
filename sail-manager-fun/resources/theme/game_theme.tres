@@ -134,6 +134,14 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ac2jv"]
+draw_center = false
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0.2710916, 0.62625307, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cguq3"]
 bg_color = Color(0.6233569, 0.7661482, 0.8825151, 1)
 border_width_left = 2
@@ -160,6 +168,7 @@ corner_radius_bottom_left = 10
 
 [resource]
 default_font_size = 28
+BoxContainer/constants/separation = 8
 Button/styles/hover = SubResource("StyleBoxFlat_gwmee")
 Button/styles/normal = SubResource("StyleBoxFlat_6nmne")
 Button/styles/pressed = SubResource("StyleBoxFlat_h2jer")
@@ -170,10 +179,14 @@ FlatButton/styles/pressed = SubResource("StyleBoxFlat_nr4fk")
 Label/colors/font_color = Color(0, 0, 0, 1)
 Label/colors/font_outline_color = Color(1, 1, 1, 1)
 Label/font_sizes/font_size = 28
+LabelPageTitle/base_type = &"Label"
+LabelPageTitle/font_sizes/font_size = 64
 MenuButton/styles/hover = SubResource("StyleBoxFlat_drdjc")
 MenuButton/styles/normal = SubResource("StyleBoxFlat_i87uh")
 MenuButton/styles/pressed = SubResource("StyleBoxFlat_oamwd")
 Panel/styles/panel = SubResource("StyleBoxFlat_ccjeu")
+PanelContainerDashboard/base_type = &"PanelContainer"
+PanelContainerDashboard/styles/panel = SubResource("StyleBoxFlat_ac2jv")
 SelectionSelected/base_type = &"Panel"
 SelectionSelected/styles/panel = SubResource("StyleBoxFlat_cguq3")
 SelectionUnselected/base_type = &"Panel"

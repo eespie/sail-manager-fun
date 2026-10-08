@@ -1,7 +1,9 @@
 [gd_resource type="Resource" script_class="TeamRes" format=3 uid="uid://cpudgh5nrn2l7"]
 
 [ext_resource type="Texture2D" uid="uid://bwit2a4vib8me" path="res://resources/team/images/Teams ESP.png" id="1_jtx4x"]
+[ext_resource type="Texture2D" uid="uid://g1ybc1mee05h" path="res://resources/flag/png-large/Flag_of_Spain.png" id="2_eade8"]
 [ext_resource type="Script" uid="uid://dfxneiqxstvvj" path="res://resources/team/team_resource.gd" id="2_pfk37"]
+[ext_resource type="Texture2D" uid="uid://dddijwya0rm8e" path="res://resources/flag/png-small/Flag_of_Spain.png" id="3_jvix0"]
 
 [resource]
 script = ExtResource("2_pfk37")
@@ -10,4 +12,6 @@ team_name = "ESP"
 team_full_name = "Spain"
 start_amount_money = 21000000
 chooser_image = ExtResource("1_jtx4x")
+flag_small = ExtResource("3_jvix0")
+flag_large = ExtResource("2_eade8")
 metadata/_custom_type_script = "uid://dfxneiqxstvvj"

@@ -1,7 +1,12 @@
 [gd_scene format=3 uid="uid://b275r5u4p0iex"]
 
 [ext_resource type="PackedScene" uid="uid://0gaisw7n8bte" path="res://stages/menus/ui/background/background.tscn" id="1_4yjcs"]
-[ext_resource type="PackedScene" uid="uid://bqafa66no0ivb" path="res://stages/menus/ui/hud/hud.tscn" id="2_wuvxh"]
+[ext_resource type="Script" uid="uid://cwtjb26n18qjj" path="res://stages/menus/dashboard/dashboard.gd" id="1_wuvxh"]
+[ext_resource type="PackedScene" uid="uid://dwxsb7ei71wxh" path="res://stages/menus/dashboard/team/team.tscn" id="3_txhdd"]
+[ext_resource type="PackedScene" uid="uid://ddbx80xan2jwg" path="res://stages/menus/dashboard/sponsors/sponsors.tscn" id="4_ouy0s"]
+[ext_resource type="PackedScene" uid="uid://ba2oxfp4askqv" path="res://stages/menus/dashboard/crew/crew.tscn" id="5_ibi1b"]
+[ext_resource type="PackedScene" uid="uid://8ohcgnr4n3ts" path="res://stages/menus/dashboard/season/season.tscn" id="6_nct0t"]
+[ext_resource type="PackedScene" uid="uid://xlsh0h5klffs" path="res://stages/menus/dashboard/next_event/next_event.tscn" id="7_tk13y"]
 
 [node name="Dashboard" type="Control" unique_id=1821514011]
 layout_mode = 3
@@ -10,11 +15,40 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_wuvxh")
 
 [node name="Background" parent="." unique_id=1805338972 instance=ExtResource("1_4yjcs")]
 layout_mode = 1
 
-[node name="HUDDasboard" parent="." unique_id=112578795 instance=ExtResource("2_wuvxh")]
-layout_mode = 1
-pageTitle = "Dashboard"
-showContinueButton = false
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=441145639]
+custom_minimum_size = Vector2(1600, 800)
+layout_mode = 0
+offset_left = 160.0
+offset_top = 138.0
+offset_right = 1760.0
+offset_bottom = 942.0
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer" unique_id=1698686419]
+layout_mode = 2
+
+[node name="Team" parent="HBoxContainer/VBoxContainer2" unique_id=2054560589 instance=ExtResource("3_txhdd")]
+layout_mode = 2
+
+[node name="Sponsors" parent="HBoxContainer/VBoxContainer2" unique_id=538060562 instance=ExtResource("4_ouy0s")]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=1997878674]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer" unique_id=358738581]
+layout_mode = 2
+
+[node name="Crew" parent="HBoxContainer/VBoxContainer/HBoxContainer" unique_id=784904703 instance=ExtResource("5_ibi1b")]
+layout_mode = 2
+
+[node name="Season" parent="HBoxContainer/VBoxContainer/HBoxContainer" unique_id=2086758962 instance=ExtResource("6_nct0t")]
+layout_mode = 2
+
+[node name="Next Event" parent="HBoxContainer/VBoxContainer" unique_id=2092147697 instance=ExtResource("7_tk13y")]
+layout_mode = 2

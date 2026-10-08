@@ -29,7 +29,6 @@ layout_mode = 1
 unique_name_in_owner = true
 layout_mode = 1
 pageTitle = "Select Crew"
-showContinueButton = false
 
 [node name="Panel" type="Panel" parent="." unique_id=1122229459]
 layout_mode = 1

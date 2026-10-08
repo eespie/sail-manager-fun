@@ -1,7 +1,9 @@
 [gd_resource type="Resource" script_class="TeamRes" format=3 uid="uid://dls7qw1hfmu1k"]
 
 [ext_resource type="Texture2D" uid="uid://bgswrgwnjf885" path="res://resources/team/images/Teams SUI.png" id="1_jjb5q"]
+[ext_resource type="Texture2D" uid="uid://2xi0u4sil64j" path="res://resources/flag/png-large/Flag_of_Switzerland.png" id="2_e40de"]
 [ext_resource type="Script" uid="uid://dfxneiqxstvvj" path="res://resources/team/team_resource.gd" id="2_ooflx"]
+[ext_resource type="Texture2D" uid="uid://bogaoan3ax0mv" path="res://resources/flag/png-small/Flag_of_Switzerland.png" id="3_4tj0n"]
 
 [resource]
 script = ExtResource("2_ooflx")
@@ -10,4 +12,6 @@ team_name = "SUI"
 team_full_name = "Switzerland"
 start_amount_money = 14000000
 chooser_image = ExtResource("1_jjb5q")
+flag_small = ExtResource("3_4tj0n")
+flag_large = ExtResource("2_e40de")
 metadata/_custom_type_script = "uid://dfxneiqxstvvj"

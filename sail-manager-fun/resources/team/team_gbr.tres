@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://d31kpnebkckc2" path="res://resources/team/images/Teams GBR.png" id="1_2ftv4"]
 [ext_resource type="Script" uid="uid://dfxneiqxstvvj" path="res://resources/team/team_resource.gd" id="2_16216"]
+[ext_resource type="Texture2D" uid="uid://8rvxxatru7sv" path="res://resources/flag/png-large/Flag_of_the_United_Kingdom.png" id="2_he757"]
+[ext_resource type="Texture2D" uid="uid://dnijqvcb7d2tf" path="res://resources/flag/png-small/Flag_of_the_United_Kingdom.png" id="3_vspe8"]
 
 [resource]
 script = ExtResource("2_16216")
@@ -10,4 +12,6 @@ team_name = "GBR"
 team_full_name = "Great Britain"
 start_amount_money = 30000000
 chooser_image = ExtResource("1_2ftv4")
+flag_small = ExtResource("3_vspe8")
+flag_large = ExtResource("2_he757")
 metadata/_custom_type_script = "uid://dfxneiqxstvvj"
