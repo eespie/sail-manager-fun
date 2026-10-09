@@ -53,3 +53,9 @@ func load_crew() -> void :
 
 func save_crew() -> void:
 	File.save_data(crew_by_role, crew_file)
+
+
+func reset_crew_list() -> void:
+	if FileAccess.file_exists(crew_file):
+		DirAccess.remove_absolute(crew_file)
+	load_crew()

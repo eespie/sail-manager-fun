@@ -12,6 +12,7 @@ func _bind_events() -> void:
 	EventBus.sigAddMoney.connect(_on_add_money)
 	EventBus.sigCrewHired.connect(_on_crew_hired)
 
+
 func init_teams() -> void:
 	for team_name in Constant.TEAM_NAME.keys():
 		var team = TeamEntity.new()
@@ -21,10 +22,14 @@ func init_teams() -> void:
 
 
 func _on_add_money(_team_id : int, _amount :int) -> void:
-	var team = teams[_team_id]
+	var team = get_team(_team_id)
 	team.add_money(_amount)
 
 
 func _on_crew_hired(_team_id : int, _crew_id :int, _person : Dictionary) -> void:
-	var team = teams[_team_id]
+	var team = get_team(_team_id)
 	team.crew_hired(_crew_id, _person)
+
+
+func get_team(team_id : int) -> TeamEntity:
+	return teams[team_id]

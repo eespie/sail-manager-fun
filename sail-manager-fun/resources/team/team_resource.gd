@@ -8,3 +8,4 @@ extends Resource
 @export var chooser_image : Resource
 @export var flag_small : Resource
 @export var flag_large : Resource
+@export var flag_square : Resource

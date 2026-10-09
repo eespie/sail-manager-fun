@@ -3,49 +3,52 @@
 [ext_resource type="FontFile" uid="uid://dmx5sp580rkvp" path="res://assets/fonts/B612/B612-Regular.ttf" id="1_gwmee"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gwmee"]
+content_margin_left = 15.0
+content_margin_top = 15.0
+content_margin_right = 15.0
+content_margin_bottom = 15.0
 bg_color = Color(0.34780002, 0.57004666, 0.74, 1)
 border_width_left = 3
 border_width_top = 3
 border_width_right = 3
 border_width_bottom = 3
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-expand_margin_left = 5.0
-expand_margin_top = 5.0
-expand_margin_right = 5.0
-expand_margin_bottom = 5.0
+border_color = Color(1, 1, 1, 1)
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6nmne"]
+content_margin_left = 15.0
+content_margin_top = 15.0
+content_margin_right = 15.0
+content_margin_bottom = 15.0
 bg_color = Color(0.1128, 0.18487999, 0.24, 1)
 border_width_left = 3
 border_width_top = 3
 border_width_right = 3
 border_width_bottom = 3
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-expand_margin_left = 5.0
-expand_margin_top = 5.0
-expand_margin_right = 5.0
-expand_margin_bottom = 5.0
+border_color = Color(1, 1, 1, 1)
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h2jer"]
-bg_color = Color(0.1128, 0.18487999, 0.24, 1)
+content_margin_left = 15.0
+content_margin_top = 15.0
+content_margin_right = 15.0
+content_margin_bottom = 15.0
+bg_color = Color(0.24375847, 0.36281657, 0.45571226, 1)
 border_width_left = 3
 border_width_top = 3
 border_width_right = 3
 border_width_bottom = 3
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-expand_margin_left = 5.0
-expand_margin_top = 5.0
-expand_margin_right = 5.0
-expand_margin_bottom = 5.0
+border_color = Color(1, 1, 1, 1)
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6kjy7"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -140,7 +143,7 @@ border_width_left = 4
 border_width_top = 4
 border_width_right = 4
 border_width_bottom = 4
-border_color = Color(0, 0.2710916, 0.62625307, 1)
+border_color = Color(1, 1, 1, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cguq3"]
 bg_color = Color(0.6233569, 0.7661482, 0.8825151, 1)
@@ -191,6 +194,11 @@ SelectionSelected/base_type = &"Panel"
 SelectionSelected/styles/panel = SubResource("StyleBoxFlat_cguq3")
 SelectionUnselected/base_type = &"Panel"
 SelectionUnselected/styles/panel = SubResource("StyleBoxFlat_cukaj")
+SmallLabel/base_type = &"Label"
+SmallLabel/colors/font_color = Color(1, 1, 1, 1)
+SmallLabel/font_sizes/font_size = 16
 TableValue/base_type = &"Label"
 TableValue/font_sizes/font_size = 26
 TableValue/fonts/font = ExtResource("1_gwmee")
+WhiteLabel/base_type = &"Label"
+WhiteLabel/colors/font_color = Color(1, 1, 1, 1)

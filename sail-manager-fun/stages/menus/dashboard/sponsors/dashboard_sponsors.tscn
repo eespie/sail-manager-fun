@@ -9,6 +9,7 @@ theme_type_variation = &"PanelContainerDashboard"
 [node name="Title" type="Label" parent="." unique_id=448835977]
 layout_mode = 2
 size_flags_vertical = 0
+theme_type_variation = &"WhiteLabel"
 text = "Sponsors"
 horizontal_alignment = 1
 vertical_alignment = 1

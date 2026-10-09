@@ -26,7 +26,10 @@ func _bind_events() -> void:
 
 func init_table(_crew_id, _crew_role) -> void:
 	var crew_by_role = CrewManagement.crew_by_role[_crew_role]
-	var max_salary = Teams.teams[Player.team_id].current_money
+	var team_entity : TeamEntity = Teams.teams[Player.team_id]
+	var max_salary = team_entity.current_money
+	if team_entity.crew.has(_crew_id):
+		max_salary += team_entity.crew[_crew_id].person_annual_salary
 	crew_by_role.sort_custom(func(a, b): return a['SKILLS'] > b['SKILLS'])
 	Utils.clear_all_children(v_box_container)
 	for person in crew_by_role:

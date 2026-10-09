@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b70nxhcfim204" path="res://resources/flag/png-large/Flag_of_New_Zealand.png" id="2_gr8x6"]
 [ext_resource type="Script" uid="uid://dfxneiqxstvvj" path="res://resources/team/team_resource.gd" id="2_irhlg"]
 [ext_resource type="Texture2D" uid="uid://thn0irxtcc3p" path="res://resources/flag/png-small/Flag_of_New_Zealand.png" id="3_b8lfq"]
+[ext_resource type="Texture2D" uid="uid://dpkowhvese2pu" path="res://resources/flag/png-carre/Flag_of_New_Zealand.png" id="4_b8lfq"]
 
 [resource]
 script = ExtResource("2_irhlg")
@@ -14,4 +15,5 @@ start_amount_money = 25000000
 chooser_image = ExtResource("1_tvr5q")
 flag_small = ExtResource("3_b8lfq")
 flag_large = ExtResource("2_gr8x6")
+flag_square = ExtResource("4_b8lfq")
 metadata/_custom_type_script = "uid://dfxneiqxstvvj"

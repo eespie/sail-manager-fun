@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://dfxneiqxstvvj" path="res://resources/team/team_resource.gd" id="2_05bfy"]
 [ext_resource type="Texture2D" uid="uid://d3kymyffx5sqw" path="res://resources/flag/png-large/Flag_of_Canada.png" id="2_364t0"]
 [ext_resource type="Texture2D" uid="uid://deejp7p53sbbf" path="res://resources/flag/png-small/Flag_of_Canada.png" id="3_iidwa"]
+[ext_resource type="Texture2D" uid="uid://bbmricwpl3iok" path="res://resources/flag/png-carre/Flag_of_Canada.png" id="4_iidwa"]
 
 [resource]
 script = ExtResource("2_05bfy")
@@ -14,4 +15,5 @@ start_amount_money = 18000000
 chooser_image = ExtResource("1_05bfy")
 flag_small = ExtResource("3_iidwa")
 flag_large = ExtResource("2_364t0")
+flag_square = ExtResource("4_iidwa")
 metadata/_custom_type_script = "uid://dfxneiqxstvvj"

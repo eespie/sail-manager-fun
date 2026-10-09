@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://dwxsb7ei71wxh"]
+
+[ext_resource type="Script" uid="uid://c8xkqxp252gdt" path="res://stages/menus/dashboard/team/dashboard_team.gd" id="1_t1igd"]
+[ext_resource type="Texture2D" uid="uid://bruqjl7p33l7u" path="res://resources/flag/png-carre/Flag_of_France.png" id="2_2wd4w"]
+
+[node name="Dashboard Team" type="PanelContainer" unique_id=2054560589]
+custom_minimum_size = Vector2(400, 400)
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_type_variation = &"PanelContainerDashboard"
+script = ExtResource("1_t1igd")
+
+[node name="Background" type="Control" parent="." unique_id=176252029]
+modulate = Color(1, 1, 1, 0.24705882)
+clip_contents = true
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="Background" unique_id=417493137]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Bg Image" type="TextureRect" parent="Background" unique_id=2112789953]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_right = 200.0
+offset_bottom = 400.0
+grow_horizontal = 2
+offset_transform_rotation = -0.5235988
+texture = ExtResource("2_2wd4w")
+expand_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=388547271]
+layout_mode = 2
+
+[node name="Team Name" type="Label" parent="VBoxContainer" unique_id=859403754]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_vertical = 0
+theme_type_variation = &"WhiteLabel"
+text = "TEAM France"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=498305134]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Lines" type="VBoxContainer" parent="VBoxContainer/MarginContainer" unique_id=1175357757]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Line" type="HBoxContainer" parent="VBoxContainer/MarginContainer/Lines" unique_id=1551832934]
+layout_mode = 2
+
+[node name="Credits Key" type="Label" parent="VBoxContainer/MarginContainer/Lines/Line" unique_id=373714132]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_type_variation = &"SmallLabel"
+text = "Budget"
+
+[node name="Credits Value" type="Label" parent="VBoxContainer/MarginContainer/Lines/Line" unique_id=501640108]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"SmallLabel"
+
+[node name="Line2" type="HBoxContainer" parent="VBoxContainer/MarginContainer/Lines" unique_id=1804161705]
+layout_mode = 2
+
+[node name="Key" type="Label" parent="VBoxContainer/MarginContainer/Lines/Line2" unique_id=930122845]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_type_variation = &"SmallLabel"
+
+[node name="Value" type="Label" parent="VBoxContainer/MarginContainer/Lines/Line2" unique_id=1128580154]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"SmallLabel"
+
+[node name="Manage Team" type="Button" parent="VBoxContainer" unique_id=76644248]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "> MANAGE TEAM"
+alignment = 0

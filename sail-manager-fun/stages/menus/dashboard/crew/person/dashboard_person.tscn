@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://dlox18rg1kg60"]
+
+[ext_resource type="Script" uid="uid://dbg0shx7hrc2" path="res://stages/menus/dashboard/crew/person/dashboard_person.gd" id="1_81jje"]
+
+[node name="Dashboard Person" type="Control" unique_id=1343896728]
+custom_minimum_size = Vector2(392, 35)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_81jje")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1174500126]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 0
+offset_right = 392.0
+offset_bottom = 40.0
+
+[node name="Role" type="Label" parent="HBoxContainer" unique_id=230335555]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(130, 0)
+layout_mode = 2
+theme_type_variation = &"SmallLabel"
+text = "Flight Controller"
+
+[node name="Name" type="Label" parent="HBoxContainer" unique_id=1561105689]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"SmallLabel"
+text = "Cipriano Parra Saavedra"
+
+[node name="Status" type="Label" parent="HBoxContainer" unique_id=740298134]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+theme_type_variation = &"SmallLabel"

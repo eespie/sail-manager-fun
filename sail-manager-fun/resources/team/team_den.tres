@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://fhb2kd00qqs3" path="res://resources/flag/png-large/Flag_of_Denmark.png" id="2_5vfbf"]
 [ext_resource type="Script" uid="uid://dfxneiqxstvvj" path="res://resources/team/team_resource.gd" id="2_kq7ie"]
 [ext_resource type="Texture2D" uid="uid://b5kndpy5bvys8" path="res://resources/flag/png-small/Flag_of_Denmark.png" id="3_pmooa"]
+[ext_resource type="Texture2D" uid="uid://cdbcccowc71ne" path="res://resources/flag/png-carre/Flag_of_Denmark.png" id="4_pmooa"]
 
 [resource]
 script = ExtResource("2_kq7ie")
@@ -14,4 +15,5 @@ start_amount_money = 20000000
 chooser_image = ExtResource("1_5gyla")
 flag_small = ExtResource("3_pmooa")
 flag_large = ExtResource("2_5vfbf")
+flag_square = ExtResource("4_pmooa")
 metadata/_custom_type_script = "uid://dfxneiqxstvvj"

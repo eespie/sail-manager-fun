@@ -6,9 +6,10 @@ size_flags_horizontal = 3
 size_flags_vertical = 0
 theme_type_variation = &"PanelContainerDashboard"
 
-[node name="Label" type="Label" parent="." unique_id=1559428828]
+[node name="Title" type="Label" parent="." unique_id=1559428828]
 layout_mode = 2
 size_flags_vertical = 0
+theme_type_variation = &"WhiteLabel"
 text = "Season"
 horizontal_alignment = 1
 vertical_alignment = 1
