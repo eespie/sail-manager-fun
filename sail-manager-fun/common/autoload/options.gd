@@ -1,7 +1,5 @@
 extends Node
 
-const global_save_file : String = "user://global.json"
-
 var WIDTH = ProjectSettings.get_setting("display/window/size/viewport_width")
 var HEIGHT = ProjectSettings.get_setting("display/window/size/viewport_height")
 
@@ -10,18 +8,18 @@ var play_music = true
 var fullscreen = false
 
 
-func save_data() -> void:
+func save_data(path : String) -> void:
 	var data : Dictionary = {
 		"play_sfx": play_sfx,
 		"play_music": play_music,
 		"fullscreen": fullscreen
 	}
 	
-	File.save_data(data, global_save_file)
+	File.save_data(data, path)
 
 
-func load_data() -> void:
-	var data = File.load_data(global_save_file)
+func load_data(path : String) -> void:
+	var data = File.load_data(path)
 	if data == {}:
 		play_sfx = true
 		play_music = true

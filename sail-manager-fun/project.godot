@@ -20,13 +20,13 @@ config/icon="res://icon.svg"
 EventBus="*uid://b4iaoa15111v"
 File="*uid://bs1bx2ldng75c"
 Sound="*uid://c1byy5cfpier"
-Global="*uid://drrjbm7yend5v"
-GameInfo="*uid://cti4ef4vyrg0l"
 Scene="*uid://jrpv0r44nb3c"
 Constant="*uid://wbsmi0gohopt"
 Teams="*uid://dnlg2cid1cjn3"
 Player="*uid://dv4k5huslb032"
 CrewManagement="*uid://f8hnoyxwlkt4"
+Options="*uid://drrjbm7yend5v"
+GameSave="*uid://cti4ef4vyrg0l"
 
 [display]
 

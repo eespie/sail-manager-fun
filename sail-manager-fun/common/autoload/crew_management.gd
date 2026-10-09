@@ -1,14 +1,12 @@
 extends Node
 
 const initial_crew_file = "res://assets/data/crew-data.json"
-const crew_file = "user://crew-data.json"
 
 var crew_by_role : Dictionary
 var role_resources : Dictionary
 
 
 func _ready() -> void:
-	load_crew()
 	_bind_events()
 
 
@@ -39,23 +37,17 @@ func load_initial_crew() -> void :
 		person['EXPERIENCE'] = randi() % 50 + 50
 		person['SKILLS'] = randi() % 50 + 50
 		person['ENDURANCE'] = randi() % 50 + 50
+		person['LEARNING'] = randi() % 50 + 50
 		person['ANNUAL_SALARY'] = floori((randi() % (person_res.annual_salary_max - person_res.annual_salary_min) + person_res.annual_salary_min) / 1000.0) * 1000
 		person['TEAM'] = 0
 		crew_by_role[role].append(person)
-	save_crew()
 
 
-func load_crew() -> void :
-	crew_by_role = File.load_data(crew_file)
+func load_crew(path : String) -> void :
+	crew_by_role = File.load_data(path)
 	if crew_by_role == {}:
 		load_initial_crew()
 
 
-func save_crew() -> void:
-	File.save_data(crew_by_role, crew_file)
-
-
-func reset_crew_list() -> void:
-	if FileAccess.file_exists(crew_file):
-		DirAccess.remove_absolute(crew_file)
-	load_crew()
+func save_crew(path : String) -> void:
+	File.save_data(crew_by_role, path)

@@ -8,7 +8,7 @@ func _ready() -> void:
 
 
 func _on_new_game_pressed() -> void:
-	CrewManagement.reset_crew_list()
+	CrewManagement.load_initial_crew()
 	EventBus.sigChangeScene.emit(newGameScene)
 
 

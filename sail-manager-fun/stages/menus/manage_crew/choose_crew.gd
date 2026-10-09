@@ -26,4 +26,3 @@ func _init_from_player() -> void:
 
 func _on_prepare_continue() -> void:
 	Scene.reset_scene_data()
-	CrewManagement.save_crew()

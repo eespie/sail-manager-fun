@@ -4,7 +4,7 @@ extends Node
 ## Play a given audio stream instance, respecting the player's setting for playing sound effects.
 ## Returns true if the sfx played, otherwise returns false.
 func play_sfx(sfx) -> bool:
-	if Global.play_sfx:
+	if Options.play_sfx:
 		if sfx != null and sfx.has_method("play"):
 			sfx.play()
 			return true
@@ -17,7 +17,7 @@ func play_sfx(sfx) -> bool:
 ## Play a given audio stream instance, respecting the player's setting for playing.
 ## Returns true if the music track played, otherwise returns false.
 func play_music(music) -> bool:
-	if Global.play_music:
+	if Options.play_music:
 		if music != null and music.has_method("play"):
 			music.play()
 			return true
