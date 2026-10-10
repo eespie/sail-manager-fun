@@ -25,4 +25,10 @@ func _init_from_player() -> void:
 
 
 func _on_prepare_continue() -> void:
+	for team_id in Teams.teams.keys():
+		if team_id <= Player.team_id:
+			continue
+		# select crew
+		var team : TeamEntity = Teams.teams[team_id]
+		team.auto_select_crew()
 	Scene.reset_scene_data()

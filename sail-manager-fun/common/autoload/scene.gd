@@ -14,7 +14,6 @@ func _bind_events() -> void:
 
 
 func _on_change_scene(path: String) -> void:
-	print(str("Scene changed to: [", path, "]"))
 	var s = load(path)
 	if s == null:
 		return

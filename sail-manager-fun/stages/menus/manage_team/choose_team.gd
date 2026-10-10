@@ -26,5 +26,12 @@ func _on_team_selected(_team_entity :TeamEntity) -> void:
 
 
 func _on_before_continue() -> void:
+	# Allocate crew on every team before the one choosen by the player
+	for team_id in Teams.teams.keys():
+		if team_id == Player.team_id:
+			break
+		# select crew
+		var team : TeamEntity = Teams.teams[team_id]
+		team.auto_select_crew()
 	# the screen after crew management is sponsors
 	Scene.add_scene_data("next_scene", "uid://b0035vf3m26mc")

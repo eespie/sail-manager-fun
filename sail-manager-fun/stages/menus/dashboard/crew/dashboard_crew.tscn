@@ -65,3 +65,5 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 18
 text = "> MANAGE CREW"
 alignment = 0
+
+[connection signal="pressed" from="VBoxContainer/Manage Crew" to="." method="_on_manage_crew_pressed"]
