@@ -34,7 +34,7 @@ func init_from_person_entity(_person_entity : PersonEntity) -> void:
 	crew_name.show()
 	crew_nationality.show()
 	crew_salary.show()
-	crew.self_modulate = Color.AQUA
+	crew.theme_type_variation = "SelectionSelected"
 
 
 func _on_crew_hired(_crew_id :int, _person : Dictionary) -> void:
@@ -48,7 +48,7 @@ func _on_crew_hired(_crew_id :int, _person : Dictionary) -> void:
 	crew_name.show()
 	crew_nationality.show()
 	crew_salary.show()
-	crew.self_modulate = Color.AQUA
+	crew.theme_type_variation = "SelectionSelected"
 
 
 func _on_mouse_entered() -> void:

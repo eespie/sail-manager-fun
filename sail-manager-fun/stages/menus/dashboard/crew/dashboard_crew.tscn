@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b4sbv7485ifr2" path="res://resources/team/images/Teams FRA.png" id="1_u03hg"]
 
 [node name="Crew" type="PanelContainer" unique_id=784904703]
-custom_minimum_size = Vector2(400, 500)
+custom_minimum_size = Vector2(500, 500)
 size_flags_horizontal = 0
 size_flags_vertical = 0
 theme_type_variation = &"PanelContainerDashboard"
@@ -38,10 +38,9 @@ texture = ExtResource("1_u03hg")
 layout_mode = 2
 
 [node name="Crew List Title" type="Label" parent="VBoxContainer" unique_id=18452182]
-custom_minimum_size = Vector2(0, 40)
+custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 size_flags_vertical = 0
-theme_type_variation = &"WhiteLabel"
 text = "Crew List"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -62,6 +61,7 @@ size_flags_vertical = 3
 
 [node name="Manage Crew" type="Button" parent="VBoxContainer" unique_id=758654823]
 layout_mode = 2
+theme_type_variation = &"DashboardButton"
 theme_override_font_sizes/font_size = 18
 text = "> MANAGE CREW"
 alignment = 0

@@ -14,7 +14,6 @@ script = ExtResource("1_k1100")
 
 [node name="Crew" type="Panel" parent="." unique_id=2105726980]
 unique_name_in_owner = true
-self_modulate = Color(0.7121294, 0.7121294, 0.71212935, 1)
 custom_minimum_size = Vector2(280, 300)
 layout_mode = 0
 offset_right = 250.0

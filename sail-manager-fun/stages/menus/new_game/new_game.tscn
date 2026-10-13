@@ -4,18 +4,6 @@
 [ext_resource type="Script" uid="uid://cktwtudnwflug" path="res://stages/menus/new_game/new_game.gd" id="1_3ybb2"]
 [ext_resource type="PackedScene" uid="uid://bqafa66no0ivb" path="res://stages/menus/ui/hud/hud.tscn" id="3_l45mq"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l45mq"]
-bg_color = Color(0.11372549, 0.18039216, 0.26666668, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
-border_blend = true
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
 [node name="NewGame" type="Control" unique_id=1906277180]
 layout_mode = 3
 anchors_preset = 15
@@ -36,6 +24,7 @@ showMoney = false
 showContinueButton = false
 
 [node name="Panel" type="Panel" parent="." unique_id=16546004]
+self_modulate = Color(1, 1, 1, 0.53333336)
 custom_minimum_size = Vector2(500, 500)
 layout_mode = 1
 anchors_preset = 8
@@ -69,16 +58,12 @@ alignment = 1
 [node name="New Game" type="Button" parent="Panel/VBoxContainer" unique_id=1004197524]
 layout_mode = 2
 size_flags_vertical = 3
-theme_type_variation = &"FlatButton"
-theme_override_styles/hover = SubResource("StyleBoxFlat_l45mq")
 toggle_mode = true
 text = "New Game"
 
 [node name="Select Game" type="Label" parent="Panel/VBoxContainer" unique_id=2146879370]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 text = "Select Game
 "
 horizontal_alignment = 1

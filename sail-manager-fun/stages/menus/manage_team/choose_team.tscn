@@ -27,6 +27,7 @@ showContinueButton = false
 nextScene = "uid://c27iitp8qmlqg"
 
 [node name="Panel" type="Panel" parent="." unique_id=1978822339]
+self_modulate = Color(1, 1, 1, 0.53333336)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
