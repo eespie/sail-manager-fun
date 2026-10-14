@@ -124,3 +124,5 @@ layout_mode = 2
 
 [node name="Next Event" parent="VBoxContainer/MarginContainer/Dashboard Main/VBoxContainer" unique_id=2092147697 instance=ExtResource("7_tk13y")]
 layout_mode = 2
+
+[connection signal="pressed" from="VBoxContainer/Toolbar/PanelContainer/HBoxContainer/Options" to="." method="_on_options_pressed"]

@@ -5,8 +5,13 @@ var HEIGHT = ProjectSettings.get_setting("display/window/size/viewport_height")
 
 var play_sfx = true
 var play_music = true
-var fullscreen = false
+var fullscreen = true
 
+func _ready() -> void:
+	if fullscreen:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
+	else:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 
 func save_data(path : String) -> void:
 	var data : Dictionary = {
@@ -29,12 +34,13 @@ func load_data(path : String) -> void:
 	play_sfx = data["play_sfx"]
 	play_music = data["play_music"]
 	fullscreen = data["fullscreen"]
+	apply()
 
 
 func apply() -> void:
 	var mode := DisplayServer.window_get_mode()
-	var is_window: bool = mode != DisplayServer.WINDOW_MODE_FULLSCREEN
+	var is_window: bool = mode != DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN and mode != DisplayServer.WINDOW_MODE_FULLSCREEN
 	if fullscreen && is_window:
-		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
 	if not fullscreen and not is_window:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)

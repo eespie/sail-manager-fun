@@ -32,12 +32,14 @@ GameSave="*uid://cti4ef4vyrg0l"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/stretch/mode="viewport"
-window/stretch/aspect="expand"
+window/size/mode=4
+window/stretch/mode="canvas_items"
+window/stretch/aspect="keep_width"
 
 [gui]
 
 fonts/dynamic_fonts/use_oversampling=false
+theme/default_theme_scale=2.0
 theme/custom="uid://d2rai3sjqo8nm"
 theme/custom_font="uid://ddoujvi5ctqms"
 

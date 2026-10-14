@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://b23msop8e0o2u"]
+
+[ext_resource type="Script" uid="uid://bq0ccgcas4rb" path="res://stages/menus/parameters/parameters.gd" id="1_bv8kw"]
+[ext_resource type="PackedScene" uid="uid://0gaisw7n8bte" path="res://stages/menus/ui/background/background.tscn" id="2_lgvcv"]
+[ext_resource type="PackedScene" uid="uid://bqafa66no0ivb" path="res://stages/menus/ui/hud/hud.tscn" id="3_dqeb4"]
+
+[node name="Parameters" type="Control" unique_id=1093109462]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bv8kw")
+
+[node name="Background" parent="." unique_id=1805338972 instance=ExtResource("2_lgvcv")]
+layout_mode = 1
+
+[node name="HUDDasboard" parent="." unique_id=112578795 instance=ExtResource("3_dqeb4")]
+layout_mode = 1
+pageTitle = "options"
+showMoney = false
+nextScene = "uid://b275r5u4p0iex"
+
+[node name="Panel" type="Panel" parent="." unique_id=1696394666]
+self_modulate = Color(1, 1, 1, 0.53333336)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -357.0
+offset_top = -391.5
+offset_right = 357.0
+offset_bottom = 391.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=2077944883]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer" unique_id=1017739476]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer" unique_id=1905151648]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Display"
+
+[node name="DisplayOptionButton" type="OptionButton" parent="Panel/VBoxContainer/HBoxContainer" unique_id=425520106]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 10
+selected = 0
+item_count = 2
+popup/item_0/text = "Windowed"
+popup/item_0/id = 0
+popup/item_1/text = "Fullscreen"
+popup/item_1/id = 1
+
+[connection signal="item_selected" from="Panel/VBoxContainer/HBoxContainer/DisplayOptionButton" to="." method="_on_display_option_button_item_selected"]
