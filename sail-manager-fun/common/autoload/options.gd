@@ -12,6 +12,8 @@ func _ready() -> void:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+		get_window().size = Vector2i(1920, 1080)
+		get_window().content_scale_factor = 1.0
 
 func save_data(path : String) -> void:
 	var data : Dictionary = {
@@ -44,3 +46,5 @@ func apply() -> void:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
 	if not fullscreen and not is_window:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+		get_window().size = Vector2i(1920, 1080)
+		get_window().content_scale_factor = 1.0
