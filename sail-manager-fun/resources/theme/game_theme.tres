@@ -104,6 +104,39 @@ expand_margin_top = 3.0
 expand_margin_right = 3.0
 expand_margin_bottom = 3.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_87i5x"]
+content_margin_left = 15.0
+content_margin_top = 15.0
+content_margin_right = 15.0
+content_margin_bottom = 15.0
+bg_color = Color(0.45490196, 0.6, 0.67058825, 1)
+border_width_top = 3
+border_color = Color(1, 1, 1, 1)
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c4d4c"]
+content_margin_left = 15.0
+content_margin_top = 15.0
+content_margin_right = 15.0
+content_margin_bottom = 15.0
+bg_color = Color(0.6, 0.7254902, 0.7529412, 1)
+border_width_top = 3
+border_color = Color(1, 1, 1, 1)
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r54kc"]
+content_margin_left = 15.0
+content_margin_top = 15.0
+content_margin_right = 15.0
+content_margin_bottom = 15.0
+bg_color = Color(0.21568628, 0.25882354, 0.28235295, 1)
+border_width_top = 3
+border_color = Color(1, 1, 1, 1)
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6kjy7"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 border_width_left = 5
@@ -203,6 +236,11 @@ corner_radius_bottom_left = 5
 shadow_color = Color(0, 0, 0, 0.42745098)
 shadow_size = 5
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gj7g4"]
+bg_color = Color(0.45490196, 0.6, 0.67058825, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cguq3"]
 bg_color = Color(0.6, 0.7254902, 0.7529412, 1)
 border_color = Color(0, 0, 0, 1)
@@ -225,6 +263,8 @@ shadow_size = 5
 
 [resource]
 default_font_size = 28
+20pxLabel/base_type = &"Label"
+20pxLabel/font_sizes/font_size = 20
 BoxContainer/constants/separation = 8
 Button/colors/font_color = Color(0, 0, 0, 1)
 Button/colors/font_focus_color = Color(0, 0, 0, 1)
@@ -241,6 +281,11 @@ DashboardButton/base_type = &"Button"
 DashboardButton/styles/hover = SubResource("StyleBoxFlat_ifv5g")
 DashboardButton/styles/normal = SubResource("StyleBoxFlat_ms1s1")
 DashboardButton/styles/pressed = SubResource("StyleBoxFlat_sslmf")
+DashletButton/base_type = &"Button"
+DashletButton/font_sizes/font_size = 20
+DashletButton/styles/hover = SubResource("StyleBoxFlat_87i5x")
+DashletButton/styles/normal = SubResource("StyleBoxFlat_c4d4c")
+DashletButton/styles/pressed = SubResource("StyleBoxFlat_r54kc")
 FlatButton/font_sizes/font_size = 28
 FlatButton/styles/hover = SubResource("StyleBoxFlat_6kjy7")
 FlatButton/styles/normal = SubResource("StyleBoxFlat_7y1cn")
@@ -258,6 +303,8 @@ MenuButton/styles/pressed = SubResource("StyleBoxFlat_oamwd")
 Panel/styles/panel = SubResource("StyleBoxFlat_ccjeu")
 PanelContainerDashboard/base_type = &"PanelContainer"
 PanelContainerDashboard/styles/panel = SubResource("StyleBoxFlat_ac2jv")
+PanelHeader/base_type = &"Panel"
+PanelHeader/styles/panel = SubResource("StyleBoxFlat_gj7g4")
 SelectionSelected/base_type = &"Panel"
 SelectionSelected/styles/panel = SubResource("StyleBoxFlat_cguq3")
 SelectionUnselected/base_type = &"Panel"
