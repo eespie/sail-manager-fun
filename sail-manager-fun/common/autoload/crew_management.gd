@@ -33,12 +33,15 @@ func load_initial_crew() -> void :
 		var person = initial_crew[i]
 		var role = person['ROLE'].capitalize()
 		var person_res = role_resources[role]
-		person['REMAINING_YEARS'] = randi() % 15 + 2
-		person['EXPERIENCE'] = randi() % 50 + 50
-		person['SKILLS'] = randi() % 50 + 50
-		person['ENDURANCE'] = randi() % 50 + 50
-		person['LEARNING'] = randi() % 50 + 50
-		person['ANNUAL_SALARY'] = floori((randi() % (person_res.annual_salary_max - person_res.annual_salary_min) + person_res.annual_salary_min) / 1000.0) * 1000
+		person['REMAINING_YEARS'] = randi() % 20 + 2
+		var ry_capacity : float = clamp((8.0 - (person['REMAINING_YEARS']/2.0)) / 7.0, 0.0, 1.0)
+		person['ENDURANCE'] = randi() % 90
+		person['LEARNING'] = randi() % 90
+		var experience_capacity : int = floori(clamp((18 - person['REMAINING_YEARS']) * (person['LEARNING'] / 10.0), 30.0, 90.0)) 
+		person['EXPERIENCE'] = randi() % experience_capacity
+		person['SKILLS'] = randi() % 50 + floori(person['EXPERIENCE'] / 2.0)
+		var capacity = (person['EXPERIENCE'] + person['SKILLS'] + person['ENDURANCE'] + person['LEARNING']) / 400.0
+		person['ANNUAL_SALARY'] = floori((randi() % (person_res.annual_salary_max - person_res.annual_salary_min) * capacity * ry_capacity + person_res.annual_salary_min) / 1000.0) * 1000
 		person['TEAM'] = 0
 		crew_by_role[role].append(person)
 

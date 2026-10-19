@@ -30,10 +30,12 @@ func init_table(_crew_id, _crew_role) -> void:
 	var max_salary = team_entity.current_money
 	if team_entity.crew.has(_crew_id):
 		max_salary += team_entity.crew[_crew_id].person_annual_salary
-	crew_by_role.sort_custom(func(a, b): return a['SKILLS'] > b['SKILLS'])
+	crew_by_role.sort_custom(func(a, b): return a['ANNUAL_SALARY'] > b['ANNUAL_SALARY'])
 	Utils.clear_all_children(v_box_container)
 	for person in crew_by_role:
 		if int(person['TEAM']) != 0 or person['ANNUAL_SALARY'] > max_salary:
+			continue
+		if person['REMAINING_YEARS'] > 15:
 			continue
 		var line = CREW_LINE.instantiate()
 		v_box_container.add_child(line)

@@ -5,8 +5,8 @@ extends ColorRect
 @onready var career_label: Label = %CareerLabel
 @onready var exp_label: TextureRect = %ExpLabel
 @onready var skills_label: TextureRect = %SkillsLabel
-@onready var endurance_label: TextureRect = %EnduranceLabel
 @onready var salary_label: Label = %SalaryLabel
+@onready var endurance_label: TextureRect = %EnduranceLabel
 
 var person : Dictionary
 var crew_id : int
@@ -16,11 +16,16 @@ var mouseEntered: bool = false
 var is_selected: bool = false
 
 const LEVELS : Array = [
-	preload("uid://dysot830ivr00"),
-	preload("uid://bglvkwhpk4q3"),
-	preload("uid://ot64gmg33642"),
-	preload("uid://gq8okseiuekr"),
-	preload("uid://bde3f6unpmu2b")
+	preload('uid://drsmv7kbcwgem'),
+	preload('uid://dak3p38x0tntl'),
+	preload('uid://crbtrxrrswe8r'),
+	preload('uid://38v1n30h8io2'),
+	preload('uid://c2g77imu85n55'),
+	preload('uid://2yyvi5mrr3dm'),
+	preload('uid://c21wbwo1rog73'),
+	preload('uid://dq5o7ri2c2iu'),
+	preload('uid://d0j1tf4y51150'),
+	preload('uid://cpfwxb6yhi03y'),
 ]
 
 
@@ -35,24 +40,24 @@ func init(_crew_id : int, _person : Dictionary) -> void:
 	career_label.text = _format_career(person['REMAINING_YEARS'])
 	salary_label.text = str(Utils.format_money(person['ANNUAL_SALARY']), " ")
 	exp_label.texture = get_stars_from_level(person['EXPERIENCE'])
-	skills_label.texture = get_stars_from_level(person['SKILLS'])
 	endurance_label.texture = get_stars_from_level(person['ENDURANCE'])
+	skills_label.texture = get_stars_from_level(person['SKILLS'])
 
 
 func get_stars_from_level(level : int) -> Resource:
-	var star = floori((level - 50) / 10.0)
+	var star = floori(level / 10.0)
 	if star < 0:
 		star = 0
-	if star > 4:
-		star = 4
+	if star > 9:
+		star = 9
 	return LEVELS[star]
 
 func _format_career(remaining_years: int) -> String:
 	if remaining_years < 5:
-		return "Start"
+		return "End"
 	if remaining_years < 10:
 		return "Mid"
-	return "End"
+	return "Start"
 
 
 func _on_mouse_entered() -> void:

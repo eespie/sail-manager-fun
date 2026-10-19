@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_u0qkw")
 role_name = "Wing Trimmer"
-annual_salary_max = 3000000
+annual_salary_max = 5000000
 annual_salary_min = 500000
 mandatory = true
 metadata/_custom_type_script = "uid://ctbulmftwdum0"

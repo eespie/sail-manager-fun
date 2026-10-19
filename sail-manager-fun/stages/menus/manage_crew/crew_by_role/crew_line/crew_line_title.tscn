@@ -10,10 +10,12 @@ offset_bottom = 40.0
 
 [node name="Bg" type="ColorRect" parent="." unique_id=1682337678]
 custom_minimum_size = Vector2(1606, 0)
+custom_maximum_size = Vector2(1606, -1)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 14.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.50928617, 0.50928617, 0.50928617, 1)
@@ -38,23 +40,16 @@ layout_mode = 2
 text = "Name"
 
 [node name="Nation" type="Label" parent="HBoxContainer" unique_id=572990955]
-custom_minimum_size = Vector2(180, 0)
-custom_maximum_size = Vector2(180, -1)
+custom_minimum_size = Vector2(130, 0)
+custom_maximum_size = Vector2(130, -1)
 layout_mode = 2
 text = "Nation"
 
 [node name="Career" type="Label" parent="HBoxContainer" unique_id=1169966066]
-custom_minimum_size = Vector2(180, 0)
-custom_maximum_size = Vector2(180, -1)
+custom_minimum_size = Vector2(130, 0)
+custom_maximum_size = Vector2(130, -1)
 layout_mode = 2
 text = "Career"
-
-[node name="Experience" type="Label" parent="HBoxContainer" unique_id=2128140243]
-custom_minimum_size = Vector2(200, 0)
-custom_maximum_size = Vector2(200, -1)
-layout_mode = 2
-text = "Learning"
-horizontal_alignment = 1
 
 [node name="Skills" type="Label" parent="HBoxContainer" unique_id=1465399454]
 custom_minimum_size = Vector2(200, 0)
@@ -63,7 +58,22 @@ layout_mode = 2
 text = "Skills"
 horizontal_alignment = 1
 
-[node name="Endurance" type="Label" parent="HBoxContainer" unique_id=634071332]
+[node name="Label2" type="Label" parent="HBoxContainer" unique_id=893108353]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="Experience" type="Label" parent="HBoxContainer" unique_id=2128140243]
+custom_minimum_size = Vector2(200, 0)
+custom_maximum_size = Vector2(200, -1)
+layout_mode = 2
+text = "Experience"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="HBoxContainer" unique_id=2795804]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="Endurance" type="Label" parent="HBoxContainer" unique_id=1724592655]
 custom_minimum_size = Vector2(200, 0)
 custom_maximum_size = Vector2(200, -1)
 layout_mode = 2
@@ -75,4 +85,4 @@ custom_minimum_size = Vector2(240, 0)
 custom_maximum_size = Vector2(240, -1)
 layout_mode = 2
 text = "Annual Salary"
-horizontal_alignment = 1
+horizontal_alignment = 2

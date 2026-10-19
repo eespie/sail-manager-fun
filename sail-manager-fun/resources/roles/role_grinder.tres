@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_hq5g3")
 role_name = "Grinder"
-annual_salary_max = 1000000
+annual_salary_max = 2000000
 annual_salary_min = 400000
 mandatory = true
 metadata/_custom_type_script = "uid://ctbulmftwdum0"
