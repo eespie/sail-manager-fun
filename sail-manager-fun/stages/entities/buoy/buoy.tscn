@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dm3boii77ghe0"]
+
+[ext_resource type="Texture2D" uid="uid://b78uipvuvcukt" path="res://resources/props/buoy.png" id="1_ftb25"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ccjeu"]
+size = Vector2(8.905075, 4.5655975)
+
+[node name="Buoy" type="Sprite2D" unique_id=584263159]
+texture = ExtResource("1_ftb25")
+
+[node name="Collision" type="Area2D" parent="." unique_id=97244345]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collision" unique_id=177705988]
+position = Vector2(0.00012207031, -6.1035156e-05)
+shape = SubResource("RectangleShape2D_ccjeu")

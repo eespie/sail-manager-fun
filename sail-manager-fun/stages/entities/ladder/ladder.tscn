@@ -1,0 +1,219 @@
+[gd_scene format=3 uid="uid://jnm7f66m5lge"]
+
+[ext_resource type="Texture2D" uid="uid://cp5i372gib644" path="res://resources/props/ladder.png" id="1_a8tg2"]
+
+[node name="Ladder" type="Node2D" unique_id=1909128318]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1732048555]
+position = Vector2(0, 160)
+texture = ExtResource("1_a8tg2")
+
+[node name="100 m" type="Label" parent="." unique_id=881619606]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -45.0
+offset_top = 15.0
+offset_right = 45.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"WhiteLabel"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 10
+text = "100 m"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="200 m" type="Label" parent="." unique_id=631013027]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -45.0
+offset_top = 47.0
+offset_right = 45.0
+offset_bottom = 82.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"WhiteLabel"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 10
+text = "200 m"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="300 m" type="Label" parent="." unique_id=587898758]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -45.0
+offset_top = 79.0
+offset_right = 45.0
+offset_bottom = 114.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"WhiteLabel"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 10
+text = "300 m"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="400 m" type="Label" parent="." unique_id=1531514906]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -45.0
+offset_top = 111.0
+offset_right = 45.0
+offset_bottom = 146.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"WhiteLabel"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 10
+text = "400 m"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="500 m" type="Label" parent="." unique_id=829966770]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -45.0
+offset_top = 143.0
+offset_right = 45.0
+offset_bottom = 178.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"WhiteLabel"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 10
+text = "500 m"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="600 m" type="Label" parent="." unique_id=255267917]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -45.0
+offset_top = 174.0
+offset_right = 45.0
+offset_bottom = 209.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"WhiteLabel"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 10
+text = "600 m"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="700 m" type="Label" parent="." unique_id=1193110973]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -45.0
+offset_top = 207.0
+offset_right = 45.0
+offset_bottom = 242.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"WhiteLabel"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 10
+text = "700 m"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="800 m" type="Label" parent="." unique_id=1268651452]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -45.0
+offset_top = 239.0
+offset_right = 45.0
+offset_bottom = 274.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"WhiteLabel"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 10
+text = "800 m"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="900 m" type="Label" parent="." unique_id=1703473439]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -45.0
+offset_top = 271.0
+offset_right = 45.0
+offset_bottom = 306.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"WhiteLabel"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 10
+text = "900 m"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="1000 m" type="Label" parent="." unique_id=581778165]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -45.0
+offset_top = 303.0
+offset_right = 45.0
+offset_bottom = 338.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"WhiteLabel"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 10
+text = "1000 m"
+horizontal_alignment = 1
+vertical_alignment = 1

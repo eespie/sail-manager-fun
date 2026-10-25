@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://clwk1hl72oeai"]
+
+[ext_resource type="PackedScene" uid="uid://dm3boii77ghe0" path="res://stages/entities/buoy/buoy.tscn" id="1_r0v46"]
+[ext_resource type="Texture2D" uid="uid://kgg68d61gh8u" path="res://resources/props/start.png" id="1_tmh8m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ccjeu"]
+size = Vector2(28, 10)
+
+[node name="Start" type="Node2D" unique_id=949367812]
+
+[node name="Line2D" type="Line2D" parent="." unique_id=33894669]
+modulate = Color(1, 1, 1, 0.60784316)
+points = PackedVector2Array(-16, 0, 16, 0)
+texture = ExtResource("1_tmh8m")
+texture_mode = 1
+
+[node name="Start Area" type="Area2D" parent="Line2D" unique_id=876103928]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Line2D/Start Area" unique_id=1220839552]
+shape = SubResource("RectangleShape2D_ccjeu")
+
+[node name="Buoy Start" parent="." unique_id=584263159 instance=ExtResource("1_r0v46")]
+position = Vector2(-16, 0)
+rotation = 1.5707964
+
+[node name="Buoy Start2" parent="." unique_id=221311554 instance=ExtResource("1_r0v46")]
+position = Vector2(16, 0)
+rotation = 1.5707964

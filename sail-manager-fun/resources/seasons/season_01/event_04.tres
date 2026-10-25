@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="EventRes" format=3 uid="uid://flwkt2ibkd8c"]
+
+[ext_resource type="Resource" uid="uid://btfnsyirrmtm2" path="res://resources/seasons/season_01/location_cowes.tres" id="1_qlads"]
+[ext_resource type="Script" uid="uid://dyb3dwgw8dywq" path="res://resources/seasons/race_res.gd" id="2_flvyl"]
+[ext_resource type="Resource" uid="uid://dvxc7meo3plgt" path="res://resources/seasons/season_01/race_fleet.tres" id="3_jtey5"]
+[ext_resource type="Resource" uid="uid://b03r5ldr41dpe" path="res://resources/seasons/season_01/race_final.tres" id="4_jo6bi"]
+[ext_resource type="Script" uid="uid://cjb8w7mce6lmf" path="res://resources/seasons/event_res.gd" id="5_wftxt"]
+
+[resource]
+script = ExtResource("5_wftxt")
+event_number = 1
+event_location = ExtResource("1_qlads")
+event_races = Array[ExtResource("2_flvyl")]([ExtResource("3_jtey5"), ExtResource("3_jtey5"), ExtResource("3_jtey5"), ExtResource("3_jtey5"), ExtResource("3_jtey5"), ExtResource("4_jo6bi")])
+metadata/_custom_type_script = "uid://cjb8w7mce6lmf"

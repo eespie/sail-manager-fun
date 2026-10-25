@@ -1,0 +1,122 @@
+[gd_scene format=3 uid="uid://cn3qovak5pm65"]
+
+[ext_resource type="Texture2D" uid="uid://kysv5xf86702" path="res://resources/maps/sydney-map-water.png" id="1_7jxte"]
+[ext_resource type="Texture2D" uid="uid://bi43dv4pmw76h" path="res://stages/seasons/2019/event_01/tracé-2019.png" id="2_20y4k"]
+[ext_resource type="PackedScene" uid="uid://clwk1hl72oeai" path="res://stages/entities/start/start.tscn" id="3_g3kr0"]
+[ext_resource type="PackedScene" uid="uid://dm3boii77ghe0" path="res://stages/entities/buoy/buoy.tscn" id="4_e3cwn"]
+[ext_resource type="PackedScene" uid="uid://4vcx6xwmjq58" path="res://stages/entities/Arrival/arrival.tscn" id="5_20y4k"]
+[ext_resource type="PackedScene" uid="uid://dga6o4kls3alj" path="res://stages/entities/gate/gate.tscn" id="5_e3cwn"]
+[ext_resource type="PackedScene" uid="uid://jnm7f66m5lge" path="res://stages/entities/ladder/ladder.tscn" id="7_7jxte"]
+[ext_resource type="Texture2D" uid="uid://qcd0m8cq5c47" path="res://resources/maps/sydney-map-transparent.png" id="8_ppp7w"]
+[ext_resource type="PackedScene" uid="uid://di38j0hwsgxmp" path="res://stages/menus/ui/camera/camera_2d.tscn" id="9_ppp7w"]
+
+[node name="Event01" type="Node2D" unique_id=371153468]
+
+[node name="water" type="Sprite2D" parent="." unique_id=853487968]
+texture = ExtResource("1_7jxte")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1424121593]
+visible = false
+modulate = Color(1, 1, 1, 0.34509805)
+position = Vector2(678, 565)
+texture = ExtResource("2_20y4k")
+
+[node name="Buoys" type="Node2D" parent="." unique_id=1443638386]
+
+[node name="Start" parent="Buoys" unique_id=949367812 instance=ExtResource("3_g3kr0")]
+position = Vector2(992, 566)
+rotation = -1.1082841
+
+[node name="Buoy 1" parent="Buoys" unique_id=584263159 instance=ExtResource("4_e3cwn")]
+position = Vector2(782, 493)
+rotation = -0.2635447
+
+[node name="Gate 2" parent="Buoys" unique_id=1550000648 instance=ExtResource("5_e3cwn")]
+position = Vector2(541.00006, 796.00006)
+rotation = 0.6789331
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Gate 3" parent="Buoys" unique_id=1048064082 instance=ExtResource("5_e3cwn")]
+position = Vector2(915, 381)
+rotation = 0.6789331
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Arrival" parent="Buoys" unique_id=944220255 instance=ExtResource("5_20y4k")]
+position = Vector2(810, 733)
+rotation = 1.3194689
+
+[node name="Targets" type="Node2D" parent="." unique_id=1117061217]
+
+[node name="Marker Start" type="Marker2D" parent="Targets" unique_id=381693751]
+position = Vector2(997, 569)
+
+[node name="Marker 1 Buoy 1" type="Marker2D" parent="Targets" unique_id=856855985]
+position = Vector2(785, 484)
+
+[node name="Marker 2 Buoy 1" type="Marker2D" parent="Targets" unique_id=1107778896]
+position = Vector2(774, 487)
+
+[node name="Marker 1 Buoy 2" type="Marker2D" parent="Targets" unique_id=846834057]
+position = Vector2(548, 817)
+
+[node name="Marker 2 Buoy 2" type="Marker2D" parent="Targets" unique_id=2062024565]
+position = Vector2(520, 792)
+
+[node name="Marker 1 Buoy 3" type="Marker2D" parent="Targets" unique_id=1883469664]
+position = Vector2(936, 384)
+
+[node name="Marker 2 Buoy 3" type="Marker2D" parent="Targets" unique_id=2101773801]
+position = Vector2(906, 361)
+
+[node name="Marker Arrival" type="Marker2D" parent="Targets" unique_id=1973679571]
+position = Vector2(806, 735)
+
+[node name="Ladder Gate 3" parent="." unique_id=1909128318 instance=ExtResource("7_7jxte")]
+visible = false
+modulate = Color(1, 1, 1, 0.5882353)
+position = Vector2(915, 381)
+rotation = 0.6859144
+
+[node name="Ladder Gate 2" parent="." unique_id=10307331 instance=ExtResource("7_7jxte")]
+visible = false
+modulate = Color(1, 1, 1, 0.5882353)
+position = Vector2(541, 796)
+rotation = -2.4609141
+
+[node name="Sydney Map" type="Sprite2D" parent="." unique_id=37359602]
+texture = ExtResource("8_ppp7w")
+centered = false
+
+[node name="Limit Line" type="Line2D" parent="." unique_id=532609217]
+points = PackedVector2Array(429, 748, 611, 613, 833, 311, 897, 293, 1046, 392, 1039, 458, 1128, 751, 1013, 890, 852, 847, 596, 870, 546, 888, 429, 748)
+width = 5.0
+joint_mode = 2
+begin_cap_mode = 2
+
+[node name="Limit Area" type="Area2D" parent="Limit Line" unique_id=1970078917]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Limit Line/Limit Area" unique_id=730109415]
+position = Vector2(0, -2)
+polygon = PackedVector2Array(429, 750, 612, 614, 833, 313, 897, 295, 1046, 394, 1039, 460, 1128, 753, 1013, 891, 852, 849, 596, 872, 546, 889, 430, 750, 416, 748, 544, 897, 597, 878, 852, 855, 1015, 898, 1134, 754, 1045, 459, 1053, 390, 898, 286, 828, 305, 606, 609, 415, 747)
+
+[node name="Exclusion" type="Line2D" parent="." unique_id=653110081]
+visible = false
+modulate = Color(1, 1, 1, 0.5882353)
+points = PackedVector2Array(399, 741, 597, 597, 820, 293, 899, 270, 1067, 382, 1059, 456, 1148, 754, 1020, 910, 851, 866, 600, 889, 540, 910, 398, 745)
+width = 20.0
+default_color = Color(0.7921569, 0, 0, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Area2D" type="Area2D" parent="Exclusion" unique_id=77952610]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Exclusion/Area2D" unique_id=1810533300]
+polygon = PackedVector2Array(411, 744, 604, 604, 826, 301, 898, 281, 1057, 387, 1049, 456, 1137, 751, 1016, 899, 851, 856, 598, 879, 543, 898, 410, 745, 382, 741, 537, 922, 602, 899, 850, 876, 1023, 922, 1159, 756, 1069, 454, 1078, 377, 901, 259, 814, 284, 590, 590, 384, 739)
+
+[node name="Camera2D" parent="." unique_id=268821489 instance=ExtResource("9_ppp7w")]
+position = Vector2(644, 591)
+zoom = Vector2(1.5, 1.5)
+drag_horizontal_enabled = true
+drag_vertical_enabled = true

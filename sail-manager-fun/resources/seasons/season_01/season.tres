@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="SeasonRes" format=3 uid="uid://dd5urpfsf6n1l"]
+
+[ext_resource type="Script" uid="uid://8ci0uhk1nyl5" path="res://resources/seasons/season_res.gd" id="1_fgtaq"]
+[ext_resource type="Script" uid="uid://cjb8w7mce6lmf" path="res://resources/seasons/event_res.gd" id="2_1t0uc"]
+[ext_resource type="Script" uid="uid://dfxneiqxstvvj" path="res://resources/team/team_resource.gd" id="3_gen6n"]
+[ext_resource type="Resource" uid="uid://ov25jgde2phh" path="res://resources/team/team_aus.tres" id="4_3e56a"]
+[ext_resource type="Resource" uid="uid://cs2g0cp2tsose" path="res://resources/team/team_fra.tres" id="5_2by14"]
+[ext_resource type="Resource" uid="uid://b6s4ug5io1l8m" path="res://resources/team/team_gbr.tres" id="6_78iql"]
+[ext_resource type="Resource" uid="uid://be8hl8i5ko066" path="res://resources/team/team_bra.tres" id="7_xf61k"]
+[ext_resource type="Resource" uid="uid://c2skjlhh5aon4" path="res://resources/team/team_can.tres" id="8_e3wp0"]
+[ext_resource type="Resource" uid="uid://c7ki5jumlfe72" path="res://resources/team/team_den.tres" id="9_cydxi"]
+
+[resource]
+script = ExtResource("1_fgtaq")
+season_number = 1
+season_prices = Array[int]([1000000, 500000, 100000])
+season_teams = Array[ExtResource("3_gen6n")]([ExtResource("4_3e56a"), ExtResource("5_2by14"), ExtResource("6_78iql"), ExtResource("7_xf61k"), ExtResource("8_e3wp0"), ExtResource("9_cydxi")])
+season_race_points = Dictionary[int, Array]({
+0: [10, 9, 8, 7, 6, 5],
+1: [3, 0]
+})
+season_event_points = Array[int]([10, 9, 8, 7, 6, 5])
+metadata/_custom_type_script = "uid://8ci0uhk1nyl5"

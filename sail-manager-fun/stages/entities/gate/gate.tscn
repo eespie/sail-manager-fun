@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dga6o4kls3alj"]
+
+[ext_resource type="PackedScene" uid="uid://dm3boii77ghe0" path="res://stages/entities/buoy/buoy.tscn" id="1_l3kbg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ccjeu"]
+size = Vector2(34, 4)
+
+[node name="Gate" type="Node2D" unique_id=1550000648]
+
+[node name="Buoy 1" parent="." unique_id=584263159 instance=ExtResource("1_l3kbg")]
+position = Vector2(19, 0)
+rotation = 1.5707964
+
+[node name="Buoy 2" parent="." unique_id=1819953634 instance=ExtResource("1_l3kbg")]
+position = Vector2(-19, 0)
+rotation = 1.5707964
+
+[node name="Area2D" type="Area2D" parent="." unique_id=484138964]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=471393269]
+shape = SubResource("RectangleShape2D_ccjeu")

@@ -1,5 +1,5 @@
 extends Node
-
+# class_name Constants
 
 enum CREW_ROLE {
 	DRIVER,
@@ -54,4 +54,10 @@ const FLAG_BY_COUNTRY : Dictionary = {
 	'BRA': 'Flag_of_Brazil.png',
 	'SWE': 'Flag_of_Sweden.png',
 	'USA': 'Flag_of_the_United_States.png',
+}
+
+enum RACE_TYPE {
+	FLEET,
+	FINAL,
+	GRAND_FINAL
 }

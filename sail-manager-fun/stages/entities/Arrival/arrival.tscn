@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://4vcx6xwmjq58"]
+
+[ext_resource type="PackedScene" uid="uid://dm3boii77ghe0" path="res://stages/entities/buoy/buoy.tscn" id="1_5x5tv"]
+[ext_resource type="Texture2D" uid="uid://crt1802mksy21" path="res://resources/props/arrival.png" id="1_vdihs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g6b5p"]
+size = Vector2(28, 10)
+
+[node name="Arrival" type="Node2D" unique_id=944220255]
+
+[node name="Line2D" type="Line2D" parent="." unique_id=359284755]
+modulate = Color(1, 1, 1, 0.60784316)
+points = PackedVector2Array(-16, 0, 16, 0)
+texture = ExtResource("1_vdihs")
+texture_mode = 1
+
+[node name="Arrival Area" type="Area2D" parent="Line2D" unique_id=597145514]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Line2D/Arrival Area" unique_id=633703352]
+shape = SubResource("RectangleShape2D_g6b5p")
+
+[node name="Buoy Start" parent="." unique_id=584263159 instance=ExtResource("1_5x5tv")]
+position = Vector2(-16, 0)
+rotation = 1.5707964
+
+[node name="Buoy Start2" parent="." unique_id=457768440 instance=ExtResource("1_5x5tv")]
+position = Vector2(16, 0)
+rotation = 1.5707964

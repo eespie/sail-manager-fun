@@ -31,6 +31,7 @@ Player="*uid://dv4k5huslb032"
 CrewManagement="*uid://f8hnoyxwlkt4"
 Options="*uid://drrjbm7yend5v"
 GameSave="*uid://cti4ef4vyrg0l"
+Results="*uid://bc5gb8ic1mduj"
 
 [display]
 
@@ -40,12 +41,29 @@ window/size/mode=4
 window/stretch/mode="canvas_items"
 window/stretch/aspect="keep_width"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/script-ide/plugin.cfg")
+
 [gui]
 
 fonts/dynamic_fonts/use_oversampling=false
 theme/default_theme_scale=2.0
 theme/custom="uid://d2rai3sjqo8nm"
 theme/custom_font="uid://ddoujvi5ctqms"
+
+[input]
+
+camera_zoom_in={
+"deadzone": 0.2,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":4,"canceled":false,"pressed":false,"double_click":false,"script":null)
+]
+}
+camera_zoom_out={
+"deadzone": 0.2,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":5,"canceled":false,"pressed":false,"double_click":false,"script":null)
+]
+}
 
 [physics]
 

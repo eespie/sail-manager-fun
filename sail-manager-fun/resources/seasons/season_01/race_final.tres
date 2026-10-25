@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="RaceRes" format=3 uid="uid://b03r5ldr41dpe"]
+
+[ext_resource type="Script" uid="uid://dyb3dwgw8dywq" path="res://resources/seasons/race_res.gd" id="1_8h8qi"]
+
+[resource]
+script = ExtResource("1_8h8qi")
+race_teams_number = 2
+metadata/_custom_type_script = "uid://dyb3dwgw8dywq"

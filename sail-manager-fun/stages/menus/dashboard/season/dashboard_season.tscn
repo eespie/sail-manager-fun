@@ -1,12 +1,36 @@
 [gd_scene format=3 uid="uid://8ohcgnr4n3ts"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2m1pj"]
+
 [node name="Season" type="PanelContainer" unique_id=2086758962]
-custom_minimum_size = Vector2(0, 500)
+custom_minimum_size = Vector2(800, 500)
+custom_maximum_size = Vector2(-1, 500)
+offset_right = 800.0
+offset_bottom = 614.0
 size_flags_horizontal = 3
 size_flags_vertical = 0
 theme_type_variation = &"PanelContainerDashboard"
 
-[node name="Title" type="Label" parent="." unique_id=1559428828]
+[node name="Label" type="Label" parent="." unique_id=1106081538]
+modulate = Color(1, 1, 1, 0.24705882)
+layout_mode = 2
+size_flags_horizontal = 4
+offset_transform_enabled = true
+offset_transform_rotation = -0.43458697
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 30
+theme_override_constants/shadow_outline_size = 5
+theme_override_font_sizes/font_size = 400
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2m1pj")
+text = "O1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1807802950]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="VBoxContainer" unique_id=1559428828]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 size_flags_vertical = 0
