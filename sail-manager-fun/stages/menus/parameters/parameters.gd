@@ -9,12 +9,10 @@ func _ready() -> void:
 		display_option_button.select(0)
 
 
-
-
 func _on_display_option_button_item_selected(index: int) -> void:
 	if index == 0:
 		Options.fullscreen = false
 	else:
 		Options.fullscreen = true
 	Options.apply()
-	GameSave.save_game('current')
+	GameSave.save_game()

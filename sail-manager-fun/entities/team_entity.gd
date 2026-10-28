@@ -42,7 +42,6 @@ func auto_select_crew() -> void:
 		var _crew_role = _crew_info['role']
 		var _percent = _crew_info['percent']
 		var crew_by_role = CrewManagement.crew_by_role[_crew_role]
-		var team_entity : TeamEntity = Teams.teams[Player.team_id]
 		var max_salary = int(budget * _percent / 100)
 		crew_by_role.sort_custom(sort_crew)
 		for person in crew_by_role:

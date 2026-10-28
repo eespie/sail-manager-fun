@@ -2,7 +2,7 @@ extends Control
 
 
 func _ready() -> void:
-	GameSave.save_game("current")
+	GameSave.save_game()
 
 
 func _on_options_pressed() -> void:

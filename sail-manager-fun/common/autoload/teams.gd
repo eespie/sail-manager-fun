@@ -1,4 +1,5 @@
 extends Node
+#class_name Teams
 
 # teams by enum value
 var teams : Dictionary[int, TeamEntity]

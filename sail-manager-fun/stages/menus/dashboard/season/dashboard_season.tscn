@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://8ohcgnr4n3ts"]
 
+[ext_resource type="Script" uid="uid://31jwgf8oskjy" path="res://stages/menus/dashboard/season/dashboard_season.gd" id="1_ufao4"]
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2m1pj"]
 
 [node name="Season" type="PanelContainer" unique_id=2086758962]
@@ -10,8 +12,10 @@ offset_bottom = 614.0
 size_flags_horizontal = 3
 size_flags_vertical = 0
 theme_type_variation = &"PanelContainerDashboard"
+script = ExtResource("1_ufao4")
 
-[node name="Label" type="Label" parent="." unique_id=1106081538]
+[node name="Season Name" type="Label" parent="." unique_id=1106081538]
+unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.24705882)
 layout_mode = 2
 size_flags_horizontal = 4

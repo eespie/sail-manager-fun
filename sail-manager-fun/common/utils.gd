@@ -10,10 +10,10 @@ static func format_money(_amount : int) -> String:
 		str_amount = '0'
 	elif _amount % 1000000 == 0:
 		unit = 'M'
-		str_amount = "%d" % floori(_amount / 1000000)
+		str_amount = "%d" % floori(_amount / 1000000.0)
 	elif _amount % 1000 == 0:
 		unit = 'k'
-		str_amount = write_numbers_with_coma(_amount / 1000)
+		str_amount = write_numbers_with_coma(_amount / 1000.0)
 	else:
 		str_amount = write_numbers_with_coma(_amount)
 	return str("$", str_amount, unit)

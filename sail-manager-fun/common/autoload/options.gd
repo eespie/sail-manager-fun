@@ -5,7 +5,7 @@ var HEIGHT = ProjectSettings.get_setting("display/window/size/viewport_height")
 
 var play_sfx = true
 var play_music = true
-var fullscreen = true
+var fullscreen = false
 
 func _ready() -> void:
 	if fullscreen:
