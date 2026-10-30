@@ -1,48 +1,48 @@
 [gd_scene format=3 uid="uid://cn3qovak5pm65"]
 
-[ext_resource type="Texture2D" uid="uid://kysv5xf86702" path="res://resources/maps/sydney-map-water.png" id="1_7jxte"]
-[ext_resource type="Texture2D" uid="uid://bi43dv4pmw76h" path="res://stages/seasons/2019/event_01/tracé-2019.png" id="2_20y4k"]
-[ext_resource type="PackedScene" uid="uid://clwk1hl72oeai" path="res://stages/entities/start/start.tscn" id="3_g3kr0"]
-[ext_resource type="PackedScene" uid="uid://dm3boii77ghe0" path="res://stages/entities/buoy/buoy.tscn" id="4_e3cwn"]
-[ext_resource type="PackedScene" uid="uid://4vcx6xwmjq58" path="res://stages/entities/Arrival/arrival.tscn" id="5_20y4k"]
-[ext_resource type="PackedScene" uid="uid://dga6o4kls3alj" path="res://stages/entities/gate/gate.tscn" id="5_e3cwn"]
-[ext_resource type="PackedScene" uid="uid://jnm7f66m5lge" path="res://stages/entities/ladder/ladder.tscn" id="7_7jxte"]
-[ext_resource type="Texture2D" uid="uid://qcd0m8cq5c47" path="res://resources/maps/sydney-map-transparent.png" id="8_ppp7w"]
-[ext_resource type="PackedScene" uid="uid://di38j0hwsgxmp" path="res://stages/menus/ui/camera/camera_2d.tscn" id="9_ppp7w"]
+[ext_resource type="Texture2D" uid="uid://kysv5xf86702" path="res://resources/maps/sydney-map-water.png" id="1_2y6c4"]
+[ext_resource type="Texture2D" uid="uid://bi43dv4pmw76h" path="res://stages/seasons/1/event_1/track.png" id="2_2y6c4"]
+[ext_resource type="PackedScene" uid="uid://clwk1hl72oeai" path="res://stages/entities/start/start.tscn" id="3_lb0wn"]
+[ext_resource type="PackedScene" uid="uid://dm3boii77ghe0" path="res://stages/entities/buoy/buoy.tscn" id="4_1pksc"]
+[ext_resource type="PackedScene" uid="uid://dga6o4kls3alj" path="res://stages/entities/gate/gate.tscn" id="5_kqd8n"]
+[ext_resource type="PackedScene" uid="uid://4vcx6xwmjq58" path="res://stages/entities/Arrival/arrival.tscn" id="6_47qxw"]
+[ext_resource type="PackedScene" uid="uid://jnm7f66m5lge" path="res://stages/entities/ladder/ladder.tscn" id="7_uo6km"]
+[ext_resource type="Texture2D" uid="uid://qcd0m8cq5c47" path="res://resources/maps/sydney-map-transparent.png" id="8_oo7lb"]
+[ext_resource type="PackedScene" uid="uid://di38j0hwsgxmp" path="res://stages/menus/ui/camera/camera_2d.tscn" id="9_r03te"]
 
 [node name="Event01" type="Node2D" unique_id=371153468]
 
 [node name="water" type="Sprite2D" parent="." unique_id=853487968]
-texture = ExtResource("1_7jxte")
+texture = ExtResource("1_2y6c4")
 centered = false
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1424121593]
 visible = false
 modulate = Color(1, 1, 1, 0.34509805)
 position = Vector2(678, 565)
-texture = ExtResource("2_20y4k")
+texture = ExtResource("2_2y6c4")
 
 [node name="Buoys" type="Node2D" parent="." unique_id=1443638386]
 
-[node name="Start" parent="Buoys" unique_id=949367812 instance=ExtResource("3_g3kr0")]
+[node name="Start" parent="Buoys" unique_id=949367812 instance=ExtResource("3_lb0wn")]
 position = Vector2(992, 566)
 rotation = -1.1082841
 
-[node name="Buoy 1" parent="Buoys" unique_id=584263159 instance=ExtResource("4_e3cwn")]
+[node name="Buoy 1" parent="Buoys" unique_id=584263159 instance=ExtResource("4_1pksc")]
 position = Vector2(782, 493)
 rotation = -0.2635447
 
-[node name="Gate 2" parent="Buoys" unique_id=1550000648 instance=ExtResource("5_e3cwn")]
+[node name="Gate 2" parent="Buoys" unique_id=1550000648 instance=ExtResource("5_kqd8n")]
 position = Vector2(541.00006, 796.00006)
 rotation = 0.6789331
 scale = Vector2(0.99999994, 0.99999994)
 
-[node name="Gate 3" parent="Buoys" unique_id=1048064082 instance=ExtResource("5_e3cwn")]
+[node name="Gate 3" parent="Buoys" unique_id=1048064082 instance=ExtResource("5_kqd8n")]
 position = Vector2(915, 381)
 rotation = 0.6789331
 scale = Vector2(0.99999994, 0.99999994)
 
-[node name="Arrival" parent="Buoys" unique_id=944220255 instance=ExtResource("5_20y4k")]
+[node name="Arrival" parent="Buoys" unique_id=944220255 instance=ExtResource("6_47qxw")]
 position = Vector2(810, 733)
 rotation = 1.3194689
 
@@ -72,20 +72,20 @@ position = Vector2(906, 361)
 [node name="Marker Arrival" type="Marker2D" parent="Targets" unique_id=1973679571]
 position = Vector2(806, 735)
 
-[node name="Ladder Gate 3" parent="." unique_id=1909128318 instance=ExtResource("7_7jxte")]
+[node name="Ladder Gate 3" parent="." unique_id=1909128318 instance=ExtResource("7_uo6km")]
 visible = false
 modulate = Color(1, 1, 1, 0.5882353)
 position = Vector2(915, 381)
 rotation = 0.6859144
 
-[node name="Ladder Gate 2" parent="." unique_id=10307331 instance=ExtResource("7_7jxte")]
+[node name="Ladder Gate 2" parent="." unique_id=10307331 instance=ExtResource("7_uo6km")]
 visible = false
 modulate = Color(1, 1, 1, 0.5882353)
 position = Vector2(541, 796)
 rotation = -2.4609141
 
 [node name="Sydney Map" type="Sprite2D" parent="." unique_id=37359602]
-texture = ExtResource("8_ppp7w")
+texture = ExtResource("8_oo7lb")
 centered = false
 
 [node name="Limit Line" type="Line2D" parent="." unique_id=532609217]
@@ -115,7 +115,7 @@ end_cap_mode = 2
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Exclusion/Area2D" unique_id=1810533300]
 polygon = PackedVector2Array(411, 744, 604, 604, 826, 301, 898, 281, 1057, 387, 1049, 456, 1137, 751, 1016, 899, 851, 856, 598, 879, 543, 898, 410, 745, 382, 741, 537, 922, 602, 899, 850, 876, 1023, 922, 1159, 756, 1069, 454, 1078, 377, 901, 259, 814, 284, 590, 590, 384, 739)
 
-[node name="Camera2D" parent="." unique_id=268821489 instance=ExtResource("9_ppp7w")]
+[node name="Camera2D" parent="." unique_id=268821489 instance=ExtResource("9_r03te")]
 position = Vector2(644, 591)
 zoom = Vector2(1.5, 1.5)
 drag_horizontal_enabled = true

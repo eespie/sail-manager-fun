@@ -1,14 +1,168 @@
 [gd_scene format=3 uid="uid://xlsh0h5klffs"]
 
+[ext_resource type="Script" uid="uid://brethhhsaipbm" path="res://stages/menus/dashboard/next_event/dashboard_next_event.gd" id="1_n86l8"]
+[ext_resource type="Texture2D" uid="uid://ckfrch85l7gho" path="res://resources/flag/png-small/Flag_of_Australia.png" id="2_jujdm"]
+[ext_resource type="Texture2D" uid="uid://2hswxmv6qppu" path="res://resources/seasons/locations/maps/sydney.png" id="3_t7tj4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jujdm"]
+
 [node name="Next Event" type="PanelContainer" unique_id=2092147697]
+custom_minimum_size = Vector2(1320, 300)
 size_flags_vertical = 3
 theme_type_variation = &"PanelContainerDashboard"
+script = ExtResource("1_n86l8")
 
-[node name="Title" type="Label" parent="." unique_id=1140204713]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1740523970]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="VBoxContainer" unique_id=1140204713]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 size_flags_vertical = 0
-text = "Next Event"
+text = "Next Race"
 horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=554095025]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 10
+
+[node name="HFlowContainer" type="HFlowContainer" parent="VBoxContainer/MarginContainer" unique_id=2077947914]
+layout_mode = 2
+theme_override_constants/h_separation = 6
+
+[node name="Season" type="PanelContainer" parent="VBoxContainer/MarginContainer/HFlowContainer" unique_id=1595171184]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+
+[node name="Season Name" type="Label" parent="VBoxContainer/MarginContainer/HFlowContainer/Season" unique_id=1455335740]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.24705882)
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+offset_transform_enabled = true
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 30
+theme_override_constants/shadow_outline_size = 5
+theme_override_font_sizes/font_size = 170
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jujdm")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Title" type="Label" parent="VBoxContainer/MarginContainer/HFlowContainer/Season" unique_id=1126501604]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_type_variation = &"WhiteLabel"
+text = "Season"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Event" type="PanelContainer" parent="VBoxContainer/MarginContainer/HFlowContainer" unique_id=561178714]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/MarginContainer/HFlowContainer/Event" unique_id=1448982836]
+layout_mode = 2
+theme_override_constants/separation = 21
+
+[node name="Event Title" type="Label" parent="VBoxContainer/MarginContainer/HFlowContainer/Event/VBoxContainer" unique_id=661962800]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_type_variation = &"WhiteLabel"
+text = "Event"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Location" type="Label" parent="VBoxContainer/MarginContainer/HFlowContainer/Event/VBoxContainer" unique_id=1616316264]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"WhiteLabel"
+text = "Location"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MarginContainer/HFlowContainer/Event/VBoxContainer" unique_id=661923901]
+layout_mode = 2
+theme_override_constants/separation = 31
+alignment = 1
+
+[node name="Nationality" type="Label" parent="VBoxContainer/MarginContainer/HFlowContainer/Event/VBoxContainer/HBoxContainer" unique_id=1844929148]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"WhiteLabel"
+text = "NAT"
+
+[node name="Flag" type="TextureRect" parent="VBoxContainer/MarginContainer/HFlowContainer/Event/VBoxContainer/HBoxContainer" unique_id=235844451]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("2_jujdm")
+
+[node name="Map" type="PanelContainer" parent="VBoxContainer/MarginContainer/HFlowContainer" unique_id=1413433863]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+
+[node name="Event Map" type="TextureRect" parent="VBoxContainer/MarginContainer/HFlowContainer/Map" unique_id=1067919541]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("3_t7tj4")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Race" type="PanelContainer" parent="VBoxContainer/MarginContainer/HFlowContainer" unique_id=509587264]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+
+[node name="Race Number" type="Label" parent="VBoxContainer/MarginContainer/HFlowContainer/Race" unique_id=237281902]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.24705882)
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+offset_transform_enabled = true
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 30
+theme_override_constants/shadow_outline_size = 5
+theme_override_font_sizes/font_size = 170
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jujdm")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Title" type="Label" parent="VBoxContainer/MarginContainer/HFlowContainer/Race" unique_id=535984396]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_type_variation = &"WhiteLabel"
+text = "Race"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Launch Race" type="PanelContainer" parent="VBoxContainer/MarginContainer/HFlowContainer" unique_id=1466949972]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+
+[node name="Race Button" type="Button" parent="VBoxContainer/MarginContainer/HFlowContainer/Launch Race" unique_id=889479182]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "> Race"

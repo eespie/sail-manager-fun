@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SeasonsRes" format=3 uid="uid://s3wopo7q7vqn"]
+
+[ext_resource type="Script" uid="uid://wah5cpf8xdwc" path="res://resources/seasons/seasons_res.gd" id="1_kv0v1"]
+[ext_resource type="Script" uid="uid://8ci0uhk1nyl5" path="res://resources/seasons/season_res.gd" id="2_tvmgj"]
+[ext_resource type="Resource" uid="uid://dd5urpfsf6n1l" path="res://resources/seasons/season_1/season.tres" id="3_kv0v1"]
+
+[resource]
+script = ExtResource("1_kv0v1")
+seasons = Array[ExtResource("2_tvmgj")]([ExtResource("3_kv0v1")])
+metadata/_custom_type_script = "uid://wah5cpf8xdwc"

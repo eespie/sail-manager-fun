@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="LocationRes" format=3 uid="uid://cyl7aarryi2b4"]
+
+[ext_resource type="Texture2D" uid="uid://ckfrch85l7gho" path="res://resources/flag/png-small/Flag_of_Australia.png" id="1_q4fmf"]
+[ext_resource type="Texture2D" uid="uid://2hswxmv6qppu" path="res://resources/seasons/locations/maps/sydney.png" id="2_kfh40"]
+[ext_resource type="Script" uid="uid://3klx7lpi2wd8" path="res://resources/seasons/location_res.gd" id="3_747k2"]
+
+[resource]
+script = ExtResource("3_747k2")
+location_name = "Sydney"
+location_country = "AUS"
+location_flag = ExtResource("1_q4fmf")
+location_map = ExtResource("2_kfh40")
+metadata/_custom_type_script = "uid://3klx7lpi2wd8"

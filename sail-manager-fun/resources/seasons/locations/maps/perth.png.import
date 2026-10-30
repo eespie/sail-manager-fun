@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bi43dv4pmw76h"
-path="res://.godot/imported/tracé-2019.png-ca6424c85a2f0a9634ee5bd7247ef726.ctex"
+uid="uid://cq857pfetxivb"
+path="res://.godot/imported/perth.png-cd9e941851fac7d6accb2d7c168513d8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://stages/seasons/2019/event_01/tracé-2019.png"
-dest_files=["res://.godot/imported/tracé-2019.png-ca6424c85a2f0a9634ee5bd7247ef726.ctex"]
+source_file="res://resources/seasons/locations/maps/perth.png"
+dest_files=["res://.godot/imported/perth.png-cd9e941851fac7d6accb2d7c168513d8.ctex"]
 
 [params]
 

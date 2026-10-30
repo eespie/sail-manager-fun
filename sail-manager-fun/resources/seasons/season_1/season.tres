@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="SeasonRes" format=3 uid="uid://dd5urpfsf6n1l"]
+
+[ext_resource type="Script" uid="uid://8ci0uhk1nyl5" path="res://resources/seasons/season_res.gd" id="1_jn5or"]
+[ext_resource type="Script" uid="uid://cjb8w7mce6lmf" path="res://resources/seasons/event_res.gd" id="2_maevm"]
+[ext_resource type="Resource" uid="uid://doevvm1deakat" path="res://resources/seasons/season_1/event_1.tres" id="3_jn5or"]
+[ext_resource type="Resource" uid="uid://ctee2ff3x71j1" path="res://resources/seasons/season_1/event_2.tres" id="4_maevm"]
+[ext_resource type="Resource" uid="uid://6pj8sb6rsc17" path="res://resources/seasons/season_1/event_3.tres" id="5_y6xot"]
+[ext_resource type="Resource" uid="uid://flwkt2ibkd8c" path="res://resources/seasons/season_1/event_4.tres" id="6_3tjmv"]
+[ext_resource type="Resource" uid="uid://dw17260bkwksf" path="res://resources/seasons/season_1/event_5.tres" id="7_kr3oh"]
+[ext_resource type="Script" uid="uid://dfxneiqxstvvj" path="res://resources/team/team_resource.gd" id="8_i1eqr"]
+[ext_resource type="Resource" uid="uid://ov25jgde2phh" path="res://resources/team/team_aus.tres" id="9_s7qq7"]
+[ext_resource type="Resource" uid="uid://cs2g0cp2tsose" path="res://resources/team/team_fra.tres" id="10_v74fh"]
+[ext_resource type="Resource" uid="uid://b6s4ug5io1l8m" path="res://resources/team/team_gbr.tres" id="11_dx8pb"]
+[ext_resource type="Resource" uid="uid://be8hl8i5ko066" path="res://resources/team/team_bra.tres" id="12_iu8gd"]
+[ext_resource type="Resource" uid="uid://c2skjlhh5aon4" path="res://resources/team/team_can.tres" id="13_ihek3"]
+[ext_resource type="Resource" uid="uid://c7ki5jumlfe72" path="res://resources/team/team_den.tres" id="14_eet1w"]
+
+[resource]
+script = ExtResource("1_jn5or")
+season_number = 1
+season_prices = Array[int]([1000000, 500000, 100000])
+season_teams = Array[ExtResource("8_i1eqr")]([ExtResource("9_s7qq7"), ExtResource("10_v74fh"), ExtResource("11_dx8pb"), ExtResource("12_iu8gd"), ExtResource("13_ihek3"), ExtResource("14_eet1w")])
+season_events = Array[ExtResource("2_maevm")]([ExtResource("3_jn5or"), ExtResource("4_maevm"), ExtResource("5_y6xot"), ExtResource("6_3tjmv"), ExtResource("7_kr3oh")])
+season_race_points = Dictionary[int, Array]({
+0: [10, 9, 8, 7, 6, 5],
+1: [3, 0]
+})
+season_event_points = Array[int]([10, 9, 8, 7, 6, 5])
+metadata/_custom_type_script = "uid://8ci0uhk1nyl5"
