@@ -6,6 +6,7 @@ func _ready() -> void:
 
 
 func _on_options_pressed() -> void:
+	Scene.add_scene_data("next_scene", "uid://b275r5u4p0iex")
 	EventBus.sigChangeScene.emit("uid://b23msop8e0o2u")
 
 

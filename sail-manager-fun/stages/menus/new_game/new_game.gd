@@ -2,17 +2,21 @@ extends Control
 
 @export var newGameScene : String
 @onready var saved_games: ItemList = %"Saved Games"
+@onready var load_game_panel: Panel = %"Load Game Panel"
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# Display previously saved games
 	GameSave.load_games()
-	for game_date in GameSave.games:
-		if DirAccess.dir_exists_absolute(str(GameSave.root_dir, game_date)):
-			saved_games.add_item(game_date)
-		else:
-			GameSave.games.erase(game_date)
+	if GameSave.games.size() == 0:
+		load_game_panel.hide()
+	else:
+		for game_date in GameSave.games:
+			if DirAccess.dir_exists_absolute(str(GameSave.root_dir, game_date)):
+				saved_games.add_item(game_date)
+			else:
+				GameSave.games.erase(game_date)
 
 
 func _on_new_game_pressed() -> void:
@@ -34,3 +38,8 @@ func _on_saved_games_item_selected(index: int) -> void:
 
 func _on_quit_pressed() -> void:
 	get_tree().quit()
+
+
+func _on_options_pressed() -> void:
+	Scene.add_scene_data("next_scene", "uid://ddt17xj1854p8")
+	EventBus.sigChangeScene.emit("uid://b23msop8e0o2u")

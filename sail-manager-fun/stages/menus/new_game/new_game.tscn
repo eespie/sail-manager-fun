@@ -23,23 +23,26 @@ pageTitle = "Game Selection"
 showMoney = false
 showContinueButton = false
 
-[node name="Panel" type="Panel" parent="." unique_id=16546004]
-self_modulate = Color(1, 1, 1, 0.53333336)
-custom_minimum_size = Vector2(500, 500)
+[node name="HFlowContainer" type="HFlowContainer" parent="." unique_id=1794055704]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = 14
 anchor_top = 0.5
-anchor_right = 0.5
+anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -250.0
 offset_top = -250.0
-offset_right = 250.0
-offset_bottom = 350.0
+offset_bottom = 250.0
 grow_horizontal = 2
 grow_vertical = 2
+alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=1563942161]
+[node name="Panel" type="Panel" parent="HFlowContainer" unique_id=16546004]
+self_modulate = Color(1, 1, 1, 0.53333336)
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HFlowContainer/Panel" unique_id=1563942161]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 1
 anchors_preset = 13
@@ -52,38 +55,66 @@ offset_right = 209.0
 offset_bottom = -50.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 20
+theme_override_constants/separation = 40
 alignment = 1
 
-[node name="New Game" type="Button" parent="Panel/VBoxContainer" unique_id=1004197524]
+[node name="New Game" type="Button" parent="HFlowContainer/Panel/VBoxContainer" unique_id=1004197524]
 layout_mode = 2
 size_flags_vertical = 3
 toggle_mode = true
 text = "New Game"
 
-[node name="Select Game" type="Label" parent="Panel/VBoxContainer" unique_id=2146879370]
+[node name="Options" type="Button" parent="HFlowContainer/Panel/VBoxContainer" unique_id=875261241]
 layout_mode = 2
-size_flags_horizontal = 4
-text = "
-Select Game"
-horizontal_alignment = 1
-vertical_alignment = 1
+size_flags_vertical = 3
+toggle_mode = true
+text = "Options
+"
 
-[node name="Saved Games" type="ItemList" parent="Panel/VBoxContainer" unique_id=1194921402]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(0, 300)
-custom_maximum_size = Vector2(-1, 300)
-layout_mode = 2
-allow_search = false
-
-[node name="Quit" type="Button" parent="Panel/VBoxContainer" unique_id=910528551]
+[node name="Quit" type="Button" parent="HFlowContainer/Panel/VBoxContainer" unique_id=910528551]
 layout_mode = 2
 size_flags_vertical = 3
 toggle_mode = true
 text = "Quit"
 
-[connection signal="pressed" from="Panel/VBoxContainer/New Game" to="." method="_on_new_game_pressed"]
-[connection signal="item_activated" from="Panel/VBoxContainer/Saved Games" to="." method="_on_saved_games_item_activated"]
-[connection signal="item_clicked" from="Panel/VBoxContainer/Saved Games" to="." method="_on_saved_games_item_clicked"]
-[connection signal="item_selected" from="Panel/VBoxContainer/Saved Games" to="." method="_on_saved_games_item_selected"]
-[connection signal="pressed" from="Panel/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[node name="Load Game Panel" type="Panel" parent="HFlowContainer" unique_id=1986335011]
+unique_name_in_owner = true
+self_modulate = Color(1, 1, 1, 0.53333336)
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HFlowContainer/Load Game Panel" unique_id=1588505439]
+custom_minimum_size = Vector2(300, 400)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -209.0
+offset_top = -171.5
+offset_right = 209.0
+offset_bottom = 171.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Load Game" type="Label" parent="HFlowContainer/Load Game Panel/VBoxContainer" unique_id=2146879370]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Load Game"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Saved Games" type="ItemList" parent="HFlowContainer/Load Game Panel/VBoxContainer" unique_id=1194921402]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 365)
+custom_maximum_size = Vector2(-1, 365)
+layout_mode = 2
+allow_search = false
+
+[connection signal="pressed" from="HFlowContainer/Panel/VBoxContainer/New Game" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="HFlowContainer/Panel/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="HFlowContainer/Panel/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="item_activated" from="HFlowContainer/Load Game Panel/VBoxContainer/Saved Games" to="." method="_on_saved_games_item_activated"]
+[connection signal="item_clicked" from="HFlowContainer/Load Game Panel/VBoxContainer/Saved Games" to="." method="_on_saved_games_item_clicked"]
+[connection signal="item_selected" from="HFlowContainer/Load Game Panel/VBoxContainer/Saved Games" to="." method="_on_saved_games_item_selected"]

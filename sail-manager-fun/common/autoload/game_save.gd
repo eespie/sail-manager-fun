@@ -26,6 +26,9 @@ func save_game() -> void:
 	# Career
 	path = str(root, "/career.json")
 	Career.save_career(path)
+	# Results
+	path = str(root, "/results.json")
+	Results.save_results(path)
 	# saved games
 	save_games()
 
@@ -44,7 +47,9 @@ func load_game() -> void:
 	# Career
 	path = str(root, "/career.json")
 	Career.load_career(path)
-
+	# Results
+	path = str(root, "/results.json")
+	Results.load_results(path)
 
 func _from_dictionary(_data : Dictionary) -> void:
 	games = []
