@@ -23,15 +23,9 @@ func _ready() -> void:
 		var team_entity : TeamEntity = Teams.teams[Player.team_id]
 		team.text = str("Team ", team_entity.team_res.team_full_name)
 		_on_money_changed(Player.team_id, team_entity.current_money)
-	if showMoney:
-		amount.show()
-	else:
-		amount.hide()
+	show_amount(showMoney)
 	show_continue_button(showContinueButton)
-	if prevScene.length() > 0:
-		show_cancel_button(true)
-	else:
-		show_cancel_button(false)
+	show_cancel_button(prevScene.length() > 0)
 
 
 func _bind_events() -> void:
@@ -52,6 +46,13 @@ func show_cancel_button(_show : bool) -> void:
 		btnCancel.hide()
 
 
+func show_amount(_show: bool) -> void:
+	if _show:
+		amount.show()
+	else:
+		amount.hide()
+
+
 # continue to next screen
 func _on_continue_pressed() -> void:
 	EventBus.sigPrepareContinue.emit()
@@ -62,6 +63,7 @@ func _on_cancel_pressed() -> void:
 	EventBus.sigPrepareCancel.emit()
 	EventBus.sigChangeScene.emit(prevScene)
 
+
 func _on_money_changed(_team_id : int, _amount :int) -> void:
 	if Player.team_id != _team_id:
 		return
@@ -71,3 +73,8 @@ func _on_money_changed(_team_id : int, _amount :int) -> void:
 func set_title(_title : String) -> void:
 	pageTitle = _title
 	labelTitle.text = pageTitle
+
+
+func _input(event):
+	if event.is_action_pressed("ui_cancel"):
+		EventBus.sigChangeScene.emit("uid://ddt17xj1854p8")

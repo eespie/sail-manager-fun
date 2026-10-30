@@ -45,6 +45,19 @@ window/stretch/aspect="keep_width"
 
 enabled=PackedStringArray("res://addons/script-ide/plugin.cfg")
 
+[file_customization]
+
+folder_colors={
+"res://assets/": "purple",
+"res://common/": "green",
+"res://entities/": "orange",
+"res://resources/": "pink",
+"res://stages/": "yellow",
+"res://stages/entities/": "orange",
+"res://stages/locations/": "blue",
+"res://stages/seasons/": "pink"
+}
+
 [gui]
 
 fonts/dynamic_fonts/use_oversampling=false

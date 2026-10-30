@@ -1,14 +1,19 @@
 extends Node
 #class_name Career
 
+var next_event : Dictionary = {
+	"season": 1,
+	"event": 1,
+	"race": 1,
+}
+
 
 func _from_dictionary(data : Dictionary) -> void:
-	pass
+	next_event = data
 
 
 func _to_dictionary() -> Dictionary:
-	var data : Dictionary = {}
-	return data
+	return next_event
 
 
 func load_career(path : String) -> void:

@@ -64,18 +64,26 @@ text = "New Game"
 [node name="Select Game" type="Label" parent="Panel/VBoxContainer" unique_id=2146879370]
 layout_mode = 2
 size_flags_horizontal = 4
-text = "Select Game
-"
+text = "
+Select Game"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Saved Games" type="ItemList" parent="Panel/VBoxContainer" unique_id=1194921402]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 300)
+custom_maximum_size = Vector2(-1, 300)
 layout_mode = 2
 allow_search = false
+
+[node name="Quit" type="Button" parent="Panel/VBoxContainer" unique_id=910528551]
+layout_mode = 2
+size_flags_vertical = 3
+toggle_mode = true
+text = "Quit"
 
 [connection signal="pressed" from="Panel/VBoxContainer/New Game" to="." method="_on_new_game_pressed"]
 [connection signal="item_activated" from="Panel/VBoxContainer/Saved Games" to="." method="_on_saved_games_item_activated"]
 [connection signal="item_clicked" from="Panel/VBoxContainer/Saved Games" to="." method="_on_saved_games_item_clicked"]
 [connection signal="item_selected" from="Panel/VBoxContainer/Saved Games" to="." method="_on_saved_games_item_selected"]
+[connection signal="pressed" from="Panel/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

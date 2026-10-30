@@ -9,7 +9,10 @@ func _ready() -> void:
 	# Display previously saved games
 	GameSave.load_games()
 	for game_date in GameSave.games:
-		saved_games.add_item(game_date)
+		if DirAccess.dir_exists_absolute(str(GameSave.root_dir, game_date)):
+			saved_games.add_item(game_date)
+		else:
+			GameSave.games.erase(game_date)
 
 
 func _on_new_game_pressed() -> void:
@@ -27,3 +30,7 @@ func _on_saved_games_item_selected(index: int) -> void:
 	GameSave.load_game()
 	# Go to dashboard
 	EventBus.sigChangeScene.emit("uid://b275r5u4p0iex")
+
+
+func _on_quit_pressed() -> void:
+	get_tree().quit()
