@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="LocationRes" format=3 uid="uid://dqw2nb3eum2j1"]
 
 [ext_resource type="Texture2D" uid="uid://bw52gssfcnfwn" path="res://resources/flag/png-small/Flag_of_France.png" id="1_nbxkr"]
+[ext_resource type="Texture2D" uid="uid://cyf5m4qkqjuok" path="res://resources/seasons/locations/maps/marseille.png" id="2_du05e"]
 [ext_resource type="Script" uid="uid://3klx7lpi2wd8" path="res://resources/seasons/location_res.gd" id="2_ppftb"]
 
 [resource]
@@ -8,4 +9,5 @@ script = ExtResource("2_ppftb")
 location_name = "Marseille"
 location_country = "FRA"
 location_flag = ExtResource("1_nbxkr")
+location_map = ExtResource("2_du05e")
 metadata/_custom_type_script = "uid://3klx7lpi2wd8"

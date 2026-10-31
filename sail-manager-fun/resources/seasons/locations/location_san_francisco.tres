@@ -1,11 +1,13 @@
 [gd_resource type="Resource" script_class="LocationRes" format=3 uid="uid://dma3wh3ik6yfa"]
 
 [ext_resource type="Texture2D" uid="uid://o4r78t2dcime" path="res://resources/flag/png-small/Flag_of_the_United_States.png" id="1_dsho7"]
+[ext_resource type="Texture2D" uid="uid://c3ohmmnepp4s2" path="res://resources/seasons/locations/maps/san-francisco.png" id="2_5uden"]
 [ext_resource type="Script" uid="uid://3klx7lpi2wd8" path="res://resources/seasons/location_res.gd" id="2_k64t2"]
 
 [resource]
 script = ExtResource("2_k64t2")
-location_name = "New York"
+location_name = "San Franscisco"
 location_country = "USA"
 location_flag = ExtResource("1_dsho7")
+location_map = ExtResource("2_5uden")
 metadata/_custom_type_script = "uid://3klx7lpi2wd8"

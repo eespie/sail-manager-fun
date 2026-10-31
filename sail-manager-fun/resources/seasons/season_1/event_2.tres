@@ -8,7 +8,7 @@
 
 [resource]
 script = ExtResource("5_kym8q")
-event_number = 1
+event_number = 2
 event_location = ExtResource("1_uovxh")
 event_races = Array[ExtResource("2_ajb41")]([ExtResource("3_bkx4i"), ExtResource("3_bkx4i"), ExtResource("3_bkx4i"), ExtResource("3_bkx4i"), ExtResource("3_bkx4i"), ExtResource("4_h0smb")])
 metadata/_custom_type_script = "uid://cjb8w7mce6lmf"

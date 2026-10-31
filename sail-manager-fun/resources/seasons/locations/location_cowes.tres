@@ -2,10 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://dnijqvcb7d2tf" path="res://resources/flag/png-small/Flag_of_the_United_Kingdom.png" id="1_41v3w"]
 [ext_resource type="Script" uid="uid://3klx7lpi2wd8" path="res://resources/seasons/location_res.gd" id="2_4euq7"]
+[ext_resource type="Texture2D" uid="uid://bo3ik400sisnt" path="res://resources/seasons/locations/maps/cowes.png" id="2_7aa1n"]
 
 [resource]
 script = ExtResource("2_4euq7")
 location_name = "Cowes"
 location_country = "GBR"
 location_flag = ExtResource("1_41v3w")
+location_map = ExtResource("2_7aa1n")
 metadata/_custom_type_script = "uid://3klx7lpi2wd8"

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://brethhhsaipbm" path="res://stages/menus/dashboard/next_event/dashboard_next_event.gd" id="1_n86l8"]
 [ext_resource type="Texture2D" uid="uid://ckfrch85l7gho" path="res://resources/flag/png-small/Flag_of_Australia.png" id="2_jujdm"]
-[ext_resource type="Texture2D" uid="uid://2hswxmv6qppu" path="res://resources/seasons/locations/maps/sydney.png" id="3_t7tj4"]
+[ext_resource type="Texture2D" uid="uid://bo3ik400sisnt" path="res://resources/seasons/locations/maps/cowes.png" id="3_t7tj4"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jujdm"]
 
