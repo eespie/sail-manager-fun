@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://0gaisw7n8bte"]
 
-[ext_resource type="Texture2D" uid="uid://cfent7ypmn8pg" path="res://stages/menus/ui/background/images/sunset.png" id="1_h2yba"]
+[ext_resource type="Texture2D" uid="uid://dkjytrev2q8wm" path="res://stages/menus/ui/background/images/blue.png" id="1_1tkmi"]
 
 [node name="Background" type="Control" unique_id=1805338972]
 layout_mode = 3
@@ -11,16 +11,16 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="BackgroundImage" type="TextureRect" parent="." unique_id=875759460]
-self_modulate = Color(0.47397572, 0.47397572, 0.47397572, 1)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_h2yba")
+texture = ExtResource("1_1tkmi")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1370714722]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
