@@ -7,12 +7,15 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jujdm"]
 
 [node name="Next Event" type="PanelContainer" unique_id=2092147697]
-custom_minimum_size = Vector2(1320, 300)
+custom_minimum_size = Vector2(1280, 300)
+offset_right = 1300.0
+offset_bottom = 300.0
 size_flags_vertical = 3
 theme_type_variation = &"PanelContainerDashboard"
 script = ExtResource("1_n86l8")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1740523970]
+custom_maximum_size = Vector2(1280, -1)
 layout_mode = 2
 
 [node name="Title" type="Label" parent="VBoxContainer" unique_id=1140204713]
@@ -27,16 +30,18 @@ uppercase = true
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=554095025]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_constants/margin_left = 20
+theme_override_constants/margin_left = 40
 theme_override_constants/margin_top = 0
-theme_override_constants/margin_right = 20
+theme_override_constants/margin_right = 40
 theme_override_constants/margin_bottom = 10
 
 [node name="HFlowContainer" type="HFlowContainer" parent="VBoxContainer/MarginContainer" unique_id=2077947914]
 layout_mode = 2
-theme_override_constants/h_separation = 6
+theme_override_constants/h_separation = 23
+alignment = 1
 
 [node name="Season" type="PanelContainer" parent="VBoxContainer/MarginContainer/HFlowContainer" unique_id=1595171184]
+visible = false
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 
@@ -70,7 +75,7 @@ vertical_alignment = 1
 uppercase = true
 
 [node name="Event" type="PanelContainer" parent="VBoxContainer/MarginContainer/HFlowContainer" unique_id=561178714]
-custom_minimum_size = Vector2(250, 0)
+custom_minimum_size = Vector2(280, 0)
 layout_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/MarginContainer/HFlowContainer/Event" unique_id=1448982836]
@@ -113,7 +118,7 @@ layout_mode = 2
 texture = ExtResource("2_jujdm")
 
 [node name="Map" type="PanelContainer" parent="VBoxContainer/MarginContainer/HFlowContainer" unique_id=1413433863]
-custom_minimum_size = Vector2(250, 0)
+custom_minimum_size = Vector2(280, 0)
 layout_mode = 2
 
 [node name="Event Map" type="TextureRect" parent="VBoxContainer/MarginContainer/HFlowContainer/Map" unique_id=1067919541]
@@ -124,7 +129,7 @@ expand_mode = 2
 stretch_mode = 5
 
 [node name="Race" type="PanelContainer" parent="VBoxContainer/MarginContainer/HFlowContainer" unique_id=509587264]
-custom_minimum_size = Vector2(250, 0)
+custom_minimum_size = Vector2(280, 0)
 layout_mode = 2
 
 [node name="Race Number" type="Label" parent="VBoxContainer/MarginContainer/HFlowContainer/Race" unique_id=237281902]
@@ -157,7 +162,7 @@ vertical_alignment = 1
 uppercase = true
 
 [node name="Launch Race" type="PanelContainer" parent="VBoxContainer/MarginContainer/HFlowContainer" unique_id=1466949972]
-custom_minimum_size = Vector2(250, 0)
+custom_minimum_size = Vector2(280, 0)
 layout_mode = 2
 
 [node name="Race Button" type="Button" parent="VBoxContainer/MarginContainer/HFlowContainer/Launch Race" unique_id=889479182]

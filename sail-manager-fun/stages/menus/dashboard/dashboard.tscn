@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://0gaisw7n8bte" path="res://stages/menus/ui/background/background.tscn" id="1_4yjcs"]
 [ext_resource type="Script" uid="uid://cwtjb26n18qjj" path="res://stages/menus/dashboard/dashboard.gd" id="1_wuvxh"]
 [ext_resource type="PackedScene" uid="uid://dwxsb7ei71wxh" path="res://stages/menus/dashboard/team/dashboard_team.tscn" id="3_txhdd"]
-[ext_resource type="PackedScene" uid="uid://ddbx80xan2jwg" path="res://stages/menus/dashboard/sponsors/dashboard_sponsors.tscn" id="4_ouy0s"]
+[ext_resource type="PackedScene" uid="uid://ddbx80xan2jwg" path="res://stages/menus/dashboard/standings/dashboard_standings.tscn" id="4_ouy0s"]
 [ext_resource type="PackedScene" uid="uid://ba2oxfp4askqv" path="res://stages/menus/dashboard/crew/dashboard_crew.tscn" id="5_ibi1b"]
 [ext_resource type="PackedScene" uid="uid://8ohcgnr4n3ts" path="res://stages/menus/dashboard/season/dashboard_season.tscn" id="6_nct0t"]
 [ext_resource type="PackedScene" uid="uid://xlsh0h5klffs" path="res://stages/menus/dashboard/next_event/dashboard_next_event.tscn" id="7_tk13y"]
@@ -61,6 +61,15 @@ theme_override_font_sizes/font_size = 18
 text = "> TEAMS"
 alignment = 0
 
+[node name="Sponsors" type="Button" parent="VBoxContainer/Toolbar/PanelContainer/HBoxContainer" unique_id=1613049436]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+size_flags_vertical = 8
+theme_type_variation = &"DashboardButton"
+theme_override_font_sizes/font_size = 18
+text = "> SPONSORS"
+alignment = 0
+
 [node name="Options" type="Button" parent="VBoxContainer/Toolbar/PanelContainer/HBoxContainer" unique_id=333478118]
 custom_minimum_size = Vector2(180, 0)
 layout_mode = 2
@@ -103,7 +112,7 @@ theme_override_constants/separation = 20
 [node name="Team" parent="VBoxContainer/MarginContainer/Dashboard Main/VBoxContainer2" unique_id=2054560589 instance=ExtResource("3_txhdd")]
 layout_mode = 2
 
-[node name="Sponsors" parent="VBoxContainer/MarginContainer/Dashboard Main/VBoxContainer2" unique_id=538060562 instance=ExtResource("4_ouy0s")]
+[node name="Season" parent="VBoxContainer/MarginContainer/Dashboard Main/VBoxContainer2" unique_id=2086758962 instance=ExtResource("6_nct0t")]
 layout_mode = 2
 size_flags_vertical = 3
 
@@ -116,8 +125,10 @@ theme_override_constants/separation = 20
 layout_mode = 2
 theme_override_constants/separation = 20
 
-[node name="Season" parent="VBoxContainer/MarginContainer/Dashboard Main/VBoxContainer/HBoxContainer" unique_id=2086758962 instance=ExtResource("6_nct0t")]
+[node name="Standings" parent="VBoxContainer/MarginContainer/Dashboard Main/VBoxContainer/HBoxContainer" unique_id=538060562 instance=ExtResource("4_ouy0s")]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="Crew" parent="VBoxContainer/MarginContainer/Dashboard Main/VBoxContainer/HBoxContainer" unique_id=784904703 instance=ExtResource("5_ibi1b")]
 layout_mode = 2

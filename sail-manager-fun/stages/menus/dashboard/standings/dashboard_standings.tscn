@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ddbx80xan2jwg"]
 
-[node name="Sponsors" type="PanelContainer" unique_id=538060562]
-custom_minimum_size = Vector2(400, 400)
+[node name="Standings" type="PanelContainer" unique_id=538060562]
+custom_minimum_size = Vector2(500, 400)
 size_flags_horizontal = 0
 size_flags_vertical = 0
 theme_type_variation = &"PanelContainerDashboard"
@@ -10,7 +10,7 @@ theme_type_variation = &"PanelContainerDashboard"
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 size_flags_vertical = 0
-text = "Sponsors"
+text = "Standings"
 horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true

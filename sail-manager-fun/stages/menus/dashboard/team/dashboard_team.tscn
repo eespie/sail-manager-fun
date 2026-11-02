@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bruqjl7p33l7u" path="res://resources/flag/png-carre/Flag_of_France.png" id="2_2wd4w"]
 
 [node name="Dashboard Team" type="PanelContainer" unique_id=2054560589]
-custom_minimum_size = Vector2(400, 400)
+custom_minimum_size = Vector2(440, 360)
 size_flags_horizontal = 0
 size_flags_vertical = 0
 theme_type_variation = &"PanelContainerDashboard"
@@ -29,9 +29,9 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -200.0
-offset_right = 200.0
-offset_bottom = 400.0
+offset_left = -217.0
+offset_right = 218.0
+offset_bottom = 396.0
 grow_horizontal = 2
 offset_transform_rotation = -0.5235988
 texture = ExtResource("2_2wd4w")
