@@ -2,5 +2,6 @@
 
 [ext_resource type="Script" uid="uid://c0vjr7evtg0ei" path="res://stages/menus/ui/camera/camera.gd" id="1_wqt74"]
 
-[node name="Camera2D" type="Camera2D"]
+[node name="Camera2D" type="Camera2D" unique_id=1465047650]
+limit_enabled = false
 script = ExtResource("1_wqt74")

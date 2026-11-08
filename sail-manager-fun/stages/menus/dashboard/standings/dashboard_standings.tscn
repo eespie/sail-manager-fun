@@ -1,12 +1,15 @@
 [gd_scene format=3 uid="uid://ddbx80xan2jwg"]
 
 [node name="Standings" type="PanelContainer" unique_id=538060562]
-custom_minimum_size = Vector2(500, 400)
+custom_minimum_size = Vector2(760, 500)
 size_flags_horizontal = 0
 size_flags_vertical = 0
 theme_type_variation = &"PanelContainerDashboard"
 
-[node name="Title" type="Label" parent="." unique_id=448835977]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=621446044]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="VBoxContainer" unique_id=448835977]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 size_flags_vertical = 0
@@ -14,3 +17,12 @@ text = "Standings"
 horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer" unique_id=132643416]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/ScrollContainer" unique_id=87188813]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3

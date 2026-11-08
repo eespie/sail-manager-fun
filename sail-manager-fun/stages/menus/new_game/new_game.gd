@@ -5,7 +5,6 @@ extends Control
 @onready var load_game_panel: Panel = %"Load Game Panel"
 
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# Display previously saved games
 	GameSave.load_games()

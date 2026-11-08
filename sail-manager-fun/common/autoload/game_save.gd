@@ -11,6 +11,7 @@ func _ready() -> void:
 	DirAccess.make_dir_absolute(root_dir)
 	games_path = str(root_dir, "games.json")
 
+
 func save_game() -> void:
 	var root : String = str(root_dir, current_game)
 	DirAccess.make_dir_absolute(root)
@@ -51,6 +52,7 @@ func load_game() -> void:
 	path = str(root, "/results.json")
 	Results.load_results(path)
 
+
 func _from_dictionary(_data : Dictionary) -> void:
 	games = []
 	for i in _data:
@@ -76,13 +78,16 @@ func load_games() -> void:
 	var path = str(root_dir, "/options.json")
 	Options.load_data(path)
 
+
 func save_games() -> void:
 	File.save_data(_to_dictionary(), games_path)
 	# Options
 	var path = str(root_dir, "/options.json")
 	Options.save_data(path)
 
+
 func new_game() -> void:
 	var date = Time.get_datetime_string_from_system()
 	games.insert(0, date)
 	current_game = date
+	Career.init_resources()

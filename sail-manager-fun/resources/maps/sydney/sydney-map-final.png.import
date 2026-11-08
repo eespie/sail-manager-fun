@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dbm73byqxqcep"
-path="res://.godot/imported/sydney-map-final.png-db63d6d2a76b09007cf319ff57943314.ctex"
+path="res://.godot/imported/sydney-map-final.png-dd969493609cebd5fce14de16afb7793.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/maps/sydney-map-final.png"
-dest_files=["res://.godot/imported/sydney-map-final.png-db63d6d2a76b09007cf319ff57943314.ctex"]
+source_file="res://resources/maps/sydney/sydney-map-final.png"
+dest_files=["res://.godot/imported/sydney-map-final.png-dd969493609cebd5fce14de16afb7793.ctex"]
 
 [params]
 
