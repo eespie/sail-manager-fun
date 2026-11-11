@@ -1,5 +1,9 @@
 [gd_scene format=3 uid="uid://f2foic5jq4yl"]
 
+[ext_resource type="PackedScene" uid="uid://0gaisw7n8bte" path="res://stages/menus/ui/background/background.tscn" id="1_mwk4f"]
+[ext_resource type="PackedScene" uid="uid://bqafa66no0ivb" path="res://stages/menus/ui/hud/hud.tscn" id="2_k8arv"]
+[ext_resource type="Texture2D" uid="uid://b5kwv8lkoaky5" path="res://resources/maps/sydney/presentation-s1.png" id="3_4p63i"]
+
 [node name="Presentation" type="Control" unique_id=575192972]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +11,44 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Background" parent="." unique_id=1805338972 instance=ExtResource("1_mwk4f")]
+layout_mode = 1
+
+[node name="HUDDasboard" parent="." unique_id=112578795 instance=ExtResource("2_k8arv")]
+layout_mode = 1
+pageTitle = "Presentation"
+showMoney = false
+
+[node name="Panel" type="Panel" parent="." unique_id=800505078]
+custom_minimum_size = Vector2(1139, 860)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=1583534498]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -539.5
+offset_top = -400.0
+offset_right = 539.5
+offset_bottom = 400.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="TextureRect" type="TextureRect" parent="Panel/MarginContainer" unique_id=1534125694]
+layout_mode = 2
+texture = ExtResource("3_4p63i")
